@@ -1,0 +1,28 @@
+# https://query.wikidata.org/
+SELECT DISTINCT ?item (MAX(?numberOfSpeakers) AS ?maxSpeakers) (MAX(?speakersTime) AS ?mostRecentTime) ?iso639_1 ?iso639_3 ?itemLabel ?itemLabel_en
+WHERE {
+  ?item wdt:P31 wd:Q34770;          # General "language" type to include all languages
+        wdt:P220 ?iso639_3.          # Language with ISO 639-3 code
+
+  ?item p:P1098 ?numberOfSpeakersStatement.
+  ?numberOfSpeakersStatement ps:P1098 ?numberOfSpeakers.
+
+  OPTIONAL {
+    ?numberOfSpeakersStatement pq:P585 ?speakersTime.
+  }
+
+  OPTIONAL {
+    ?item wdt:P218 ?iso639_1.
+    ?item rdfs:label ?itemLabel_1 . FILTER(lang(?itemLabel_1) = ?iso639_1)
+  }
+  OPTIONAL {
+    ?item rdfs:label ?itemLabel_3 . FILTER(lang(?itemLabel_3) = ?iso639_3)
+  }
+  BIND(COALESCE(?itemLabel_3, ?itemLabel_1) AS ?itemLabel)
+
+  OPTIONAL {
+    ?item rdfs:label ?itemLabel_en . FILTER(lang(?itemLabel_en) = 'en')
+  }
+}
+GROUP BY ?item ?iso639_1 ?iso639_3 ?itemLabel ?itemLabel_en
+ORDER BY DESC(?maxSpeakers) DESC(?mostRecentTime)

@@ -3,180 +3,240 @@
     "model": "openai/gpt-4o-mini",
     "original_language": "eng_Latn",
     "target_language": "eng_Latn",
+    "target_language_name": "English",
+    "speakers": 1132366680,
     "bleu": 96.0187510193446
   },
   {
     "model": "google/gemini-flash-1.5",
     "original_language": "eng_Latn",
     "target_language": "eng_Latn",
+    "target_language_name": "English",
+    "speakers": 1132366680,
     "bleu": 79.64837722618887
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "eng_Latn",
+    "target_language_name": "English",
+    "speakers": 1132366680,
     "bleu": 47.89694173473209
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
     "original_language": "eng_Latn",
     "target_language": "eng_Latn",
+    "target_language_name": "English",
+    "speakers": 1132366680,
     "bleu": 57.08253125905762
   },
   {
     "model": "meta-llama/llama-3.1-8b-instruct",
     "original_language": "eng_Latn",
     "target_language": "eng_Latn",
+    "target_language_name": "English",
+    "speakers": 1132366680,
     "bleu": 71.3986619616758
   },
   {
     "model": "openai/gpt-4o-mini",
     "original_language": "eng_Latn",
     "target_language": "deu_Latn",
+    "target_language_name": "German",
+    "speakers": 105000000,
     "bleu": 42.76912386979146
   },
   {
     "model": "google/gemini-flash-1.5",
     "original_language": "eng_Latn",
     "target_language": "deu_Latn",
+    "target_language_name": "German",
+    "speakers": 105000000,
     "bleu": 48.166702527508484
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "deu_Latn",
+    "target_language_name": "German",
+    "speakers": 105000000,
     "bleu": 47.56638188073429
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
     "original_language": "eng_Latn",
     "target_language": "deu_Latn",
+    "target_language_name": "German",
+    "speakers": 105000000,
     "bleu": 38.8670415108337
   },
   {
     "model": "meta-llama/llama-3.1-8b-instruct",
     "original_language": "eng_Latn",
     "target_language": "deu_Latn",
+    "target_language_name": "German",
+    "speakers": 105000000,
     "bleu": 32.2942935571844
   },
   {
     "model": "openai/gpt-4o-mini",
     "original_language": "eng_Latn",
     "target_language": "fra_Latn",
+    "target_language_name": "French",
+    "speakers": 208157220,
     "bleu": 47.70220301445618
   },
   {
     "model": "google/gemini-flash-1.5",
     "original_language": "eng_Latn",
     "target_language": "fra_Latn",
+    "target_language_name": "French",
+    "speakers": 208157220,
     "bleu": 49.50529382461407
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "fra_Latn",
+    "target_language_name": "French",
+    "speakers": 208157220,
     "bleu": 50.55719906730571
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
     "original_language": "eng_Latn",
     "target_language": "fra_Latn",
+    "target_language_name": "French",
+    "speakers": 208157220,
     "bleu": 43.43766704709355
   },
   {
     "model": "meta-llama/llama-3.1-8b-instruct",
     "original_language": "eng_Latn",
     "target_language": "fra_Latn",
+    "target_language_name": "French",
+    "speakers": 208157220,
     "bleu": 37.38013101452594
   },
   {
     "model": "openai/gpt-4o-mini",
     "original_language": "eng_Latn",
     "target_language": "spa_Latn",
+    "target_language_name": "Spanish",
+    "speakers": 485000000,
     "bleu": 34.65606074843554
   },
   {
     "model": "google/gemini-flash-1.5",
     "original_language": "eng_Latn",
     "target_language": "spa_Latn",
+    "target_language_name": "Spanish",
+    "speakers": 485000000,
     "bleu": 34.49205632717459
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "spa_Latn",
+    "target_language_name": "Spanish",
+    "speakers": 485000000,
     "bleu": 34.58637890527096
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
     "original_language": "eng_Latn",
     "target_language": "spa_Latn",
+    "target_language_name": "Spanish",
+    "speakers": 485000000,
     "bleu": 33.41419407814188
   },
   {
     "model": "meta-llama/llama-3.1-8b-instruct",
     "original_language": "eng_Latn",
     "target_language": "spa_Latn",
+    "target_language_name": "Spanish",
+    "speakers": 485000000,
     "bleu": 29.470460185415075
   },
   {
     "model": "openai/gpt-4o-mini",
     "original_language": "eng_Latn",
     "target_language": "cmn_Hans",
+    "target_language_name": "Mandarin",
+    "speakers": 1074000000,
     "bleu": 0.7678283495493847
   },
   {
     "model": "google/gemini-flash-1.5",
     "original_language": "eng_Latn",
     "target_language": "cmn_Hans",
+    "target_language_name": "Mandarin",
+    "speakers": 1074000000,
     "bleu": 0.3178534804335777
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "cmn_Hans",
+    "target_language_name": "Mandarin",
+    "speakers": 1074000000,
     "bleu": 0.8670958769249191
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
     "original_language": "eng_Latn",
     "target_language": "cmn_Hans",
+    "target_language_name": "Mandarin",
+    "speakers": 1074000000,
     "bleu": 0.6796400550094367
   },
   {
     "model": "meta-llama/llama-3.1-8b-instruct",
     "original_language": "eng_Latn",
     "target_language": "cmn_Hans",
+    "target_language_name": "Mandarin",
+    "speakers": 1074000000,
     "bleu": 0.027154305073795664
   },
   {
     "model": "openai/gpt-4o-mini",
     "original_language": "eng_Latn",
     "target_language": "cmn_Hant",
+    "target_language_name": "Mandarin",
+    "speakers": 1074000000,
     "bleu": 2.175042632198715
   },
   {
     "model": "google/gemini-flash-1.5",
     "original_language": "eng_Latn",
     "target_language": "cmn_Hant",
+    "target_language_name": "Mandarin",
+    "speakers": 1074000000,
     "bleu": 0.3480387797702917
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "cmn_Hant",
+    "target_language_name": "Mandarin",
+    "speakers": 1074000000,
     "bleu": 3.8196828383724886
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
     "original_language": "eng_Latn",
     "target_language": "cmn_Hant",
+    "target_language_name": "Mandarin",
+    "speakers": 1074000000,
     "bleu": 2.1029807575075994
   },
   {
     "model": "meta-llama/llama-3.1-8b-instruct",
     "original_language": "eng_Latn",
     "target_language": "cmn_Hant",
+    "target_language_name": "Mandarin",
+    "speakers": 1074000000,
     "bleu": 0.017008567925605175
   }
 ]

@@ -10,6 +10,17 @@
             padding: 20px;
             font-family: sans-serif;
         }
+
+        .language-header {
+            margin-bottom: 10px;
+        }
+
+        .speaker-count {
+            font-size: 0.8em;
+            color: #666;
+            font-weight: normal;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -25,15 +36,39 @@
             const response = await fetch('results.json');
             const results = await response.json();
 
-            const languages = [...new Set(results.map(r => r.target_language))];
+            // Get unique languages with their speaker counts
+            const languageMap = new Map();
+            results.forEach(r => {
+                if (!languageMap.has(r.target_language_name)) {
+                    languageMap.set(r.target_language_name, r.speakers);
+                }
+            });
+
+            // Sort languages by speaker count (descending)
+            const languages = [...languageMap.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([lang]) => lang);
+
             const chartsDiv = document.getElementById('charts');
 
             languages.forEach(language => {
+                const headerDiv = document.createElement('div');
+                headerDiv.className = 'language-header';
+
                 const h2 = document.createElement('h2');
                 h2.textContent = language;
-                chartsDiv.appendChild(h2);
+                h2.style.marginBottom = '5px';
 
-                const languageData = results.filter(r => r.target_language === language);
+                const speakerP = document.createElement('p');
+                speakerP.className = 'speaker-count';
+                const speakerCount = (languageMap.get(language) / 1_000_000).toFixed(1);
+                speakerP.textContent = `${speakerCount}M speakers`;
+
+                headerDiv.appendChild(h2);
+                headerDiv.appendChild(speakerP);
+                chartsDiv.appendChild(headerDiv);
+
+                const languageData = results.filter(r => r.target_language_name === language);
 
                 // Create plot using the more idiomatic Observable Plot approach
                 const plot = Plot.plot({
