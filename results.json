@@ -1,0 +1,152 @@
+[
+  {
+    "model": "openai/gpt-4o-mini",
+    "original_language": "eng_Latn",
+    "target_language": "eng_Latn",
+    "bleu": 0.9601875101934466
+  },
+  {
+    "model": "google/gemini-flash-1.5",
+    "original_language": "eng_Latn",
+    "target_language": "eng_Latn",
+    "bleu": 0.796483772261889
+  },
+  {
+    "model": "anthropic/claude-3.5-sonnet",
+    "original_language": "eng_Latn",
+    "target_language": "eng_Latn",
+    "bleu": 0.4789694173473208
+  },
+  {
+    "model": "qwen/qwen-2.5-72b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "eng_Latn",
+    "bleu": 0.5708253125905761
+  },
+  {
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "eng_Latn",
+    "bleu": 0.7139866196167579
+  },
+  {
+    "model": "openai/gpt-4o-mini",
+    "original_language": "eng_Latn",
+    "target_language": "deu_Latn",
+    "bleu": 0.42769123869791453
+  },
+  {
+    "model": "google/gemini-flash-1.5",
+    "original_language": "eng_Latn",
+    "target_language": "deu_Latn",
+    "bleu": 0.481667025275085
+  },
+  {
+    "model": "anthropic/claude-3.5-sonnet",
+    "original_language": "eng_Latn",
+    "target_language": "deu_Latn",
+    "bleu": 0.47566381880734276
+  },
+  {
+    "model": "qwen/qwen-2.5-72b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "deu_Latn",
+    "bleu": 0.3886704151083369
+  },
+  {
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "deu_Latn",
+    "bleu": 0.3229429355718441
+  },
+  {
+    "model": "openai/gpt-4o-mini",
+    "original_language": "eng_Latn",
+    "target_language": "fra_Latn",
+    "bleu": 0.4770220301445618
+  },
+  {
+    "model": "google/gemini-flash-1.5",
+    "original_language": "eng_Latn",
+    "target_language": "fra_Latn",
+    "bleu": 0.4950529382461408
+  },
+  {
+    "model": "anthropic/claude-3.5-sonnet",
+    "original_language": "eng_Latn",
+    "target_language": "fra_Latn",
+    "bleu": 0.505571990673057
+  },
+  {
+    "model": "qwen/qwen-2.5-72b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "fra_Latn",
+    "bleu": 0.4343766704709354
+  },
+  {
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "fra_Latn",
+    "bleu": 0.3738013101452592
+  },
+  {
+    "model": "openai/gpt-4o-mini",
+    "original_language": "eng_Latn",
+    "target_language": "spa_Latn",
+    "bleu": 0.34656060748435535
+  },
+  {
+    "model": "google/gemini-flash-1.5",
+    "original_language": "eng_Latn",
+    "target_language": "spa_Latn",
+    "bleu": 0.3449205632717461
+  },
+  {
+    "model": "anthropic/claude-3.5-sonnet",
+    "original_language": "eng_Latn",
+    "target_language": "spa_Latn",
+    "bleu": 0.34586378905270954
+  },
+  {
+    "model": "qwen/qwen-2.5-72b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "spa_Latn",
+    "bleu": 0.3341419407814188
+  },
+  {
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "spa_Latn",
+    "bleu": 0.29470460185415065
+  },
+  {
+    "model": "openai/gpt-4o-mini",
+    "original_language": "eng_Latn",
+    "target_language": "cmn_Hans",
+    "bleu": 0.0
+  },
+  {
+    "model": "google/gemini-flash-1.5",
+    "original_language": "eng_Latn",
+    "target_language": "cmn_Hans",
+    "bleu": 0.0
+  },
+  {
+    "model": "anthropic/claude-3.5-sonnet",
+    "original_language": "eng_Latn",
+    "target_language": "cmn_Hans",
+    "bleu": 0.0
+  },
+  {
+    "model": "qwen/qwen-2.5-72b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "cmn_Hans",
+    "bleu": 0.0
+  },
+  {
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "cmn_Hans",
+    "bleu": 0.0
+  }
+]
