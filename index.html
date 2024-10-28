@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Language Bench</title>
+    <!-- Load Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Language Bench</h1>
+    <div id="charts"></div>
+
+    <script>
+        async function init() {
+            // Load the JSON data
+            const response = await fetch('results.json');
+            const results = await response.json();
+
+            // Create charts for each language
+            const languages = [...new Set(results.map(r => r.target_language))];
+            const chartsDiv = document.getElementById('charts');
+
+            languages.forEach(language => {
+                const h2 = document.createElement('h2');
+                h2.textContent = language;
+                chartsDiv.appendChild(h2);
+
+                const chartDiv = document.createElement('div');
+                chartsDiv.appendChild(chartDiv);
+
+                const languageData = results.filter(r => r.target_language === language);
+
+                const trace = {
+                    x: languageData.map(r => r.model.split('/')[0]),
+                    y: languageData.map(r => r.bleu),
+                    type: 'bar'
+                };
+
+                const layout = {
+                    yaxis: {
+                        range: [0, 100],
+                        tickfont: { size: 10 }
+                    },
+                    xaxis: {
+                        tickfont: { size: 10 }
+                    },
+                    margin: { t: 20 },
+                    width: 400,
+                    height: 200
+                };
+
+                const config = {
+                    displayModeBar: false
+                };
+
+                Plotly.newPlot(chartDiv, [trace], layout, config);
+            });
+        }
+
+        init();
+    </script>
+</body>
+
+</html>
