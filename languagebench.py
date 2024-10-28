@@ -26,16 +26,17 @@ target_languages = [
     "fra_Latn",
     "spa_Latn",
     "cmn_Hans",
+    "cmn_Hant",
 ]
 
 # setup
+load_dotenv()
 client = AsyncOpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key=getenv("OPENROUTER_API_KEY"),
 )
-load_dotenv()
 cache = Memory(location=".cache", verbose=0).cache
-bleu = evaluate.load("bleu")
+bleu = evaluate.load("sacrebleu")
 
 
 @cache
@@ -75,11 +76,11 @@ async def main():
                     "model": model,
                     "original_language": original_language,
                     "target_language": target_language,
-                    "bleu": metrics["bleu"],
+                    "bleu": metrics["score"],
                 }
             )
             with open("results.json", "w") as f:
-                json.dump(results, f, indent=2)
+                json.dump(results, f, indent=2, ensure_ascii=False)
 
 
 if __name__ == "__main__":
