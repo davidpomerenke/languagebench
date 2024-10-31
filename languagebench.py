@@ -1,6 +1,7 @@
 import asyncio
 import json
 import os
+import random
 from os import getenv
 
 import evaluate
@@ -9,6 +10,7 @@ from dotenv import load_dotenv
 from joblib.memory import Memory
 from openai import AsyncOpenAI
 from tqdm.asyncio import tqdm_asyncio
+from tqdm.auto import tqdm
 
 # config
 models = [
@@ -21,15 +23,17 @@ models = [
 # models = ["gpt-4o-mini"]
 original_language = "eng_Latn"
 dataset = "floresp-v2.0-rc.3/dev"
-target_languages = sorted([f.split(".")[1] for f in os.listdir(dataset)][:10])
-target_languages = [
-    "eng_Latn",
-    "deu_Latn",
-    "fra_Latn",
-    "spa_Latn",
-    "cmn_Hans",
-    "cmn_Hant",
-]
+random.seed(42)
+target_languages = [f.split(".")[1] for f in os.listdir(dataset)]
+target_languages = random.choices(target_languages, k=10)
+# target_languages = [
+#     "eng_Latn",
+#     "deu_Latn",
+#     "fra_Latn",
+#     "spa_Latn",
+#     "cmn_Hans",
+#     "cmn_Hant",
+# ]
 
 # setup
 load_dotenv()
@@ -40,17 +44,33 @@ client = AsyncOpenAI(
 )
 cache = Memory(location=".cache", verbose=0).cache
 bleu = evaluate.load("sacrebleu")
-language_stats = pd.read_csv("languages.tsv", sep="\t")
 
 
 @cache
-async def translate(model, target_language, sentence):
-    reply = await client.chat.completions.create(
+async def complete(**kwargs):
+    return await client.chat.completions.create(**kwargs)
+
+
+def reorder(language_name):
+    if "," in language_name and "(" not in language_name:
+        return language_name.split(",")[1] + " " + language_name.split(",")[0]
+    return language_name
+
+
+language_names = pd.read_csv("LanguageCodes.tab", sep="\t")
+language_names["Name"] = language_names["Name"].apply(reorder)
+language_stats = pd.read_csv("languages.tsv", sep="\t")
+script_names = pd.read_csv("ScriptCodes.csv")
+
+
+@cache
+async def translate(model, target_language, target_script, sentence):
+    reply = await complete(
         model=model,
         messages=[
             {
                 "role": "user",
-                "content": f"Translate the following text from {original_language} to {target_language}:\n\n{sentence}",
+                "content": f"Translate the following text to {target_language} (script: {target_script}):\n\n{sentence}",
             }
         ],
         temperature=0,
@@ -61,9 +81,15 @@ async def translate(model, target_language, sentence):
 def get_language_stats(language_code):
     lang, script = language_code.split("_")
     stats = language_stats[language_stats["iso639_3"] == lang]
-    if stats.empty:
-        return dict()
-    return stats.iloc[0].to_dict()
+    if not stats.empty:
+        stats = stats.iloc[0].to_dict()
+    else:
+        stats = dict()
+    stats["script"] = script_names[script_names["Code"] == script]["English Name"].iloc[
+        0
+    ]
+    stats["name"] = language_names[language_names["LangID"] == lang]["Name"].iloc[0]
+    return stats
 
 
 async def main():
@@ -71,31 +97,43 @@ async def main():
     results = []
     original_sentences = open(f"{dataset}/dev.{original_language}").readlines()
     for target_language in target_languages:
+        if target_language == original_language:
+            continue
         target_sentences = open(f"{dataset}/dev.{target_language}").readlines()
         for model in models:
-            print(f"{model} -> {target_language}")
-            predictions = await tqdm_asyncio.gather(
-                *[
-                    translate(model, target_language, sentence)
-                    for sentence in original_sentences[:n]
-                ],
-            )
-            metrics = bleu.compute(
-                predictions=predictions, references=target_sentences[:n]
-            )
             stats = get_language_stats(target_language)
+            print(f"{model} -> {stats['name']}")
+            # predictions = [
+            #     await translate(model, stats["name"], stats["script"], sentence)
+            #     for sentence in tqdm(original_sentences[:n])
+            # ]
+            predictions = [
+                translate(model, stats["name"], stats["script"], sentence)
+                for sentence in tqdm(original_sentences[:n])
+            ]
+            predictions = await tqdm_asyncio.gather(*predictions)
+            metrics = bleu.compute(
+                predictions=predictions,
+                references=target_sentences[:n],
+                tokenize="char",
+            )
+
             results.append(
                 {
                     "model": model,
                     "original_language": original_language,
                     "target_language": target_language,
-                    "target_language_name": stats.get("itemLabel_en", target_language),
+                    "target_language_name": stats["name"],
                     "speakers": stats.get("maxSpeakers"),
                     "bleu": metrics["score"],
                 }
             )
             with open("results.json", "w") as f:
                 json.dump(results, f, indent=2, ensure_ascii=False)
+            # compute mean bleu for each target language
+            pd.DataFrame(results).groupby("target_language_name").agg(
+                {"bleu": "mean"}
+            ).reset_index().to_json("results_summary.json", indent=2, orient="records")
 
 
 if __name__ == "__main__":

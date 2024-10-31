@@ -2,241 +2,321 @@
   {
     "model": "openai/gpt-4o-mini",
     "original_language": "eng_Latn",
-    "target_language": "eng_Latn",
-    "target_language_name": "English",
-    "speakers": 1132366680,
-    "bleu": 96.0187510193446
+    "target_language": "isl_Latn",
+    "target_language_name": "Icelandic",
+    "speakers": "358000",
+    "bleu": 61.64765463591684
   },
   {
     "model": "google/gemini-flash-1.5",
     "original_language": "eng_Latn",
-    "target_language": "eng_Latn",
-    "target_language_name": "English",
-    "speakers": 1132366680,
-    "bleu": 79.64837722618887
+    "target_language": "isl_Latn",
+    "target_language_name": "Icelandic",
+    "speakers": "358000",
+    "bleu": 58.800114937175536
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
-    "target_language": "eng_Latn",
-    "target_language_name": "English",
-    "speakers": 1132366680,
-    "bleu": 47.89694173473209
+    "target_language": "isl_Latn",
+    "target_language_name": "Icelandic",
+    "speakers": "358000",
+    "bleu": 63.29310272337262
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
     "original_language": "eng_Latn",
-    "target_language": "eng_Latn",
-    "target_language_name": "English",
-    "speakers": 1132366680,
-    "bleu": 57.08253125905762
+    "target_language": "isl_Latn",
+    "target_language_name": "Icelandic",
+    "speakers": "358000",
+    "bleu": 28.81229691079592
   },
   {
     "model": "meta-llama/llama-3.1-8b-instruct",
     "original_language": "eng_Latn",
-    "target_language": "eng_Latn",
-    "target_language_name": "English",
-    "speakers": 1132366680,
-    "bleu": 71.3986619616758
+    "target_language": "isl_Latn",
+    "target_language_name": "Icelandic",
+    "speakers": "358000",
+    "bleu": 35.26511601216665
   },
   {
     "model": "openai/gpt-4o-mini",
     "original_language": "eng_Latn",
-    "target_language": "deu_Latn",
-    "target_language_name": "German",
-    "speakers": 105000000,
-    "bleu": 42.76912386979146
+    "target_language": "ind_Latn",
+    "target_language_name": "Indonesian",
+    "speakers": "198996550",
+    "bleu": 77.046561794683
   },
   {
     "model": "google/gemini-flash-1.5",
     "original_language": "eng_Latn",
-    "target_language": "deu_Latn",
-    "target_language_name": "German",
-    "speakers": 105000000,
-    "bleu": 48.166702527508484
+    "target_language": "ind_Latn",
+    "target_language_name": "Indonesian",
+    "speakers": "198996550",
+    "bleu": 73.29149877209336
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
-    "target_language": "deu_Latn",
-    "target_language_name": "German",
-    "speakers": 105000000,
-    "bleu": 47.56638188073429
+    "target_language": "ind_Latn",
+    "target_language_name": "Indonesian",
+    "speakers": "198996550",
+    "bleu": 71.2935146236652
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
     "original_language": "eng_Latn",
-    "target_language": "deu_Latn",
-    "target_language_name": "German",
-    "speakers": 105000000,
-    "bleu": 38.8670415108337
+    "target_language": "ind_Latn",
+    "target_language_name": "Indonesian",
+    "speakers": "198996550",
+    "bleu": 71.24329964015463
   },
   {
     "model": "meta-llama/llama-3.1-8b-instruct",
     "original_language": "eng_Latn",
-    "target_language": "deu_Latn",
-    "target_language_name": "German",
-    "speakers": 105000000,
-    "bleu": 32.2942935571844
+    "target_language": "ind_Latn",
+    "target_language_name": "Indonesian",
+    "speakers": "198996550",
+    "bleu": 68.73551514908719
   },
   {
     "model": "openai/gpt-4o-mini",
     "original_language": "eng_Latn",
-    "target_language": "fra_Latn",
-    "target_language_name": "French",
-    "speakers": 208157220,
-    "bleu": 47.70220301445618
+    "target_language": "pol_Latn",
+    "target_language_name": "Polish",
+    "speakers": "40200000",
+    "bleu": 65.22066652766671
   },
   {
     "model": "google/gemini-flash-1.5",
     "original_language": "eng_Latn",
-    "target_language": "fra_Latn",
-    "target_language_name": "French",
-    "speakers": 208157220,
-    "bleu": 49.50529382461407
+    "target_language": "pol_Latn",
+    "target_language_name": "Polish",
+    "speakers": "40200000",
+    "bleu": 64.9142026045634
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
-    "target_language": "fra_Latn",
-    "target_language_name": "French",
-    "speakers": 208157220,
-    "bleu": 50.55719906730571
+    "target_language": "pol_Latn",
+    "target_language_name": "Polish",
+    "speakers": "40200000",
+    "bleu": 62.0169794404058
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
     "original_language": "eng_Latn",
-    "target_language": "fra_Latn",
-    "target_language_name": "French",
-    "speakers": 208157220,
-    "bleu": 43.43766704709355
+    "target_language": "pol_Latn",
+    "target_language_name": "Polish",
+    "speakers": "40200000",
+    "bleu": 50.22137732799528
   },
   {
     "model": "meta-llama/llama-3.1-8b-instruct",
     "original_language": "eng_Latn",
-    "target_language": "fra_Latn",
-    "target_language_name": "French",
-    "speakers": 208157220,
-    "bleu": 37.38013101452594
+    "target_language": "pol_Latn",
+    "target_language_name": "Polish",
+    "speakers": "40200000",
+    "bleu": 54.39716369344653
   },
   {
     "model": "openai/gpt-4o-mini",
     "original_language": "eng_Latn",
-    "target_language": "spa_Latn",
-    "target_language_name": "Spanish",
-    "speakers": 485000000,
-    "bleu": 34.65606074843554
+    "target_language": "kas_Deva",
+    "target_language_name": "Kashmiri",
+    "speakers": "6900000",
+    "bleu": 22.853844625462184
   },
   {
     "model": "google/gemini-flash-1.5",
     "original_language": "eng_Latn",
-    "target_language": "spa_Latn",
-    "target_language_name": "Spanish",
-    "speakers": 485000000,
-    "bleu": 34.49205632717459
+    "target_language": "kas_Deva",
+    "target_language_name": "Kashmiri",
+    "speakers": "6900000",
+    "bleu": 1.6028583744267129
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
-    "target_language": "spa_Latn",
-    "target_language_name": "Spanish",
-    "speakers": 485000000,
-    "bleu": 34.58637890527096
+    "target_language": "kas_Deva",
+    "target_language_name": "Kashmiri",
+    "speakers": "6900000",
+    "bleu": 10.24928534626491
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
     "original_language": "eng_Latn",
-    "target_language": "spa_Latn",
-    "target_language_name": "Spanish",
-    "speakers": 485000000,
-    "bleu": 33.41419407814188
+    "target_language": "kas_Deva",
+    "target_language_name": "Kashmiri",
+    "speakers": "6900000",
+    "bleu": 18.289957619904254
   },
   {
     "model": "meta-llama/llama-3.1-8b-instruct",
     "original_language": "eng_Latn",
-    "target_language": "spa_Latn",
-    "target_language_name": "Spanish",
-    "speakers": 485000000,
-    "bleu": 29.470460185415075
+    "target_language": "kas_Deva",
+    "target_language_name": "Kashmiri",
+    "speakers": "6900000",
+    "bleu": 0.8669151440746464
   },
   {
     "model": "openai/gpt-4o-mini",
     "original_language": "eng_Latn",
-    "target_language": "cmn_Hans",
-    "target_language_name": "Mandarin",
-    "speakers": 1074000000,
-    "bleu": 0.7678283495493847
+    "target_language": "lin_Latn",
+    "target_language_name": "Lingala",
+    "speakers": "20000000",
+    "bleu": 50.873508850595044
   },
   {
     "model": "google/gemini-flash-1.5",
     "original_language": "eng_Latn",
-    "target_language": "cmn_Hans",
-    "target_language_name": "Mandarin",
-    "speakers": 1074000000,
-    "bleu": 0.3178534804335777
+    "target_language": "lin_Latn",
+    "target_language_name": "Lingala",
+    "speakers": "20000000",
+    "bleu": 6.943431977023627
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
-    "target_language": "cmn_Hans",
-    "target_language_name": "Mandarin",
-    "speakers": 1074000000,
-    "bleu": 0.8670958769249191
+    "target_language": "lin_Latn",
+    "target_language_name": "Lingala",
+    "speakers": "20000000",
+    "bleu": 45.048992005653
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
     "original_language": "eng_Latn",
-    "target_language": "cmn_Hans",
-    "target_language_name": "Mandarin",
-    "speakers": 1074000000,
-    "bleu": 0.6796400550094367
+    "target_language": "lin_Latn",
+    "target_language_name": "Lingala",
+    "speakers": "20000000",
+    "bleu": 2.9809864732757902
   },
   {
     "model": "meta-llama/llama-3.1-8b-instruct",
     "original_language": "eng_Latn",
-    "target_language": "cmn_Hans",
-    "target_language_name": "Mandarin",
-    "speakers": 1074000000,
-    "bleu": 0.027154305073795664
+    "target_language": "lin_Latn",
+    "target_language_name": "Lingala",
+    "speakers": "20000000",
+    "bleu": 0.5682271000080301
   },
   {
     "model": "openai/gpt-4o-mini",
     "original_language": "eng_Latn",
-    "target_language": "cmn_Hant",
-    "target_language_name": "Mandarin",
-    "speakers": 1074000000,
-    "bleu": 2.175042632198715
+    "target_language": "bjn_Latn",
+    "target_language_name": "Banjar",
+    "speakers": "3500000",
+    "bleu": 50.02000892713302
   },
   {
     "model": "google/gemini-flash-1.5",
     "original_language": "eng_Latn",
-    "target_language": "cmn_Hant",
-    "target_language_name": "Mandarin",
-    "speakers": 1074000000,
-    "bleu": 0.3480387797702917
+    "target_language": "bjn_Latn",
+    "target_language_name": "Banjar",
+    "speakers": "3500000",
+    "bleu": 5.960932185623333
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
-    "target_language": "cmn_Hant",
-    "target_language_name": "Mandarin",
-    "speakers": 1074000000,
-    "bleu": 3.8196828383724886
+    "target_language": "bjn_Latn",
+    "target_language_name": "Banjar",
+    "speakers": "3500000",
+    "bleu": 46.23236901760108
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
     "original_language": "eng_Latn",
-    "target_language": "cmn_Hant",
-    "target_language_name": "Mandarin",
-    "speakers": 1074000000,
-    "bleu": 2.1029807575075994
+    "target_language": "bjn_Latn",
+    "target_language_name": "Banjar",
+    "speakers": "3500000",
+    "bleu": 21.478973248564643
   },
   {
     "model": "meta-llama/llama-3.1-8b-instruct",
     "original_language": "eng_Latn",
-    "target_language": "cmn_Hant",
-    "target_language_name": "Mandarin",
-    "speakers": 1074000000,
-    "bleu": 0.017008567925605175
+    "target_language": "bjn_Latn",
+    "target_language_name": "Banjar",
+    "speakers": "3500000",
+    "bleu": 22.371002216375594
+  },
+  {
+    "model": "openai/gpt-4o-mini",
+    "original_language": "eng_Latn",
+    "target_language": "bho_Deva",
+    "target_language_name": "Bhojpuri",
+    "speakers": "52200000",
+    "bleu": 43.46871320382143
+  },
+  {
+    "model": "google/gemini-flash-1.5",
+    "original_language": "eng_Latn",
+    "target_language": "bho_Deva",
+    "target_language_name": "Bhojpuri",
+    "speakers": "52200000",
+    "bleu": 18.253876118905147
+  },
+  {
+    "model": "anthropic/claude-3.5-sonnet",
+    "original_language": "eng_Latn",
+    "target_language": "bho_Deva",
+    "target_language_name": "Bhojpuri",
+    "speakers": "52200000",
+    "bleu": 23.447356116551486
+  },
+  {
+    "model": "qwen/qwen-2.5-72b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "bho_Deva",
+    "target_language_name": "Bhojpuri",
+    "speakers": "52200000",
+    "bleu": 29.81946758376717
+  },
+  {
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "bho_Deva",
+    "target_language_name": "Bhojpuri",
+    "speakers": "52200000",
+    "bleu": 3.2486895985868474
+  },
+  {
+    "model": "openai/gpt-4o-mini",
+    "original_language": "eng_Latn",
+    "target_language": "ces_Latn",
+    "target_language_name": "Czech",
+    "speakers": "10700000",
+    "bleu": 69.01583822081993
+  },
+  {
+    "model": "google/gemini-flash-1.5",
+    "original_language": "eng_Latn",
+    "target_language": "ces_Latn",
+    "target_language_name": "Czech",
+    "speakers": "10700000",
+    "bleu": 69.4260447999661
+  },
+  {
+    "model": "anthropic/claude-3.5-sonnet",
+    "original_language": "eng_Latn",
+    "target_language": "ces_Latn",
+    "target_language_name": "Czech",
+    "speakers": "10700000",
+    "bleu": 68.6109083634317
+  },
+  {
+    "model": "qwen/qwen-2.5-72b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "ces_Latn",
+    "target_language_name": "Czech",
+    "speakers": "10700000",
+    "bleu": 59.72501366200287
+  },
+  {
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "ces_Latn",
+    "target_language_name": "Czech",
+    "speakers": "10700000",
+    "bleu": 60.25088578142904
   }
 ]

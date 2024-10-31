@@ -1,4 +1,6 @@
 floresp-*
+LanguageCodes.tab
+ScriptCodes.csv
 .cache
 .env
 

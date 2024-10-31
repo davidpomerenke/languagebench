@@ -33,6 +33,8 @@
         import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
 
         async function init() {
+            const summary = await fetch('results_summary.json');
+
             const response = await fetch('results.json');
             const results = await response.json();
 
@@ -70,6 +72,11 @@
 
                 const languageData = results.filter(r => r.target_language_name === language);
 
+                const descriptor = code => {
+                    let [org, model] = code.split("/")
+                    return model.split("-")[0]
+                }
+
                 // Create plot using the more idiomatic Observable Plot approach
                 const plot = Plot.plot({
                     width: 400,
@@ -81,7 +88,7 @@
                     },
                     marks: [
                         Plot.barY(languageData, {
-                            x: d => d.model.split('/')[0],
+                            x: d => descriptor(d.model),
                             y: "bleu"
                         })
                     ]

@@ -1,0 +1,4 @@
+floresp-v2.0-rc.3: https://github.com/openlanguagedata/flores
+languages.csv: generated from https://query.wikidata.org/ using the languages.rq query
+LanguageCodes.tab: https://www.ethnologue.com/
+ScriptCodes.csv: https://www.unicode.org/iso15924/iso15924-codes.html

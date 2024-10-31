@@ -1,0 +1,34 @@
+[
+  {
+    "target_language_name":"Banjar",
+    "bleu":29.2126571191
+  },
+  {
+    "target_language_name":"Bhojpuri",
+    "bleu":23.6476205243
+  },
+  {
+    "target_language_name":"Czech",
+    "bleu":65.4057381655
+  },
+  {
+    "target_language_name":"Icelandic",
+    "bleu":49.5636570439
+  },
+  {
+    "target_language_name":"Indonesian",
+    "bleu":72.3220779959
+  },
+  {
+    "target_language_name":"Kashmiri",
+    "bleu":10.772572222
+  },
+  {
+    "target_language_name":"Lingala",
+    "bleu":21.2830292813
+  },
+  {
+    "target_language_name":"Polish",
+    "bleu":59.3540779188
+  }
+]
