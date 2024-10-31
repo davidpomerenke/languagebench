@@ -22,6 +22,8 @@
             margin: 0;
         }
     </style>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22black%22>🌍</text></svg>">
 </head>
 
 <body>
@@ -37,24 +39,44 @@
 
             const summary = await fetch('results_summary.json');
             const summaryData = await summary.json();
+            const formatTitle = d => d.target_language_name + "\n" + parseInt(d.speakers / 1_000_00) / 10 + "M speakers\nBLEU score: " + d.bleu.toFixed(1)
 
             // Create summary plot
             const summaryPlot = Plot.plot({
                 width: 800,
                 height: 400,
-                x: { label: "Number of speakers" },
+                marginBottom: 100,
+                x: { label: "Number of speakers", axis: null },
                 y: { label: "BLEU Score (average across models)" },
                 marks: [
+
                     Plot.rectY(summaryData, Plot.stackX({
                         x: "speakers",
                         order: "bleu",
                         reverse: true,
                         y2: "bleu", // y2 to avoid stacking by y
-                        title: (d) => `${d.target_language_name}\n${d.bleu.toFixed(1)}`,
-                        insetLeft: 0.2,
-                        insetRight: 0.2
+                        title: formatTitle,
+                        tip: true,
                     })),
-                    Plot.ruleY([0])
+                    Plot.rectY(summaryData, Plot.pointerX(Plot.stackX({
+                        x: "speakers",
+                        order: "bleu",
+                        reverse: true,
+                        y2: "bleu", // y2 to avoid stacking by y
+                        fill: "grey",
+                    }))),
+                    Plot.text(summaryData, Plot.stackX({
+                        filter: (d) => d.speakers > 1_000_000,
+                        x: "speakers",
+                        y2: "bleu",
+                        order: "bleu",
+                        reverse: true,
+                        text: "target_language_name",
+                        frameAnchor: "bottom",
+                        textAnchor: "end",
+                        dy: 10,
+                        rotate: 270
+                    }))
                 ]
             });
 

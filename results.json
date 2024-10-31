@@ -318,5 +318,45 @@
     "target_language_name": "Czech",
     "speakers": 10700000,
     "bleu": 60.25088578142904
+  },
+  {
+    "model": "openai/gpt-4o-mini",
+    "original_language": "eng_Latn",
+    "target_language": "sag_Latn",
+    "target_language_name": "Sango",
+    "speakers": 4600000,
+    "bleu": 2.2745290486034833
+  },
+  {
+    "model": "google/gemini-flash-1.5",
+    "original_language": "eng_Latn",
+    "target_language": "sag_Latn",
+    "target_language_name": "Sango",
+    "speakers": 4600000,
+    "bleu": 5.131617554505083
+  },
+  {
+    "model": "anthropic/claude-3.5-sonnet",
+    "original_language": "eng_Latn",
+    "target_language": "sag_Latn",
+    "target_language_name": "Sango",
+    "speakers": 4600000,
+    "bleu": 22.265544703760973
+  },
+  {
+    "model": "qwen/qwen-2.5-72b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "sag_Latn",
+    "target_language_name": "Sango",
+    "speakers": 4600000,
+    "bleu": 1.1524444505654738
+  },
+  {
+    "model": "meta-llama/llama-3.1-8b-instruct",
+    "original_language": "eng_Latn",
+    "target_language": "sag_Latn",
+    "target_language_name": "Sango",
+    "speakers": 4600000,
+    "bleu": 1.437953401517244
   }
 ]

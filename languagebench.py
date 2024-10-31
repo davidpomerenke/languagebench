@@ -25,7 +25,7 @@ original_language = "eng_Latn"
 dataset = "floresp-v2.0-rc.3/dev"
 random.seed(42)
 target_languages = [f.split(".")[1] for f in os.listdir(dataset)]
-target_languages = random.choices(target_languages, k=8)
+target_languages = random.choices(target_languages, k=9)
 # target_languages = [
 #     "eng_Latn",
 #     "deu_Latn",

@@ -38,5 +38,10 @@
     "target_language_name":"Polish",
     "bleu":59.3540779188,
     "speakers":40200000.0
+  },
+  {
+    "target_language_name":"Sango",
+    "bleu":6.4524178318,
+    "speakers":4600000.0
   }
 ]
