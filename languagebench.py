@@ -25,7 +25,7 @@ original_language = "eng_Latn"
 dataset = "floresp-v2.0-rc.3/dev"
 random.seed(42)
 target_languages = [f.split(".")[1] for f in os.listdir(dataset)]
-target_languages = random.choices(target_languages, k=10)
+target_languages = random.choices(target_languages, k=8)
 # target_languages = [
 #     "eng_Latn",
 #     "deu_Latn",
@@ -124,7 +124,7 @@ async def main():
                     "original_language": original_language,
                     "target_language": target_language,
                     "target_language_name": stats["name"],
-                    "speakers": stats.get("maxSpeakers"),
+                    "speakers": int(stats.get("maxSpeakers", 0)),
                     "bleu": metrics["score"],
                 }
             )
@@ -132,7 +132,7 @@ async def main():
                 json.dump(results, f, indent=2, ensure_ascii=False)
             # compute mean bleu for each target language
             pd.DataFrame(results).groupby("target_language_name").agg(
-                {"bleu": "mean"}
+                {"bleu": "mean", "speakers": "mean"}
             ).reset_index().to_json("results_summary.json", indent=2, orient="records")
 
 

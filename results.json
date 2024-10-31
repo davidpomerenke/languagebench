@@ -4,7 +4,7 @@
     "original_language": "eng_Latn",
     "target_language": "isl_Latn",
     "target_language_name": "Icelandic",
-    "speakers": "358000",
+    "speakers": 358000,
     "bleu": 61.64765463591684
   },
   {
@@ -12,7 +12,7 @@
     "original_language": "eng_Latn",
     "target_language": "isl_Latn",
     "target_language_name": "Icelandic",
-    "speakers": "358000",
+    "speakers": 358000,
     "bleu": 58.800114937175536
   },
   {
@@ -20,7 +20,7 @@
     "original_language": "eng_Latn",
     "target_language": "isl_Latn",
     "target_language_name": "Icelandic",
-    "speakers": "358000",
+    "speakers": 358000,
     "bleu": 63.29310272337262
   },
   {
@@ -28,7 +28,7 @@
     "original_language": "eng_Latn",
     "target_language": "isl_Latn",
     "target_language_name": "Icelandic",
-    "speakers": "358000",
+    "speakers": 358000,
     "bleu": 28.81229691079592
   },
   {
@@ -36,7 +36,7 @@
     "original_language": "eng_Latn",
     "target_language": "isl_Latn",
     "target_language_name": "Icelandic",
-    "speakers": "358000",
+    "speakers": 358000,
     "bleu": 35.26511601216665
   },
   {
@@ -44,7 +44,7 @@
     "original_language": "eng_Latn",
     "target_language": "ind_Latn",
     "target_language_name": "Indonesian",
-    "speakers": "198996550",
+    "speakers": 198996550,
     "bleu": 77.046561794683
   },
   {
@@ -52,7 +52,7 @@
     "original_language": "eng_Latn",
     "target_language": "ind_Latn",
     "target_language_name": "Indonesian",
-    "speakers": "198996550",
+    "speakers": 198996550,
     "bleu": 73.29149877209336
   },
   {
@@ -60,7 +60,7 @@
     "original_language": "eng_Latn",
     "target_language": "ind_Latn",
     "target_language_name": "Indonesian",
-    "speakers": "198996550",
+    "speakers": 198996550,
     "bleu": 71.2935146236652
   },
   {
@@ -68,7 +68,7 @@
     "original_language": "eng_Latn",
     "target_language": "ind_Latn",
     "target_language_name": "Indonesian",
-    "speakers": "198996550",
+    "speakers": 198996550,
     "bleu": 71.24329964015463
   },
   {
@@ -76,7 +76,7 @@
     "original_language": "eng_Latn",
     "target_language": "ind_Latn",
     "target_language_name": "Indonesian",
-    "speakers": "198996550",
+    "speakers": 198996550,
     "bleu": 68.73551514908719
   },
   {
@@ -84,7 +84,7 @@
     "original_language": "eng_Latn",
     "target_language": "pol_Latn",
     "target_language_name": "Polish",
-    "speakers": "40200000",
+    "speakers": 40200000,
     "bleu": 65.22066652766671
   },
   {
@@ -92,7 +92,7 @@
     "original_language": "eng_Latn",
     "target_language": "pol_Latn",
     "target_language_name": "Polish",
-    "speakers": "40200000",
+    "speakers": 40200000,
     "bleu": 64.9142026045634
   },
   {
@@ -100,7 +100,7 @@
     "original_language": "eng_Latn",
     "target_language": "pol_Latn",
     "target_language_name": "Polish",
-    "speakers": "40200000",
+    "speakers": 40200000,
     "bleu": 62.0169794404058
   },
   {
@@ -108,7 +108,7 @@
     "original_language": "eng_Latn",
     "target_language": "pol_Latn",
     "target_language_name": "Polish",
-    "speakers": "40200000",
+    "speakers": 40200000,
     "bleu": 50.22137732799528
   },
   {
@@ -116,7 +116,7 @@
     "original_language": "eng_Latn",
     "target_language": "pol_Latn",
     "target_language_name": "Polish",
-    "speakers": "40200000",
+    "speakers": 40200000,
     "bleu": 54.39716369344653
   },
   {
@@ -124,7 +124,7 @@
     "original_language": "eng_Latn",
     "target_language": "kas_Deva",
     "target_language_name": "Kashmiri",
-    "speakers": "6900000",
+    "speakers": 6900000,
     "bleu": 22.853844625462184
   },
   {
@@ -132,7 +132,7 @@
     "original_language": "eng_Latn",
     "target_language": "kas_Deva",
     "target_language_name": "Kashmiri",
-    "speakers": "6900000",
+    "speakers": 6900000,
     "bleu": 1.6028583744267129
   },
   {
@@ -140,7 +140,7 @@
     "original_language": "eng_Latn",
     "target_language": "kas_Deva",
     "target_language_name": "Kashmiri",
-    "speakers": "6900000",
+    "speakers": 6900000,
     "bleu": 10.24928534626491
   },
   {
@@ -148,7 +148,7 @@
     "original_language": "eng_Latn",
     "target_language": "kas_Deva",
     "target_language_name": "Kashmiri",
-    "speakers": "6900000",
+    "speakers": 6900000,
     "bleu": 18.289957619904254
   },
   {
@@ -156,7 +156,7 @@
     "original_language": "eng_Latn",
     "target_language": "kas_Deva",
     "target_language_name": "Kashmiri",
-    "speakers": "6900000",
+    "speakers": 6900000,
     "bleu": 0.8669151440746464
   },
   {
@@ -164,7 +164,7 @@
     "original_language": "eng_Latn",
     "target_language": "lin_Latn",
     "target_language_name": "Lingala",
-    "speakers": "20000000",
+    "speakers": 20000000,
     "bleu": 50.873508850595044
   },
   {
@@ -172,7 +172,7 @@
     "original_language": "eng_Latn",
     "target_language": "lin_Latn",
     "target_language_name": "Lingala",
-    "speakers": "20000000",
+    "speakers": 20000000,
     "bleu": 6.943431977023627
   },
   {
@@ -180,7 +180,7 @@
     "original_language": "eng_Latn",
     "target_language": "lin_Latn",
     "target_language_name": "Lingala",
-    "speakers": "20000000",
+    "speakers": 20000000,
     "bleu": 45.048992005653
   },
   {
@@ -188,7 +188,7 @@
     "original_language": "eng_Latn",
     "target_language": "lin_Latn",
     "target_language_name": "Lingala",
-    "speakers": "20000000",
+    "speakers": 20000000,
     "bleu": 2.9809864732757902
   },
   {
@@ -196,7 +196,7 @@
     "original_language": "eng_Latn",
     "target_language": "lin_Latn",
     "target_language_name": "Lingala",
-    "speakers": "20000000",
+    "speakers": 20000000,
     "bleu": 0.5682271000080301
   },
   {
@@ -204,7 +204,7 @@
     "original_language": "eng_Latn",
     "target_language": "bjn_Latn",
     "target_language_name": "Banjar",
-    "speakers": "3500000",
+    "speakers": 3500000,
     "bleu": 50.02000892713302
   },
   {
@@ -212,7 +212,7 @@
     "original_language": "eng_Latn",
     "target_language": "bjn_Latn",
     "target_language_name": "Banjar",
-    "speakers": "3500000",
+    "speakers": 3500000,
     "bleu": 5.960932185623333
   },
   {
@@ -220,7 +220,7 @@
     "original_language": "eng_Latn",
     "target_language": "bjn_Latn",
     "target_language_name": "Banjar",
-    "speakers": "3500000",
+    "speakers": 3500000,
     "bleu": 46.23236901760108
   },
   {
@@ -228,7 +228,7 @@
     "original_language": "eng_Latn",
     "target_language": "bjn_Latn",
     "target_language_name": "Banjar",
-    "speakers": "3500000",
+    "speakers": 3500000,
     "bleu": 21.478973248564643
   },
   {
@@ -236,7 +236,7 @@
     "original_language": "eng_Latn",
     "target_language": "bjn_Latn",
     "target_language_name": "Banjar",
-    "speakers": "3500000",
+    "speakers": 3500000,
     "bleu": 22.371002216375594
   },
   {
@@ -244,7 +244,7 @@
     "original_language": "eng_Latn",
     "target_language": "bho_Deva",
     "target_language_name": "Bhojpuri",
-    "speakers": "52200000",
+    "speakers": 52200000,
     "bleu": 43.46871320382143
   },
   {
@@ -252,7 +252,7 @@
     "original_language": "eng_Latn",
     "target_language": "bho_Deva",
     "target_language_name": "Bhojpuri",
-    "speakers": "52200000",
+    "speakers": 52200000,
     "bleu": 18.253876118905147
   },
   {
@@ -260,7 +260,7 @@
     "original_language": "eng_Latn",
     "target_language": "bho_Deva",
     "target_language_name": "Bhojpuri",
-    "speakers": "52200000",
+    "speakers": 52200000,
     "bleu": 23.447356116551486
   },
   {
@@ -268,7 +268,7 @@
     "original_language": "eng_Latn",
     "target_language": "bho_Deva",
     "target_language_name": "Bhojpuri",
-    "speakers": "52200000",
+    "speakers": 52200000,
     "bleu": 29.81946758376717
   },
   {
@@ -276,7 +276,7 @@
     "original_language": "eng_Latn",
     "target_language": "bho_Deva",
     "target_language_name": "Bhojpuri",
-    "speakers": "52200000",
+    "speakers": 52200000,
     "bleu": 3.2486895985868474
   },
   {
@@ -284,7 +284,7 @@
     "original_language": "eng_Latn",
     "target_language": "ces_Latn",
     "target_language_name": "Czech",
-    "speakers": "10700000",
+    "speakers": 10700000,
     "bleu": 69.01583822081993
   },
   {
@@ -292,7 +292,7 @@
     "original_language": "eng_Latn",
     "target_language": "ces_Latn",
     "target_language_name": "Czech",
-    "speakers": "10700000",
+    "speakers": 10700000,
     "bleu": 69.4260447999661
   },
   {
@@ -300,7 +300,7 @@
     "original_language": "eng_Latn",
     "target_language": "ces_Latn",
     "target_language_name": "Czech",
-    "speakers": "10700000",
+    "speakers": 10700000,
     "bleu": 68.6109083634317
   },
   {
@@ -308,7 +308,7 @@
     "original_language": "eng_Latn",
     "target_language": "ces_Latn",
     "target_language_name": "Czech",
-    "speakers": "10700000",
+    "speakers": 10700000,
     "bleu": 59.72501366200287
   },
   {
@@ -316,7 +316,7 @@
     "original_language": "eng_Latn",
     "target_language": "ces_Latn",
     "target_language_name": "Czech",
-    "speakers": "10700000",
+    "speakers": 10700000,
     "bleu": 60.25088578142904
   }
 ]
