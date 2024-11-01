@@ -6,49 +6,59 @@ from os import getenv
 
 import evaluate
 import pandas as pd
+import requests
+from aiolimiter import AsyncLimiter
 from dotenv import load_dotenv
 from joblib.memory import Memory
 from openai import AsyncOpenAI
 from tqdm.asyncio import tqdm_asyncio
-from tqdm.auto import tqdm
 
 # config
 models = [
     "openai/gpt-4o-mini",
-    "google/gemini-flash-1.5",
     "anthropic/claude-3.5-sonnet",
-    "qwen/qwen-2.5-72b-instruct",
-    "meta-llama/llama-3.1-8b-instruct",
+    "meta-llama/llama-3.1-70b-instruct",  # lots of slow repetitions for LRLs
+    "mistralai/mistral-nemo",
+    "google/gemini-flash-1.5",  # very fast
+    "qwen/qwen-2.5-72b-instruct",  # somewhat slow
 ]
-# models = ["gpt-4o-mini"]
 original_language = "eng_Latn"
 dataset = "floresp-v2.0-rc.3/dev"
 random.seed(42)
 target_languages = [f.split(".")[1] for f in os.listdir(dataset)]
-target_languages = random.choices(target_languages, k=9)
-# target_languages = [
-#     "eng_Latn",
-#     "deu_Latn",
-#     "fra_Latn",
-#     "spa_Latn",
-#     "cmn_Hans",
-#     "cmn_Hant",
-# ]
+target_languages = random.choices(target_languages, k=15) + ["deu_Latn"]
 
 # setup
 load_dotenv()
 client = AsyncOpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key=getenv("OPENROUTER_API_KEY"),
-    # api_key=getenv("OPENAI_API_KEY"),
 )
 cache = Memory(location=".cache", verbose=0).cache
 bleu = evaluate.load("sacrebleu")
+rate_limit = AsyncLimiter(max_rate=2, time_period=0.1)
+
+
+def check_rate_limit():
+    print(
+        requests.get(
+            "https://openrouter.ai/api/v1/auth/key",
+            headers={"Authorization": f"Bearer {getenv('OPENROUTER_API_KEY')}"},
+        ).json()
+    )
+    print(
+        requests.get(
+            "https://openrouter.ai/api/v1/models",
+            headers={"Authorization": f"Bearer {getenv('OPENROUTER_API_KEY')}"},
+        ).json()
+    )
 
 
 @cache
 async def complete(**kwargs):
-    return await client.chat.completions.create(**kwargs)
+    async with rate_limit:
+        response = await client.chat.completions.create(**kwargs)
+    return response
 
 
 def reorder(language_name):
@@ -70,10 +80,11 @@ async def translate(model, target_language, target_script, sentence):
         messages=[
             {
                 "role": "user",
-                "content": f"Translate the following text to {target_language} (script: {target_script}):\n\n{sentence}",
+                "content": f"Translate the following text to the {target_language} language; use the {target_script} script; reply only with the translation:\n\n{sentence}",
             }
         ],
-        temperature=0,
+        temperature=0.1,
+        max_tokens=1024,
     )
     return reply.choices[0].message.content
 
@@ -103,15 +114,11 @@ async def main():
         for model in models:
             stats = get_language_stats(target_language)
             print(f"{model} -> {stats['name']}")
-            # predictions = [
-            #     await translate(model, stats["name"], stats["script"], sentence)
-            #     for sentence in tqdm(original_sentences[:n])
-            # ]
             predictions = [
                 translate(model, stats["name"], stats["script"], sentence)
-                for sentence in tqdm(original_sentences[:n])
+                for sentence in original_sentences[:n]
             ]
-            predictions = await tqdm_asyncio.gather(*predictions)
+            predictions = await tqdm_asyncio.gather(*predictions, miniters=1)
             metrics = bleu.compute(
                 predictions=predictions,
                 references=target_sentences[:n],
@@ -130,11 +137,11 @@ async def main():
             )
             with open("results.json", "w") as f:
                 json.dump(results, f, indent=2, ensure_ascii=False)
-            # compute mean bleu for each target language
             pd.DataFrame(results).groupby("target_language_name").agg(
                 {"bleu": "mean", "speakers": "mean"}
             ).reset_index().to_json("results_summary.json", indent=2, orient="records")
 
 
 if __name__ == "__main__":
+    # check_rate_limit()
     asyncio.run(main())

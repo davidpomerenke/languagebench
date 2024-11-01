@@ -1,47 +1,77 @@
 [
   {
+    "target_language_name":" Ayacucho Quechua",
+    "bleu":23.9326690957,
+    "speakers":918200.0
+  },
+  {
+    "target_language_name":" Standard German",
+    "bleu":73.5003329505,
+    "speakers":105000000.0
+  },
+  {
+    "target_language_name":" Tosk Albanian",
+    "bleu":58.9349506058,
+    "speakers":3000000.0
+  },
+  {
+    "target_language_name":"Bali (Indonesia)",
+    "bleu":51.6096890651,
+    "speakers":4000000.0
+  },
+  {
     "target_language_name":"Banjar",
-    "bleu":29.2126571191,
+    "bleu":51.5227181365,
     "speakers":3500000.0
   },
   {
     "target_language_name":"Bhojpuri",
-    "bleu":23.6476205243,
+    "bleu":39.273082579,
     "speakers":52200000.0
   },
   {
     "target_language_name":"Czech",
-    "bleu":65.4057381655,
+    "bleu":66.754874801,
     "speakers":10700000.0
   },
   {
     "target_language_name":"Icelandic",
-    "bleu":49.5636570439,
+    "bleu":56.0067334267,
     "speakers":358000.0
   },
   {
     "target_language_name":"Indonesian",
-    "bleu":72.3220779959,
+    "bleu":73.5262667867,
     "speakers":198996550.0
   },
   {
     "target_language_name":"Kashmiri",
-    "bleu":10.772572222,
+    "bleu":21.7518148776,
     "speakers":6900000.0
   },
   {
     "target_language_name":"Lingala",
-    "bleu":21.2830292813,
+    "bleu":33.4938226708,
     "speakers":20000000.0
   },
   {
+    "target_language_name":"Nuer",
+    "bleu":5.2909507789,
+    "speakers":900000.0
+  },
+  {
     "target_language_name":"Polish",
-    "bleu":59.3540779188,
+    "bleu":63.1176806825,
     "speakers":40200000.0
   },
   {
     "target_language_name":"Sango",
-    "bleu":6.4524178318,
+    "bleu":19.6608440732,
     "speakers":4600000.0
+  },
+  {
+    "target_language_name":"Serbian",
+    "bleu":64.8198504575,
+    "speakers":9000000.0
   }
 ]

@@ -66,7 +66,7 @@
                         fill: "grey",
                     }))),
                     Plot.text(summaryData, Plot.stackX({
-                        filter: (d) => d.speakers > 1_000_000,
+                        filter: (d) => d.speakers > 5_000_000,
                         x: "speakers",
                         y2: "bleu",
                         order: "bleu",
@@ -75,7 +75,7 @@
                         frameAnchor: "bottom",
                         textAnchor: "end",
                         dy: 10,
-                        rotate: 270
+                        rotate: 270,
                     }))
                 ]
             });
