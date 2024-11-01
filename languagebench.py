@@ -19,14 +19,15 @@ models = [
     "anthropic/claude-3.5-sonnet",
     "meta-llama/llama-3.1-70b-instruct",  # lots of slow repetitions for LRLs
     "mistralai/mistral-nemo",
-    "google/gemini-flash-1.5",  # very fast
+    # "google/gemini-flash-1.5",  # very fast
     "qwen/qwen-2.5-72b-instruct",  # somewhat slow
 ]
+fast_model = "anthropic/claude-3.5-sonnet"
 original_language = "eng_Latn"
 dataset = "floresp-v2.0-rc.3/dev"
 random.seed(42)
 target_languages = [f.split(".")[1] for f in os.listdir(dataset)]
-target_languages = random.choices(target_languages, k=15) + ["deu_Latn"]
+detailed_target_languages = random.choices(target_languages, k=5)
 
 # setup
 load_dotenv()
@@ -36,7 +37,7 @@ client = AsyncOpenAI(
 )
 cache = Memory(location=".cache", verbose=0).cache
 bleu = evaluate.load("sacrebleu")
-rate_limit = AsyncLimiter(max_rate=2, time_period=0.1)
+rate_limit = AsyncLimiter(max_rate=15, time_period=1)
 
 
 def check_rate_limit():
@@ -46,18 +47,20 @@ def check_rate_limit():
             headers={"Authorization": f"Bearer {getenv('OPENROUTER_API_KEY')}"},
         ).json()
     )
-    print(
-        requests.get(
-            "https://openrouter.ai/api/v1/models",
-            headers={"Authorization": f"Bearer {getenv('OPENROUTER_API_KEY')}"},
-        ).json()
-    )
+    models = requests.get(
+        "https://openrouter.ai/api/v1/models",
+        headers={"Authorization": f"Bearer {getenv('OPENROUTER_API_KEY')}"},
+    ).json()["data"]
+    model = next((m for m in models if m["id"] == "google/gemini-flash-1.5"), None)
+    print(model)
 
 
 @cache
 async def complete(**kwargs):
     async with rate_limit:
         response = await client.chat.completions.create(**kwargs)
+    if not response.choices:
+        raise Exception(response)
     return response
 
 
@@ -83,14 +86,15 @@ async def translate(model, target_language, target_script, sentence):
                 "content": f"Translate the following text to the {target_language} language; use the {target_script} script; reply only with the translation:\n\n{sentence}",
             }
         ],
-        temperature=0.1,
+        temperature=0,
         max_tokens=1024,
     )
     return reply.choices[0].message.content
 
 
 def get_language_stats(language_code):
-    lang, script = language_code.split("_")
+    lang, script = language_code.split("_", 1)
+    script = script.split("_", 1)[0]
     stats = language_stats[language_stats["iso639_3"] == lang]
     if not stats.empty:
         stats = stats.iloc[0].to_dict()
@@ -99,7 +103,12 @@ def get_language_stats(language_code):
     stats["script"] = script_names[script_names["Code"] == script]["English Name"].iloc[
         0
     ]
-    stats["name"] = language_names[language_names["LangID"] == lang]["Name"].iloc[0]
+    name_series = language_names[language_names["LangID"] == lang]["Name"]
+    stats["name"] = (
+        name_series.iloc[0]
+        if not name_series.empty
+        else stats.get("itemLabel_en") or stats.get("itemLabel", lang)
+    )
     return stats
 
 
@@ -112,6 +121,8 @@ async def main():
             continue
         target_sentences = open(f"{dataset}/dev.{target_language}").readlines()
         for model in models:
+            if model != fast_model and target_language not in detailed_target_languages:
+                continue
             stats = get_language_stats(target_language)
             print(f"{model} -> {stats['name']}")
             predictions = [

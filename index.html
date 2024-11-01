@@ -39,6 +39,7 @@
 
             const summary = await fetch('results_summary.json');
             const summaryData = await summary.json();
+            // Format captions
             const formatTitle = d => d.target_language_name + "\n" + parseInt(d.speakers / 1_000_00) / 10 + "M speakers\nBLEU score: " + d.bleu.toFixed(1)
 
             // Create summary plot
@@ -48,8 +49,8 @@
                 marginBottom: 100,
                 x: { label: "Number of speakers", axis: null },
                 y: { label: "BLEU Score (average across models)" },
+                // color: { scheme: "BrBG" },
                 marks: [
-
                     Plot.rectY(summaryData, Plot.stackX({
                         x: "speakers",
                         order: "bleu",
@@ -57,6 +58,7 @@
                         y2: "bleu", // y2 to avoid stacking by y
                         title: formatTitle,
                         tip: true,
+                        // fill: d => -d.bleu
                     })),
                     Plot.rectY(summaryData, Plot.pointerX(Plot.stackX({
                         x: "speakers",
@@ -66,7 +68,6 @@
                         fill: "grey",
                     }))),
                     Plot.text(summaryData, Plot.stackX({
-                        filter: (d) => d.speakers > 5_000_000,
                         x: "speakers",
                         y2: "bleu",
                         order: "bleu",
@@ -76,6 +77,7 @@
                         textAnchor: "end",
                         dy: 10,
                         rotate: 270,
+                        opacity: (d) => d.speakers > 50_000_000 ? 1 : 0,
                     }))
                 ]
             });
@@ -100,7 +102,7 @@
                 .map(([lang]) => lang);
 
 
-
+            // Section for each language
             languages.forEach(language => {
                 const headerDiv = document.createElement('div');
                 headerDiv.className = 'language-header';
@@ -125,24 +127,28 @@
                     return model.split("-")[0]
                 }
 
-                // Create plot using the more idiomatic Observable Plot approach
-                const plot = Plot.plot({
-                    width: 400,
-                    height: 200,
-                    margin: 30,
-                    y: {
-                        domain: [0, 100],
-                        label: "BLEU"
-                    },
-                    marks: [
-                        Plot.barY(languageData, {
-                            x: d => descriptor(d.model),
-                            y: "bleu"
-                        })
-                    ]
-                });
+                // Plot for how well the models perform on this language
+                if (languageData.length > 2) {
+                    console.log(languageData);
+                    const plot = Plot.plot({
+                        width: 400,
+                        height: 200,
+                        margin: 30,
+                        y: {
+                            domain: [0, 100],
+                            label: "BLEU"
+                        },
+                        marks: [
+                            Plot.barY(languageData, {
+                                x: d => descriptor(d.model),
+                                y: "bleu"
+                            })
+                        ]
+                    });
+                    chartsDiv.appendChild(plot);
+                }
 
-                chartsDiv.appendChild(plot);
+
             });
         }
 
