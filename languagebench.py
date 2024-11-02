@@ -37,9 +37,23 @@ client = AsyncOpenAI(
 )
 cache = Memory(location=".cache", verbose=0).cache
 bleu = evaluate.load("sacrebleu")
+bertscore = evaluate.load("bertscore")
 rate_limit = AsyncLimiter(max_rate=15, time_period=1)
 
 
+def reorder(language_name):
+    if "," in language_name and "(" not in language_name:
+        return language_name.split(",")[1] + " " + language_name.split(",")[0]
+    return language_name
+
+
+language_names = pd.read_csv("LanguageCodes.tab", sep="\t")
+language_names["Name"] = language_names["Name"].apply(reorder).str.strip()
+language_stats = pd.read_csv("languages.tsv", sep="\t")
+script_names = pd.read_csv("ScriptCodes.csv")
+
+
+# utils
 def check_rate_limit():
     print(
         requests.get(
@@ -62,18 +76,6 @@ async def complete(**kwargs):
     if not response.choices:
         raise Exception(response)
     return response
-
-
-def reorder(language_name):
-    if "," in language_name and "(" not in language_name:
-        return language_name.split(",")[1] + " " + language_name.split(",")[0]
-    return language_name
-
-
-language_names = pd.read_csv("LanguageCodes.tab", sep="\t")
-language_names["Name"] = language_names["Name"].apply(reorder)
-language_stats = pd.read_csv("languages.tsv", sep="\t")
-script_names = pd.read_csv("ScriptCodes.csv")
 
 
 @cache
@@ -112,13 +114,16 @@ def get_language_stats(language_code):
     return stats
 
 
+def mean(l):
+    return sum(l) / len(l)
+
+
+# evaluation!
 async def main():
     n = 30
     results = []
     original_sentences = open(f"{dataset}/dev.{original_language}").readlines()
     for target_language in target_languages:
-        if target_language == original_language:
-            continue
         target_sentences = open(f"{dataset}/dev.{target_language}").readlines()
         for model in models:
             if model != fast_model and target_language not in detailed_target_languages:
@@ -135,7 +140,11 @@ async def main():
                 references=target_sentences[:n],
                 tokenize="char",
             )
-
+            bert_metrics = bertscore.compute(
+                predictions=predictions,
+                references=target_sentences[:n],
+                model_type="distilbert-base-uncased",
+            )
             results.append(
                 {
                     "model": model,
@@ -144,12 +153,13 @@ async def main():
                     "target_language_name": stats["name"],
                     "speakers": int(stats.get("maxSpeakers", 0)),
                     "bleu": metrics["score"],
+                    "bert_score": mean(bert_metrics["f1"]),
                 }
             )
             with open("results.json", "w") as f:
                 json.dump(results, f, indent=2, ensure_ascii=False)
             pd.DataFrame(results).groupby("target_language_name").agg(
-                {"bleu": "mean", "speakers": "mean"}
+                {"bleu": "mean", "bert_score": "mean", "speakers": "mean"}
             ).reset_index().to_json("results_summary.json", indent=2, orient="records")
 
 

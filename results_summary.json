@@ -1,997 +1,1202 @@
 [
   {
-    "target_language_name":" Ayacucho Quechua",
-    "bleu":46.244412926,
-    "speakers":918200.0
-  },
-  {
-    "target_language_name":" Central Aymara",
-    "bleu":40.7737907059,
-    "speakers":0.0
-  },
-  {
-    "target_language_name":" Central Kurdish",
-    "bleu":58.3049111733,
-    "speakers":7250000.0
-  },
-  {
-    "target_language_name":" Central Tibetan",
-    "bleu":51.762059856,
-    "speakers":1200000.0
-  },
-  {
-    "target_language_name":" Eastern Punjabi",
-    "bleu":60.8335398677,
-    "speakers":125000000.0
-  },
-  {
-    "target_language_name":" Eastern Yiddish",
-    "bleu":49.9745007585,
-    "speakers":0.0
-  },
-  {
-    "target_language_name":" Egyptian Arabic",
-    "bleu":54.068278052,
-    "speakers":100542400.0
-  },
-  {
-    "target_language_name":" Goan Konkani",
-    "bleu":46.8883507968,
-    "speakers":3633900.0
-  },
-  {
-    "target_language_name":" Halh Mongolian",
-    "bleu":59.1426397299,
-    "speakers":2704030.0
-  },
-  {
-    "target_language_name":" Iranian Persian",
-    "bleu":57.466690672,
-    "speakers":52800000.0
-  },
-  {
-    "target_language_name":" Levantine Arabic",
-    "bleu":56.1658711447,
-    "speakers":44000000.0
-  },
-  {
-    "target_language_name":" Mandarin Chinese",
-    "bleu":42.5923366202,
-    "speakers":1074000000.0
-  },
-  {
-    "target_language_name":" Meadow Mari",
-    "bleu":49.5606117273,
-    "speakers":482000.0
-  },
-  {
-    "target_language_name":" Merina Malagasy",
-    "bleu":60.4304388047,
-    "speakers":0.0
-  },
-  {
-    "target_language_name":" Mesopotamian Arabic",
-    "bleu":50.0865634269,
-    "speakers":15700000.0
-  },
-  {
-    "target_language_name":" Moroccan Arabic",
-    "bleu":48.5607873978,
-    "speakers":27500000.0
-  },
-  {
-    "target_language_name":" Najdi Arabic",
-    "bleu":47.7692581451,
-    "speakers":0.0
-  },
-  {
-    "target_language_name":" Nigerian Fulfulde",
-    "bleu":28.2458571831,
-    "speakers":14500000.0
-  },
-  {
-    "target_language_name":" North Azerbaijani",
-    "bleu":55.0045961351,
-    "speakers":9220610.0
-  },
-  {
-    "target_language_name":" Northern Kurdish",
-    "bleu":55.0085600267,
-    "speakers":14600000.0
-  },
-  {
-    "target_language_name":" Northern Sotho",
-    "bleu":63.0482508066,
-    "speakers":4100000.0
-  },
-  {
-    "target_language_name":" Northern Uzbek",
-    "bleu":64.07804482,
-    "speakers":26912410.0
-  },
-  {
-    "target_language_name":" Paraguayan Guaran\u00ed",
-    "bleu":42.9023503897,
-    "speakers":0.0
-  },
-  {
-    "target_language_name":" South Azerbaijani",
-    "bleu":43.5362266708,
-    "speakers":15000000.0
-  },
-  {
-    "target_language_name":" Southern Pashto",
-    "bleu":38.5486962222,
-    "speakers":10900000.0
-  },
-  {
-    "target_language_name":" Southern Sotho",
-    "bleu":57.1537510266,
-    "speakers":6000000.0
-  },
-  {
-    "target_language_name":" Southwestern Dinka",
-    "bleu":12.4978320514,
-    "speakers":0.0
-  },
-  {
-    "target_language_name":" Standard Arabic",
-    "bleu":56.6219786764,
-    "speakers":0.0
-  },
-  {
-    "target_language_name":" Standard Estonian",
-    "bleu":68.0693526943,
-    "speakers":1164770.0
-  },
-  {
-    "target_language_name":" Standard German",
-    "bleu":77.2213038369,
-    "speakers":105000000.0
-  },
-  {
-    "target_language_name":" Standard Latvian",
-    "bleu":64.8995188161,
-    "speakers":0.0
-  },
-  {
-    "target_language_name":" Standard Malay",
-    "bleu":75.5868255696,
-    "speakers":0.0
-  },
-  {
-    "target_language_name":" Standard Moroccan Tamazight",
-    "bleu":36.0211020389,
-    "speakers":0.0
-  },
-  {
-    "target_language_name":" Ta\u2019izzi-Adeni Arabic",
-    "bleu":48.6728574258,
-    "speakers":10500000.0
-  },
-  {
-    "target_language_name":" Tosk Albanian",
-    "bleu":69.2428556015,
-    "speakers":3000000.0
-  },
-  {
-    "target_language_name":" Tunisian Arabic",
-    "bleu":49.8735980011,
-    "speakers":11600000.0
-  },
-  {
-    "target_language_name":" West Central Oromo",
-    "bleu":47.1911435507,
-    "speakers":0.0
-  },
-  {
-    "target_language_name":" Yerwa Kanuri",
-    "bleu":18.4779991227,
-    "speakers":0.0
-  },
-  {
-    "target_language_name":" Yue Chinese",
-    "bleu":34.2560977082,
-    "speakers":73100000.0
-  },
-  {
     "target_language_name":"Aceh",
     "bleu":39.1659660901,
+    "bert_score":0.8998966595,
     "speakers":3500032.0
   },
   {
     "target_language_name":"Afrikaans",
     "bleu":76.8900540777,
+    "bert_score":0.9481831173,
     "speakers":10300000.0
   },
   {
     "target_language_name":"Amharic",
     "bleu":43.1544568697,
+    "bert_score":0.989116921,
     "speakers":25000000.0
   },
   {
     "target_language_name":"Armenian",
     "bleu":64.6804400806,
+    "bert_score":0.9550812801,
     "speakers":6700000.0
   },
   {
     "target_language_name":"Assamese",
     "bleu":47.0351331605,
+    "bert_score":0.928119574,
     "speakers":15300000.0
   },
   {
     "target_language_name":"Asturian",
     "bleu":71.3445623493,
+    "bert_score":0.931475842,
     "speakers":450000.0
   },
   {
     "target_language_name":"Awadhi",
     "bleu":46.0797144146,
+    "bert_score":0.9333642821,
     "speakers":22000000.0
+  },
+  {
+    "target_language_name":"Ayacucho Quechua",
+    "bleu":45.6534927028,
+    "bert_score":0.8731370111,
+    "speakers":918200.0
   },
   {
     "target_language_name":"Bali (Indonesia)",
     "bleu":52.8752419159,
+    "bert_score":0.8934772114,
     "speakers":4000000.0
   },
   {
     "target_language_name":"Bamanankan",
     "bleu":38.6939091408,
+    "bert_score":0.8872043769,
     "speakers":2700000.0
   },
   {
     "target_language_name":"Banjar",
     "bleu":46.5453977487,
+    "bert_score":0.91599799,
     "speakers":3500000.0
   },
   {
     "target_language_name":"Bashkort",
     "bleu":57.5453842927,
+    "bert_score":0.9298217595,
     "speakers":1200000.0
   },
   {
     "target_language_name":"Basque",
     "bleu":65.8968721377,
+    "bert_score":0.9192741295,
     "speakers":750000.0
   },
   {
     "target_language_name":"Belarusian",
     "bleu":54.5195166442,
+    "bert_score":0.9329862595,
     "speakers":7900000.0
   },
   {
     "target_language_name":"Bemba",
     "bleu":47.8068548956,
+    "bert_score":0.889907831,
     "speakers":3600000.0
   },
   {
     "target_language_name":"Bengali",
     "bleu":57.1417588816,
+    "bert_score":0.9483523647,
     "speakers":300000000.0
   },
   {
     "target_language_name":"Bhojpuri",
     "bleu":44.5412337907,
+    "bert_score":0.9288184981,
     "speakers":52200000.0
   },
   {
     "target_language_name":"Bokm\u00e5l",
     "bleu":77.4939513016,
+    "bert_score":0.9550971886,
     "speakers":4000000.0
   },
   {
     "target_language_name":"Boro (India)",
     "bleu":36.1100474969,
+    "bert_score":0.925187854,
     "speakers":1482929.0
   },
   {
     "target_language_name":"Bosnian",
     "bleu":72.5488027131,
+    "bert_score":0.947693936,
     "speakers":3500000.0
   },
   {
     "target_language_name":"Bugis",
     "bleu":44.8388170031,
+    "bert_score":0.8647923966,
     "speakers":5017800.0
   },
   {
     "target_language_name":"Bulgarian",
     "bleu":72.9695925131,
+    "bert_score":0.9545443177,
     "speakers":9000000.0
   },
   {
     "target_language_name":"Burmese",
     "bleu":55.7235911677,
+    "bert_score":0.9759751062,
     "speakers":32900000.0
   },
   {
     "target_language_name":"Catalan",
     "bleu":74.4595007932,
+    "bert_score":0.9464139263,
     "speakers":5100000.0
   },
   {
     "target_language_name":"Cebuano",
     "bleu":69.4557958655,
+    "bert_score":0.9321281234,
     "speakers":15900000.0
+  },
+  {
+    "target_language_name":"Central Aymara",
+    "bleu":42.7698436669,
+    "bert_score":0.8625142018,
+    "speakers":0.0
+  },
+  {
+    "target_language_name":"Central Kurdish",
+    "bleu":59.1927910692,
+    "bert_score":0.9332568824,
+    "speakers":7250000.0
+  },
+  {
+    "target_language_name":"Central Tibetan",
+    "bleu":51.349075274,
+    "bert_score":0.967157503,
+    "speakers":1200000.0
   },
   {
     "target_language_name":"Chhattisgarhi",
     "bleu":47.9797501304,
+    "bert_score":0.9363766015,
     "speakers":16300000.0
   },
   {
     "target_language_name":"Chichewa",
     "bleu":59.7601680161,
+    "bert_score":0.9069253902,
     "speakers":12000000.0
   },
   {
     "target_language_name":"Chokwe",
     "bleu":10.1864074161,
+    "bert_score":0.727788798,
     "speakers":0.0
   },
   {
     "target_language_name":"Chuvash",
     "bleu":45.0546658723,
+    "bert_score":0.9203916192,
     "speakers":1279650.0
   },
   {
     "target_language_name":"Crimean Tatar",
     "bleu":52.7050249448,
+    "bert_score":0.8972040812,
     "speakers":552740.0
   },
   {
     "target_language_name":"Croatian",
     "bleu":69.5456983662,
+    "bert_score":0.9444877982,
     "speakers":7000000.0
   },
   {
     "target_language_name":"Czech",
     "bleu":69.7112290599,
+    "bert_score":0.9384464244,
     "speakers":10700000.0
   },
   {
     "target_language_name":"Danish",
     "bleu":78.0935433284,
+    "bert_score":0.9506490747,
     "speakers":6000000.0
   },
   {
     "target_language_name":"Dari",
     "bleu":52.5539795795,
+    "bert_score":0.9466466506,
     "speakers":9600000.0
   },
   {
     "target_language_name":"Dholuo",
     "bleu":46.4119479071,
+    "bert_score":0.8803233822,
     "speakers":3000000.0
   },
   {
     "target_language_name":"Dogri",
     "bleu":44.9153535278,
+    "bert_score":0.934070154,
     "speakers":2000000.0
   },
   {
     "target_language_name":"Dutch",
     "bleu":71.1849326315,
+    "bert_score":0.9376831949,
     "speakers":23100000.0
   },
   {
     "target_language_name":"Dzongkha",
     "bleu":44.3573814017,
+    "bert_score":0.9664796074,
     "speakers":237080.0
+  },
+  {
+    "target_language_name":"Eastern Punjabi",
+    "bleu":60.468441109,
+    "bert_score":0.988244007,
+    "speakers":125000000.0
+  },
+  {
+    "target_language_name":"Eastern Yiddish",
+    "bleu":47.5562009325,
+    "bert_score":0.9590989411,
+    "speakers":0.0
+  },
+  {
+    "target_language_name":"Egyptian Arabic",
+    "bleu":53.6818081038,
+    "bert_score":0.9394114673,
+    "speakers":100542400.0
+  },
+  {
+    "target_language_name":"English",
+    "bleu":75.3501173486,
+    "bert_score":0.8807334363,
+    "speakers":1132366680.0
   },
   {
     "target_language_name":"Esperanto",
     "bleu":69.6056577554,
+    "bert_score":0.9302131255,
     "speakers":2000000.0
   },
   {
     "target_language_name":"Faroese",
     "bleu":65.9147902483,
+    "bert_score":0.9332413753,
     "speakers":69150.0
   },
   {
     "target_language_name":"Fijian",
     "bleu":58.2892667246,
+    "bert_score":0.9183188617,
     "speakers":341270.0
   },
   {
     "target_language_name":"Filipino",
     "bleu":70.1928498378,
+    "bert_score":0.9269425154,
     "speakers":90000000.0
   },
   {
     "target_language_name":"Finnish",
     "bleu":70.9425029518,
+    "bert_score":0.9320579688,
     "speakers":5413380.0
   },
   {
     "target_language_name":"Fon",
     "bleu":25.2797773666,
+    "bert_score":0.8664443592,
     "speakers":1935500.0
   },
   {
     "target_language_name":"French",
     "bleu":79.3023871219,
+    "bert_score":0.9554367423,
     "speakers":208157220.0
   },
   {
     "target_language_name":"Friulian",
     "bleu":66.5488092372,
+    "bert_score":0.9255799611,
     "speakers":300000.0
   },
   {
     "target_language_name":"Galician",
     "bleu":68.7024786904,
+    "bert_score":0.9283550183,
     "speakers":2500000.0
   },
   {
     "target_language_name":"Ganda",
     "bleu":45.8693322936,
+    "bert_score":0.88344028,
     "speakers":4100000.0
   },
   {
     "target_language_name":"Georgian",
     "bleu":61.0166361442,
+    "bert_score":0.9546662311,
     "speakers":3700000.0
   },
   {
     "target_language_name":"Gikuyu",
     "bleu":40.9288275291,
+    "bert_score":0.8850945433,
     "speakers":6623000.0
+  },
+  {
+    "target_language_name":"Goan Konkani",
+    "bleu":47.1084017945,
+    "bert_score":0.9314287245,
+    "speakers":3633900.0
   },
   {
     "target_language_name":"Greek",
     "bleu":66.2347782153,
+    "bert_score":0.9577525119,
     "speakers":15000000.0
   },
   {
     "target_language_name":"Gujarati",
     "bleu":55.5884513452,
+    "bert_score":0.9753397226,
     "speakers":56400000.0
   },
   {
     "target_language_name":"Haitian Creole",
     "bleu":63.8532187591,
+    "bert_score":0.93236112,
     "speakers":9600000.0
+  },
+  {
+    "target_language_name":"Halh Mongolian",
+    "bleu":58.5037789971,
+    "bert_score":0.9380823056,
+    "speakers":2704030.0
   },
   {
     "target_language_name":"Hausa",
     "bleu":56.3431957901,
+    "bert_score":0.9012877802,
     "speakers":43900000.0
   },
   {
     "target_language_name":"Hebrew",
     "bleu":72.0702990513,
+    "bert_score":0.964064618,
     "speakers":9303950.0
   },
   {
     "target_language_name":"Hindi",
     "bleu":64.9362166898,
+    "bert_score":0.9463364283,
     "speakers":341000000.0
   },
   {
     "target_language_name":"Hungarian",
     "bleu":66.1301119408,
+    "bert_score":0.9249218643,
     "speakers":12600000.0
   },
   {
     "target_language_name":"Icelandic",
     "bleu":54.4330055353,
+    "bert_score":0.9120460276,
     "speakers":358000.0
   },
   {
     "target_language_name":"Igbo",
     "bleu":46.4017344934,
+    "bert_score":0.9137314638,
     "speakers":27000000.0
   },
   {
     "target_language_name":"Ilocano",
     "bleu":62.6058864594,
+    "bert_score":0.9115280092,
     "speakers":9100000.0
   },
   {
     "target_language_name":"Indonesian",
     "bleu":72.9087066262,
+    "bert_score":0.9301403503,
     "speakers":198996550.0
+  },
+  {
+    "target_language_name":"Iranian Persian",
+    "bleu":57.6444169698,
+    "bert_score":0.9476486345,
+    "speakers":52800000.0
   },
   {
     "target_language_name":"Irish",
     "bleu":69.9725194524,
+    "bert_score":0.9440232972,
     "speakers":1030000.0
   },
   {
     "target_language_name":"Italian",
     "bleu":69.1588343572,
+    "bert_score":0.9358606537,
     "speakers":64819790.0
   },
   {
     "target_language_name":"Japanese",
     "bleu":49.9166135693,
+    "bert_score":0.9425287286,
     "speakers":128000000.0
   },
   {
     "target_language_name":"Javanese",
     "bleu":60.440335299,
+    "bert_score":0.9125308077,
     "speakers":84308740.0
   },
   {
     "target_language_name":"Jingpho",
     "bleu":43.5500581403,
+    "bert_score":0.8727998992,
     "speakers":940000.0
   },
   {
     "target_language_name":"Jula",
     "bleu":29.5415180297,
+    "bert_score":0.822332112,
     "speakers":2700000.0
   },
   {
     "target_language_name":"Kabiy\u00e8",
     "bleu":22.5498504655,
+    "bert_score":0.8587520639,
     "speakers":1000000.0
   },
   {
     "target_language_name":"Kabuverdianu",
     "bleu":65.1106010391,
+    "bert_score":0.9213403026,
     "speakers":871000.0
   },
   {
     "target_language_name":"Kabyle",
     "bleu":41.1442992587,
+    "bert_score":0.8803219795,
     "speakers":5586000.0
   },
   {
     "target_language_name":"Kamba",
     "bleu":41.733489671,
+    "bert_score":0.8780206362,
     "speakers":3893000.0
   },
   {
     "target_language_name":"Kannada",
     "bleu":60.0142028332,
+    "bert_score":0.9730932295,
     "speakers":43600000.0
   },
   {
     "target_language_name":"Kashmiri",
     "bleu":22.3019416547,
+    "bert_score":0.8984790143,
     "speakers":6900000.0
   },
   {
     "target_language_name":"Kazakh",
     "bleu":61.1251621375,
+    "bert_score":0.9379647116,
     "speakers":13161980.0
   },
   {
     "target_language_name":"Khmer",
     "bleu":49.2098257043,
+    "bert_score":0.8907732884,
     "speakers":16600000.0
   },
   {
     "target_language_name":"Kimbundu",
     "bleu":5.8523457224,
+    "bert_score":0.6849321783,
     "speakers":0.0
   },
   {
     "target_language_name":"Kinyarwanda",
     "bleu":57.2410626756,
+    "bert_score":0.906923449,
     "speakers":12100000.0
   },
   {
     "target_language_name":"Kituba (Democratic Republic of the Congo)",
     "bleu":52.8484601602,
+    "bert_score":0.9017938395,
     "speakers":0.0
   },
   {
     "target_language_name":"Korean",
     "bleu":43.6872285974,
+    "bert_score":0.9579092761,
     "speakers":77300000.0
   },
   {
     "target_language_name":"Kyrgyz",
     "bleu":57.0824422453,
+    "bert_score":0.9317750076,
     "speakers":4568480.0
   },
   {
     "target_language_name":"Lao",
     "bleu":60.0210909677,
+    "bert_score":0.904438438,
     "speakers":5225552.0
   },
   {
     "target_language_name":"Latgalian",
     "bleu":56.4843556524,
+    "bert_score":0.9078494012,
     "speakers":200000.0
+  },
+  {
+    "target_language_name":"Levantine Arabic",
+    "bleu":56.0898634013,
+    "bert_score":0.9437467565,
+    "speakers":44000000.0
   },
   {
     "target_language_name":"Ligurian",
     "bleu":55.8530636302,
+    "bert_score":0.9047620773,
     "speakers":500000.0
   },
   {
     "target_language_name":"Limburgish",
     "bleu":59.4485504982,
+    "bert_score":0.8987095455,
     "speakers":1600000.0
   },
   {
     "target_language_name":"Lingala",
     "bleu":30.4322896531,
+    "bert_score":0.8553236572,
     "speakers":20000000.0
   },
   {
     "target_language_name":"Lithuanian",
     "bleu":67.1625695571,
+    "bert_score":0.9154702902,
     "speakers":4000000.0
   },
   {
     "target_language_name":"Lombard",
     "bleu":46.3884402674,
+    "bert_score":0.8643471499,
     "speakers":3900000.0
   },
   {
     "target_language_name":"Luba-Kasai",
     "bleu":45.0655291655,
+    "bert_score":0.8749240279,
     "speakers":6300000.0
   },
   {
     "target_language_name":"Luxembourgish",
     "bleu":70.8338190438,
+    "bert_score":0.9297492107,
     "speakers":391200.0
   },
   {
     "target_language_name":"Macedonian",
     "bleu":72.2733471437,
+    "bert_score":0.9558346649,
     "speakers":2000000.0
   },
   {
     "target_language_name":"Magahi",
     "bleu":58.5474221546,
+    "bert_score":0.9458349566,
     "speakers":20700000.0
   },
   {
     "target_language_name":"Maithili",
     "bleu":54.6530071391,
+    "bert_score":0.9433513383,
     "speakers":33900000.0
   },
   {
     "target_language_name":"Malayalam",
     "bleu":64.0655894091,
+    "bert_score":0.9803075671,
     "speakers":37100000.0
   },
   {
     "target_language_name":"Maltese",
     "bleu":80.0866777263,
+    "bert_score":0.9520254652,
     "speakers":570000.0
+  },
+  {
+    "target_language_name":"Mandarin Chinese",
+    "bleu":42.5300166785,
+    "bert_score":0.9634857118,
+    "speakers":1074000000.0
   },
   {
     "target_language_name":"Maori",
     "bleu":54.8319935643,
+    "bert_score":0.9185245017,
     "speakers":160000.0
   },
   {
     "target_language_name":"Marathi",
     "bleu":57.4434090711,
+    "bert_score":0.9421781262,
     "speakers":83100000.0
+  },
+  {
+    "target_language_name":"Meadow Mari",
+    "bleu":49.7911680582,
+    "bert_score":0.9295116961,
+    "speakers":482000.0
   },
   {
     "target_language_name":"Meitei",
     "bleu":41.2619945571,
+    "bert_score":0.9528288851,
     "speakers":1470000.0
+  },
+  {
+    "target_language_name":"Merina Malagasy",
+    "bleu":61.0968434546,
+    "bert_score":0.9032936792,
+    "speakers":0.0
+  },
+  {
+    "target_language_name":"Mesopotamian Arabic",
+    "bleu":49.5184865297,
+    "bert_score":0.9382626355,
+    "speakers":15700000.0
   },
   {
     "target_language_name":"Minangkabau",
     "bleu":50.7407956197,
+    "bert_score":0.9252789746,
     "speakers":5530000.0
   },
   {
     "target_language_name":"Mizo",
     "bleu":51.6558017488,
+    "bert_score":0.8875152906,
     "speakers":500000.0
   },
   {
     "target_language_name":"Moore",
     "bleu":32.8458097983,
+    "bert_score":0.8583020627,
     "speakers":7600000.0
+  },
+  {
+    "target_language_name":"Moroccan Arabic",
+    "bleu":49.3082976781,
+    "bert_score":0.9317501009,
+    "speakers":27500000.0
+  },
+  {
+    "target_language_name":"Najdi Arabic",
+    "bleu":46.4102430377,
+    "bert_score":0.9332984229,
+    "speakers":0.0
   },
   {
     "target_language_name":"Nepali",
     "bleu":55.2919347352,
+    "bert_score":0.9358912428,
     "speakers":0.0
+  },
+  {
+    "target_language_name":"Nigerian Fulfulde",
+    "bleu":28.1761055913,
+    "bert_score":0.8343587597,
+    "speakers":14500000.0
+  },
+  {
+    "target_language_name":"North Azerbaijani",
+    "bleu":55.5265107063,
+    "bert_score":0.9145456314,
+    "speakers":9220610.0
+  },
+  {
+    "target_language_name":"Northern Kurdish",
+    "bleu":55.7965878227,
+    "bert_score":0.9104436457,
+    "speakers":14600000.0
+  },
+  {
+    "target_language_name":"Northern Sotho",
+    "bleu":62.8769401692,
+    "bert_score":0.9261207898,
+    "speakers":4100000.0
+  },
+  {
+    "target_language_name":"Northern Uzbek",
+    "bleu":63.205573851,
+    "bert_score":0.9120756924,
+    "speakers":26912410.0
   },
   {
     "target_language_name":"Nuer",
     "bleu":16.5796987951,
+    "bert_score":0.8528214693,
     "speakers":900000.0
   },
   {
     "target_language_name":"N\u2019Ko",
     "bleu":32.483490799,
+    "bert_score":0.9823745767,
     "speakers":0.0
   },
   {
     "target_language_name":"Occitan",
     "bleu":71.532740184,
+    "bert_score":0.9337525626,
     "speakers":542000.0
   },
   {
     "target_language_name":"Odia",
     "bleu":57.3628096518,
+    "bert_score":0.9768644154,
     "speakers":34500000.0
   },
   {
     "target_language_name":"Pangasinan",
     "bleu":56.0048183827,
+    "bert_score":0.8906280657,
     "speakers":1100000.0
   },
   {
     "target_language_name":"Papiamentu",
     "bleu":69.7955328133,
+    "bert_score":0.9325902323,
     "speakers":321300.0
+  },
+  {
+    "target_language_name":"Paraguayan Guaran\u00ed",
+    "bleu":41.7929863707,
+    "bert_score":0.8764786462,
+    "speakers":0.0
   },
   {
     "target_language_name":"Polish",
     "bleu":61.8768399674,
+    "bert_score":0.9179250948,
     "speakers":40200000.0
   },
   {
     "target_language_name":"Portuguese",
     "bleu":77.4978074222,
+    "bert_score":0.9494876027,
     "speakers":254300000.0
   },
   {
     "target_language_name":"Romanian",
     "bleu":76.4907159035,
+    "bert_score":0.9455295324,
     "speakers":24300000.0
   },
   {
     "target_language_name":"Rundi",
     "bleu":48.943513629,
+    "bert_score":0.8933652222,
     "speakers":10800000.0
   },
   {
     "target_language_name":"Russian",
     "bleu":71.1489441039,
+    "bert_score":0.9518508852,
     "speakers":171428900.0
   },
   {
     "target_language_name":"Samoan",
     "bleu":56.7138831423,
+    "bert_score":0.9166683555,
     "speakers":415720.0
   },
   {
     "target_language_name":"Sango",
     "bleu":34.8754222657,
+    "bert_score":0.8720244229,
     "speakers":4600000.0
   },
   {
     "target_language_name":"Sanskrit",
     "bleu":32.7813249911,
+    "bert_score":0.8987655501,
     "speakers":49736.0
   },
   {
     "target_language_name":"Santhali",
     "bleu":31.5119247269,
+    "bert_score":0.944095705,
     "speakers":7200000.0
   },
   {
     "target_language_name":"Sardinian",
     "bleu":62.6903914771,
+    "bert_score":0.9118991812,
     "speakers":1300000.0
   },
   {
     "target_language_name":"Scottish Gaelic",
     "bleu":62.6044371338,
+    "bert_score":0.9264988482,
     "speakers":60130.0
   },
   {
     "target_language_name":"Serbian",
     "bleu":69.9691396176,
+    "bert_score":0.9582955678,
     "speakers":9000000.0
   },
   {
     "target_language_name":"Setswana",
     "bleu":55.2288890228,
+    "bert_score":0.9117900888,
     "speakers":4500000.0
   },
   {
     "target_language_name":"Shan",
     "bleu":29.2129948577,
+    "bert_score":0.9378574808,
     "speakers":3000000.0
   },
   {
     "target_language_name":"Shona",
     "bleu":51.5592191405,
+    "bert_score":0.8798740129,
     "speakers":9023000.0
   },
   {
     "target_language_name":"Sicilian",
     "bleu":58.5895359443,
+    "bert_score":0.90428345,
     "speakers":4700000.0
   },
   {
     "target_language_name":"Silesian",
     "bleu":56.7836392069,
+    "bert_score":0.9106028736,
     "speakers":522000.0
   },
   {
     "target_language_name":"Sindhi",
     "bleu":48.1876056648,
+    "bert_score":0.936702015,
     "speakers":25000000.0
   },
   {
     "target_language_name":"Sinhala",
     "bleu":56.7567311796,
+    "bert_score":0.9713358581,
     "speakers":15300000.0
   },
   {
     "target_language_name":"Slovak",
     "bleu":67.9284804086,
+    "bert_score":0.9360236605,
     "speakers":6000000.0
   },
   {
     "target_language_name":"Slovene",
     "bleu":72.5691270757,
+    "bert_score":0.9432346245,
     "speakers":2400000.0
   },
   {
     "target_language_name":"Somali",
     "bleu":55.3706496473,
+    "bert_score":0.908571593,
     "speakers":16200000.0
+  },
+  {
+    "target_language_name":"South Azerbaijani",
+    "bleu":44.3712804302,
+    "bert_score":0.9420697371,
+    "speakers":15000000.0
+  },
+  {
+    "target_language_name":"Southern Pashto",
+    "bleu":38.3124819374,
+    "bert_score":0.921268179,
+    "speakers":10900000.0
+  },
+  {
+    "target_language_name":"Southern Sotho",
+    "bleu":56.735299554,
+    "bert_score":0.9102749407,
+    "speakers":6000000.0
+  },
+  {
+    "target_language_name":"Southwestern Dinka",
+    "bleu":17.5913281403,
+    "bert_score":0.8016291638,
+    "speakers":0.0
   },
   {
     "target_language_name":"Spanish",
     "bleu":63.8467073379,
+    "bert_score":0.9224406302,
     "speakers":485000000.0
+  },
+  {
+    "target_language_name":"Standard Arabic",
+    "bleu":56.8831262708,
+    "bert_score":0.9168330083,
+    "speakers":0.0
+  },
+  {
+    "target_language_name":"Standard Estonian",
+    "bleu":67.4156919517,
+    "bert_score":0.9277306815,
+    "speakers":1164770.0
+  },
+  {
+    "target_language_name":"Standard German",
+    "bleu":77.1966515107,
+    "bert_score":0.9468763133,
+    "speakers":105000000.0
+  },
+  {
+    "target_language_name":"Standard Latvian",
+    "bleu":65.0833210037,
+    "bert_score":0.9217625757,
+    "speakers":0.0
+  },
+  {
+    "target_language_name":"Standard Malay",
+    "bleu":74.2657232798,
+    "bert_score":0.9445500493,
+    "speakers":0.0
+  },
+  {
+    "target_language_name":"Standard Moroccan Tamazight",
+    "bleu":35.6247648109,
+    "bert_score":0.9847298423,
+    "speakers":0.0
   },
   {
     "target_language_name":"Sunda",
     "bleu":56.4065999104,
+    "bert_score":0.9077177823,
     "speakers":32400000.0
   },
   {
     "target_language_name":"Swahili",
     "bleu":73.5199042142,
+    "bert_score":0.9450787365,
     "speakers":82300000.0
   },
   {
     "target_language_name":"Swati",
     "bleu":52.7746096439,
+    "bert_score":0.8899940272,
     "speakers":2034200.0
   },
   {
     "target_language_name":"Swedish",
     "bleu":77.421610247,
+    "bert_score":0.9571870168,
     "speakers":9244250.0
   },
   {
     "target_language_name":"Tajik",
     "bleu":60.9783684158,
+    "bert_score":0.9378365338,
     "speakers":14000000.0
   },
   {
     "target_language_name":"Tamasheq",
     "bleu":18.4319889721,
+    "bert_score":0.8427422295,
     "speakers":500000.0
   },
   {
     "target_language_name":"Tamil",
     "bleu":65.7863221054,
+    "bert_score":0.9536473691,
     "speakers":75000000.0
   },
   {
     "target_language_name":"Tatar",
     "bleu":60.3447467213,
+    "bert_score":0.9364115715,
     "speakers":5427318.0
+  },
+  {
+    "target_language_name":"Ta\u2019izzi-Adeni Arabic",
+    "bleu":49.4139335281,
+    "bert_score":0.9354432185,
+    "speakers":10500000.0
   },
   {
     "target_language_name":"Telugu",
     "bleu":61.6352457629,
+    "bert_score":0.9790697515,
     "speakers":82000000.0
   },
   {
     "target_language_name":"Thai",
     "bleu":62.8125360944,
+    "bert_score":0.9225328485,
     "speakers":40000000.0
   },
   {
     "target_language_name":"Tigrigna",
     "bleu":32.8711961703,
+    "bert_score":0.9852415164,
     "speakers":7507780.0
   },
   {
     "target_language_name":"Tok Pisin",
     "bleu":56.5407760367,
+    "bert_score":0.9031182428,
     "speakers":4000000.0
+  },
+  {
+    "target_language_name":"Tosk Albanian",
+    "bleu":69.4218765092,
+    "bert_score":0.9402680953,
+    "speakers":3000000.0
   },
   {
     "target_language_name":"Tsonga",
     "bleu":58.3516573597,
+    "bert_score":0.9134832978,
     "speakers":13000000.0
   },
   {
     "target_language_name":"Tumbuka",
     "bleu":44.0490017392,
+    "bert_score":0.8865564326,
     "speakers":2680000.0
+  },
+  {
+    "target_language_name":"Tunisian Arabic",
+    "bleu":49.6714090744,
+    "bert_score":0.9337966998,
+    "speakers":11600000.0
   },
   {
     "target_language_name":"Turkish",
     "bleu":67.1600625676,
+    "bert_score":0.9309494158,
     "speakers":82231620.0
   },
   {
     "target_language_name":"Turkmen",
     "bleu":60.5593705936,
+    "bert_score":0.9125106474,
     "speakers":16000000.0
   },
   {
     "target_language_name":"Twi",
     "bleu":44.7976562068,
+    "bert_score":0.8913615406,
     "speakers":3000000.0
   },
   {
     "target_language_name":"Ukrainian",
     "bleu":68.0976232544,
+    "bert_score":0.9468558848,
     "speakers":34710100.0
   },
   {
     "target_language_name":"Umbundu",
     "bleu":21.0802775597,
+    "bert_score":0.8461364289,
     "speakers":6000000.0
   },
   {
     "target_language_name":"Urdu",
     "bleu":61.1255457272,
+    "bert_score":0.953888009,
     "speakers":94022900.0
   },
   {
     "target_language_name":"Uyghur",
     "bleu":53.5346877103,
+    "bert_score":0.9397906005,
     "speakers":10400000.0
   },
   {
     "target_language_name":"Venetian",
     "bleu":60.6140876271,
+    "bert_score":0.9080212533,
     "speakers":2000000.0
   },
   {
     "target_language_name":"Vietnamese",
     "bleu":70.3560749464,
+    "bert_score":0.9527418713,
     "speakers":76000000.0
   },
   {
     "target_language_name":"Waray-Waray",
     "bleu":66.3850231243,
+    "bert_score":0.920412008,
     "speakers":3100000.0
   },
   {
     "target_language_name":"Welsh",
     "bleu":83.3437724474,
+    "bert_score":0.9662299534,
     "speakers":977366.0
+  },
+  {
+    "target_language_name":"West Central Oromo",
+    "bleu":46.9090350028,
+    "bert_score":0.8845542371,
+    "speakers":0.0
   },
   {
     "target_language_name":"Wolof",
     "bleu":42.6430127569,
+    "bert_score":0.8762976408,
     "speakers":3700000.0
   },
   {
     "target_language_name":"Xhosa",
     "bleu":55.4688091009,
+    "bert_score":0.9008744816,
     "speakers":11000000.0
+  },
+  {
+    "target_language_name":"Yerwa Kanuri",
+    "bleu":18.5081787556,
+    "bert_score":0.839997381,
+    "speakers":0.0
   },
   {
     "target_language_name":"Yoruba",
     "bleu":34.2642542268,
+    "bert_score":0.9001545012,
     "speakers":40000000.0
+  },
+  {
+    "target_language_name":"Yue Chinese",
+    "bleu":34.5614651228,
+    "bert_score":0.9634495397,
+    "speakers":73100000.0
   },
   {
     "target_language_name":"Zulu",
     "bleu":59.1762078389,
+    "bert_score":0.9099391103,
     "speakers":15700000.0
   },
   {
     "target_language_name":"nno",
     "bleu":71.8615646296,
+    "bert_score":0.9335320314,
     "speakers":0.0
   },
   {
     "target_language_name":"\u00c9w\u00e9",
     "bleu":41.6614038791,
+    "bert_score":0.8829316159,
     "speakers":3000000.0
   }
 ]

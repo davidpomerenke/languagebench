@@ -5,15 +5,17 @@
     "target_language": "tur_Latn",
     "target_language_name": "Turkish",
     "speakers": 82231620,
-    "bleu": 67.16006256755001
+    "bleu": 67.16006256755001,
+    "bert_score": 0.9309494157632192
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "ary_Arab",
-    "target_language_name": " Moroccan Arabic",
+    "target_language_name": "Moroccan Arabic",
     "speakers": 27500000,
-    "bleu": 48.56078739780091
+    "bleu": 49.308297678095336,
+    "bert_score": 0.9317501008510589
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -21,7 +23,8 @@
     "target_language": "fij_Latn",
     "target_language_name": "Fijian",
     "speakers": 341270,
-    "bleu": 58.28926672457303
+    "bleu": 58.28926672457303,
+    "bert_score": 0.9183188617229462
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -29,7 +32,8 @@
     "target_language": "lug_Latn",
     "target_language_name": "Ganda",
     "speakers": 4100000,
-    "bleu": 45.86933229358203
+    "bleu": 45.86933229358203,
+    "bert_score": 0.8834402799606323
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -37,7 +41,8 @@
     "target_language": "kin_Latn",
     "target_language_name": "Kinyarwanda",
     "speakers": 12100000,
-    "bleu": 57.241062675597036
+    "bleu": 57.241062675597036,
+    "bert_score": 0.9069234490394592
   },
   {
     "model": "openai/gpt-4o-mini",
@@ -45,7 +50,8 @@
     "target_language": "ind_Latn",
     "target_language_name": "Indonesian",
     "speakers": 198996550,
-    "bleu": 76.69607051201163
+    "bleu": 76.69607051201163,
+    "bert_score": 0.9437516768773396
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -53,7 +59,8 @@
     "target_language": "ind_Latn",
     "target_language_name": "Indonesian",
     "speakers": 198996550,
-    "bleu": 75.20007995551391
+    "bleu": 75.20007995551391,
+    "bert_score": 0.9425927738348643
   },
   {
     "model": "meta-llama/llama-3.1-70b-instruct",
@@ -61,7 +68,8 @@
     "target_language": "ind_Latn",
     "target_language_name": "Indonesian",
     "speakers": 198996550,
-    "bleu": 74.1959714053824
+    "bleu": 74.1959714053824,
+    "bert_score": 0.9384953796863555
   },
   {
     "model": "mistralai/mistral-nemo",
@@ -69,7 +77,8 @@
     "target_language": "ind_Latn",
     "target_language_name": "Indonesian",
     "speakers": 198996550,
-    "bleu": 65.59558256613556
+    "bleu": 65.59558256613556,
+    "bert_score": 0.894232589006424
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
@@ -77,7 +86,8 @@
     "target_language": "ind_Latn",
     "target_language_name": "Indonesian",
     "speakers": 198996550,
-    "bleu": 72.85582869172275
+    "bleu": 72.85582869172275,
+    "bert_score": 0.9316293319066365
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -85,7 +95,8 @@
     "target_language": "nus_Latn",
     "target_language_name": "Nuer",
     "speakers": 900000,
-    "bleu": 16.57969879511241
+    "bleu": 16.57969879511241,
+    "bert_score": 0.8528214693069458
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -93,23 +104,26 @@
     "target_language": "szl_Latn",
     "target_language_name": "Silesian",
     "speakers": 522000,
-    "bleu": 56.78363920686616
+    "bleu": 56.78363920686616,
+    "bert_score": 0.9106028735637665
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "azj_Latn",
-    "target_language_name": " North Azerbaijani",
+    "target_language_name": "North Azerbaijani",
     "speakers": 9220610,
-    "bleu": 55.00459613512087
+    "bleu": 55.52651070626997,
+    "bert_score": 0.9145456314086914
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "dik_Latn",
-    "target_language_name": " Southwestern Dinka",
+    "target_language_name": "Southwestern Dinka",
     "speakers": 0,
-    "bleu": 12.497832051373198
+    "bleu": 17.591328140326063,
+    "bert_score": 0.8016291638215383
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -117,7 +131,8 @@
     "target_language": "smo_Latn",
     "target_language_name": "Samoan",
     "speakers": 415720,
-    "bleu": 56.71388314225869
+    "bleu": 56.71388314225869,
+    "bert_score": 0.9166683554649353
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -125,7 +140,8 @@
     "target_language": "heb_Hebr",
     "target_language_name": "Hebrew",
     "speakers": 9303950,
-    "bleu": 72.0702990513479
+    "bleu": 72.0702990513479,
+    "bert_score": 0.9640646179517111
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -133,7 +149,8 @@
     "target_language": "lao_Laoo",
     "target_language_name": "Lao",
     "speakers": 5225552,
-    "bleu": 60.02109096770294
+    "bleu": 60.02109096770294,
+    "bert_score": 0.904438438018163
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -141,7 +158,8 @@
     "target_language": "bul_Cyrl",
     "target_language_name": "Bulgarian",
     "speakers": 9000000,
-    "bleu": 72.9695925130979
+    "bleu": 72.9695925130979,
+    "bert_score": 0.9545443177223205
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -149,7 +167,8 @@
     "target_language": "dgo_Deva",
     "target_language_name": "Dogri",
     "speakers": 2000000,
-    "bleu": 44.91535352779186
+    "bleu": 44.91535352779186,
+    "bert_score": 0.9340701540311177
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -157,15 +176,17 @@
     "target_language": "epo_Latn",
     "target_language_name": "Esperanto",
     "speakers": 2000000,
-    "bleu": 69.60565775541012
+    "bleu": 69.60565775541012,
+    "bert_score": 0.9302131255467733
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "azb_Arab",
-    "target_language_name": " South Azerbaijani",
+    "target_language_name": "South Azerbaijani",
     "speakers": 15000000,
-    "bleu": 43.53622667084785
+    "bleu": 44.37128043020771,
+    "bert_score": 0.9420697371164958
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -173,7 +194,8 @@
     "target_language": "pap_Latn",
     "target_language_name": "Papiamentu",
     "speakers": 321300,
-    "bleu": 69.79553281331113
+    "bleu": 69.79553281331113,
+    "bert_score": 0.9325902322928111
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -181,7 +203,8 @@
     "target_language": "ces_Latn",
     "target_language_name": "Czech",
     "speakers": 10700000,
-    "bleu": 69.71122905993063
+    "bleu": 69.71122905993063,
+    "bert_score": 0.9384464244047801
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -189,7 +212,8 @@
     "target_language": "gle_Latn",
     "target_language_name": "Irish",
     "speakers": 1030000,
-    "bleu": 69.97251945242859
+    "bleu": 69.97251945242859,
+    "bert_score": 0.9440232972304027
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -197,7 +221,8 @@
     "target_language": "cym_Latn",
     "target_language_name": "Welsh",
     "speakers": 977366,
-    "bleu": 83.34377244735965
+    "bleu": 83.34377244735965,
+    "bert_score": 0.9662299533685048
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -205,7 +230,8 @@
     "target_language": "war_Latn",
     "target_language_name": "Waray-Waray",
     "speakers": 3100000,
-    "bleu": 66.38502312428538
+    "bleu": 66.38502312428538,
+    "bert_score": 0.920412007967631
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -213,7 +239,8 @@
     "target_language": "tuk_Latn",
     "target_language_name": "Turkmen",
     "speakers": 16000000,
-    "bleu": 60.559370593640274
+    "bleu": 60.559370593640274,
+    "bert_score": 0.9125106473763783
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -221,7 +248,8 @@
     "target_language": "kea_Latn",
     "target_language_name": "Kabuverdianu",
     "speakers": 871000,
-    "bleu": 65.11060103907447
+    "bleu": 65.11060103907447,
+    "bert_score": 0.921340302626292
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -229,7 +257,8 @@
     "target_language": "swe_Latn",
     "target_language_name": "Swedish",
     "speakers": 9244250,
-    "bleu": 77.42161024703672
+    "bleu": 77.42161024703672,
+    "bert_score": 0.9571870168050131
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -237,7 +266,8 @@
     "target_language": "mni_Mtei",
     "target_language_name": "Meitei",
     "speakers": 1470000,
-    "bleu": 41.90750872077243
+    "bleu": 41.90750872077243,
+    "bert_score": 0.9731392125288646
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -245,15 +275,17 @@
     "target_language": "kan_Knda",
     "target_language_name": "Kannada",
     "speakers": 43600000,
-    "bleu": 60.01420283321725
+    "bleu": 60.01420283321725,
+    "bert_score": 0.9730932295322419
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "plt_Latn",
-    "target_language_name": " Merina Malagasy",
+    "target_language_name": "Merina Malagasy",
     "speakers": 0,
-    "bleu": 60.430438804745
+    "bleu": 61.096843454641544,
+    "bert_score": 0.9032936791578928
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -261,7 +293,8 @@
     "target_language": "ewe_Latn",
     "target_language_name": "Éwé",
     "speakers": 3000000,
-    "bleu": 41.6614038790914
+    "bleu": 41.6614038790914,
+    "bert_score": 0.8829316159089406
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -269,7 +302,8 @@
     "target_language": "rus_Cyrl",
     "target_language_name": "Russian",
     "speakers": 171428900,
-    "bleu": 71.14894410390329
+    "bleu": 71.14894410390329,
+    "bert_score": 0.9518508851528168
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -277,7 +311,8 @@
     "target_language": "bjn_Arab",
     "target_language_name": "Banjar",
     "speakers": 3500000,
-    "bleu": 36.7812759423696
+    "bleu": 36.7812759423696,
+    "bert_score": 0.9300645053386688
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -285,7 +320,8 @@
     "target_language": "kmb_Latn",
     "target_language_name": "Kimbundu",
     "speakers": 0,
-    "bleu": 5.85234572235619
+    "bleu": 5.85234572235619,
+    "bert_score": 0.6849321782588959
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -293,15 +329,17 @@
     "target_language": "vec_Latn",
     "target_language_name": "Venetian",
     "speakers": 2000000,
-    "bleu": 60.61408762705794
+    "bleu": 60.61408762705794,
+    "bert_score": 0.9080212533473968
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "aeb_Arab",
-    "target_language_name": " Tunisian Arabic",
+    "target_language_name": "Tunisian Arabic",
     "speakers": 11600000,
-    "bleu": 49.87359800112665
+    "bleu": 49.67140907439696,
+    "bert_score": 0.9337966998418172
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -309,7 +347,8 @@
     "target_language": "lit_Latn",
     "target_language_name": "Lithuanian",
     "speakers": 4000000,
-    "bleu": 67.16256955707802
+    "bleu": 67.16256955707802,
+    "bert_score": 0.915470290184021
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -317,7 +356,8 @@
     "target_language": "swh_Latn",
     "target_language_name": "Swahili",
     "speakers": 82300000,
-    "bleu": 73.51990421418041
+    "bleu": 73.51990421418041,
+    "bert_score": 0.9450787365436554
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -325,15 +365,17 @@
     "target_language": "bug_Latn",
     "target_language_name": "Bugis",
     "speakers": 5017800,
-    "bleu": 44.838817003109384
+    "bleu": 44.838817003109384,
+    "bert_score": 0.864792396624883
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "apc_Arab_nort3139",
-    "target_language_name": " Levantine Arabic",
+    "target_language_name": "Levantine Arabic",
     "speakers": 44000000,
-    "bleu": 56.66525774941823
+    "bleu": 55.944015565916516,
+    "bert_score": 0.9422544419765473
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -341,7 +383,8 @@
     "target_language": "lus_Latn",
     "target_language_name": "Mizo",
     "speakers": 500000,
-    "bleu": 51.65580174875804
+    "bleu": 51.65580174875804,
+    "bert_score": 0.8875152905782063
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -349,7 +392,8 @@
     "target_language": "lim_Latn",
     "target_language_name": "Limburgish",
     "speakers": 1600000,
-    "bleu": 59.44855049817084
+    "bleu": 59.44855049817084,
+    "bert_score": 0.8987095455328623
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -357,7 +401,8 @@
     "target_language": "mri_Latn",
     "target_language_name": "Maori",
     "speakers": 160000,
-    "bleu": 54.831993564329125
+    "bleu": 54.831993564329125,
+    "bert_score": 0.9185245017210643
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -365,7 +410,8 @@
     "target_language": "kam_Latn",
     "target_language_name": "Kamba",
     "speakers": 3893000,
-    "bleu": 41.73348967095708
+    "bleu": 41.73348967095708,
+    "bert_score": 0.8780206362406413
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -373,15 +419,17 @@
     "target_language": "ban_Latn",
     "target_language_name": "Bali (Indonesia)",
     "speakers": 4000000,
-    "bleu": 52.87524191594727
+    "bleu": 52.87524191594727,
+    "bert_score": 0.8934772113958994
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "pan_Guru",
-    "target_language_name": " Eastern Punjabi",
+    "target_language_name": "Eastern Punjabi",
     "speakers": 125000000,
-    "bleu": 60.833539867728966
+    "bleu": 60.46844110900072,
+    "bert_score": 0.9882440070311228
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -389,7 +437,8 @@
     "target_language": "por_Latn",
     "target_language_name": "Portuguese",
     "speakers": 254300000,
-    "bleu": 77.49780742224304
+    "bleu": 77.49780742224304,
+    "bert_score": 0.9494876027107239
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -397,7 +446,8 @@
     "target_language": "crh_Latn",
     "target_language_name": "Crimean Tatar",
     "speakers": 552740,
-    "bleu": 52.705024944759934
+    "bleu": 52.705024944759934,
+    "bert_score": 0.8972040812174479
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -405,7 +455,8 @@
     "target_language": "srp_Cyrl",
     "target_language_name": "Serbian",
     "speakers": 9000000,
-    "bleu": 69.96913961762156
+    "bleu": 69.96913961762156,
+    "bert_score": 0.9582955678304036
   },
   {
     "model": "openai/gpt-4o-mini",
@@ -413,7 +464,8 @@
     "target_language": "kas_Deva",
     "target_language_name": "Kashmiri",
     "speakers": 6900000,
-    "bleu": 22.94872648513265
+    "bleu": 22.94872648513265,
+    "bert_score": 0.9032864511013031
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -421,7 +473,8 @@
     "target_language": "kas_Deva",
     "target_language_name": "Kashmiri",
     "speakers": 6900000,
-    "bleu": 27.525562771983658
+    "bleu": 27.525562771983658,
+    "bert_score": 0.9144352018833161
   },
   {
     "model": "meta-llama/llama-3.1-70b-instruct",
@@ -429,7 +482,8 @@
     "target_language": "kas_Deva",
     "target_language_name": "Kashmiri",
     "speakers": 6900000,
-    "bleu": 7.999053096113321
+    "bleu": 7.999053096113321,
+    "bert_score": 0.891643617550532
   },
   {
     "model": "mistralai/mistral-nemo",
@@ -437,7 +491,8 @@
     "target_language": "kas_Deva",
     "target_language_name": "Kashmiri",
     "speakers": 6900000,
-    "bleu": 15.126083511737422
+    "bleu": 15.126083511737422,
+    "bert_score": 0.8491478403409322
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
@@ -445,15 +500,17 @@
     "target_language": "kas_Deva",
     "target_language_name": "Kashmiri",
     "speakers": 6900000,
-    "bleu": 21.928943407791756
+    "bleu": 21.928943407791756,
+    "bert_score": 0.9002275844415029
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "bod_Tibt",
-    "target_language_name": " Central Tibetan",
+    "target_language_name": "Central Tibetan",
     "speakers": 1200000,
-    "bleu": 51.76205985600136
+    "bleu": 51.34907527401463,
+    "bert_score": 0.9671575029691061
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -461,15 +518,17 @@
     "target_language": "slv_Latn",
     "target_language_name": "Slovene",
     "speakers": 2400000,
-    "bleu": 72.56912707571306
+    "bleu": 72.56912707571306,
+    "bert_score": 0.9432346244653066
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "ars_Arab",
-    "target_language_name": " Najdi Arabic",
+    "target_language_name": "Najdi Arabic",
     "speakers": 0,
-    "bleu": 47.7692581451387
+    "bleu": 46.41024303772761,
+    "bert_score": 0.9332984228928883
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -477,7 +536,8 @@
     "target_language": "cat_Latn",
     "target_language_name": "Catalan",
     "speakers": 5100000,
-    "bleu": 74.45950079317922
+    "bleu": 74.45950079317922,
+    "bert_score": 0.9464139262835185
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -485,15 +545,17 @@
     "target_language": "zul_Latn",
     "target_language_name": "Zulu",
     "speakers": 15700000,
-    "bleu": 59.176207838896076
+    "bleu": 59.176207838896076,
+    "bert_score": 0.9099391102790833
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "pes_Arab",
-    "target_language_name": " Iranian Persian",
+    "target_language_name": "Iranian Persian",
     "speakers": 52800000,
-    "bleu": 57.466690672020064
+    "bleu": 57.64441696979444,
+    "bert_score": 0.9476486345132192
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -501,7 +563,8 @@
     "target_language": "taq_Latn",
     "target_language_name": "Tamasheq",
     "speakers": 500000,
-    "bleu": 25.866944911127725
+    "bleu": 25.866944911127725,
+    "bert_score": 0.8280646105607351
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -509,7 +572,8 @@
     "target_language": "snd_Deva",
     "target_language_name": "Sindhi",
     "speakers": 25000000,
-    "bleu": 40.04493401977834
+    "bleu": 40.04493401977834,
+    "bert_score": 0.9263754248619079
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -517,7 +581,8 @@
     "target_language": "ssw_Latn",
     "target_language_name": "Swati",
     "speakers": 2034200,
-    "bleu": 52.77460964391619
+    "bleu": 52.77460964391619,
+    "bert_score": 0.8899940272172292
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -525,7 +590,8 @@
     "target_language": "mkd_Cyrl",
     "target_language_name": "Macedonian",
     "speakers": 2000000,
-    "bleu": 72.27334714365769
+    "bleu": 72.27334714365769,
+    "bert_score": 0.9558346649010976
   },
   {
     "model": "openai/gpt-4o-mini",
@@ -533,7 +599,8 @@
     "target_language": "pol_Latn",
     "target_language_name": "Polish",
     "speakers": 40200000,
-    "bleu": 63.79524354957938
+    "bleu": 63.79524354957938,
+    "bert_score": 0.9248784482479095
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -541,7 +608,8 @@
     "target_language": "pol_Latn",
     "target_language_name": "Polish",
     "speakers": 40200000,
-    "bleu": 65.97562270518736
+    "bleu": 65.97562270518736,
+    "bert_score": 0.9295462707678477
   },
   {
     "model": "meta-llama/llama-3.1-70b-instruct",
@@ -549,7 +617,8 @@
     "target_language": "pol_Latn",
     "target_language_name": "Polish",
     "speakers": 40200000,
-    "bleu": 62.09512880944625
+    "bleu": 62.09512880944625,
+    "bert_score": 0.918810615936915
   },
   {
     "model": "mistralai/mistral-nemo",
@@ -557,7 +626,8 @@
     "target_language": "pol_Latn",
     "target_language_name": "Polish",
     "speakers": 40200000,
-    "bleu": 56.42877796144466
+    "bleu": 56.42877796144466,
+    "bert_score": 0.8988153100013733
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
@@ -565,7 +635,8 @@
     "target_language": "pol_Latn",
     "target_language_name": "Polish",
     "speakers": 40200000,
-    "bleu": 61.08942681151859
+    "bleu": 61.08942681151859,
+    "bert_score": 0.9175748288631439
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -573,15 +644,17 @@
     "target_language": "srd_Latn",
     "target_language_name": "Sardinian",
     "speakers": 1300000,
-    "bleu": 62.69039147714039
+    "bleu": 62.69039147714039,
+    "bert_score": 0.9118991812070211
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "arb_Latn",
-    "target_language_name": " Standard Arabic",
+    "target_language_name": "Standard Arabic",
     "speakers": 0,
-    "bleu": 47.790331753697075
+    "bleu": 48.72485475113871,
+    "bert_score": 0.8800670305887858
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -589,7 +662,8 @@
     "target_language": "twi_Latn_asan1239",
     "target_language_name": "Twi",
     "speakers": 3000000,
-    "bleu": 44.44337481309101
+    "bleu": 44.44337481309101,
+    "bert_score": 0.8881823480129242
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -597,7 +671,8 @@
     "target_language": "tum_Latn",
     "target_language_name": "Tumbuka",
     "speakers": 2680000,
-    "bleu": 44.0490017392109
+    "bleu": 44.0490017392109,
+    "bert_score": 0.8865564326445262
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -605,7 +680,8 @@
     "target_language": "fur_Latn",
     "target_language_name": "Friulian",
     "speakers": 300000,
-    "bleu": 66.54880923723718
+    "bleu": 66.54880923723718,
+    "bert_score": 0.9255799611409505
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -613,7 +689,8 @@
     "target_language": "lua_Latn",
     "target_language_name": "Luba-Kasai",
     "speakers": 6300000,
-    "bleu": 45.065529165477344
+    "bleu": 45.065529165477344,
+    "bert_score": 0.8749240279197693
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -621,7 +698,8 @@
     "target_language": "fil_Latn",
     "target_language_name": "Filipino",
     "speakers": 90000000,
-    "bleu": 70.19284983784472
+    "bleu": 70.19284983784472,
+    "bert_score": 0.92694251537323
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -629,7 +707,8 @@
     "target_language": "afr_Latn",
     "target_language_name": "Afrikaans",
     "speakers": 10300000,
-    "bleu": 76.89005407773752
+    "bleu": 76.89005407773752,
+    "bert_score": 0.9481831173102061
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -637,7 +716,8 @@
     "target_language": "bos_Latn",
     "target_language_name": "Bosnian",
     "speakers": 3500000,
-    "bleu": 72.54880271311463
+    "bleu": 72.54880271311463,
+    "bert_score": 0.94769393603007
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -645,15 +725,17 @@
     "target_language": "ltg_Latn",
     "target_language_name": "Latgalian",
     "speakers": 200000,
-    "bleu": 56.484355652391756
+    "bleu": 56.484355652391756,
+    "bert_score": 0.9078494012355804
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "acq_Arab",
-    "target_language_name": " Ta’izzi-Adeni Arabic",
+    "target_language_name": "Ta’izzi-Adeni Arabic",
     "speakers": 10500000,
-    "bleu": 48.67285742584471
+    "bleu": 49.413933528139225,
+    "bert_score": 0.9354432185490926
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -661,7 +743,8 @@
     "target_language": "mag_Deva",
     "target_language_name": "Magahi",
     "speakers": 20700000,
-    "bleu": 58.54742215461198
+    "bleu": 58.54742215461198,
+    "bert_score": 0.9458349565664927
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -669,7 +752,8 @@
     "target_language": "min_Latn",
     "target_language_name": "Minangkabau",
     "speakers": 5530000,
-    "bleu": 64.0323403919738
+    "bleu": 64.0323403919738,
+    "bert_score": 0.9164695799350738
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -677,15 +761,17 @@
     "target_language": "kor_Hang",
     "target_language_name": "Korean",
     "speakers": 77300000,
-    "bleu": 43.68722859743311
+    "bleu": 43.68722859743311,
+    "bert_score": 0.9579092760880789
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "zsm_Latn",
-    "target_language_name": " Standard Malay",
+    "target_language_name": "Standard Malay",
     "speakers": 0,
-    "bleu": 75.58682556964494
+    "bleu": 74.2657232797885,
+    "bert_score": 0.9445500493049621
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -693,15 +779,17 @@
     "target_language": "mar_Deva",
     "target_language_name": "Marathi",
     "speakers": 83100000,
-    "bleu": 57.44340907113495
+    "bleu": 57.44340907113495,
+    "bert_score": 0.9421781261761983
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "pbt_Arab",
-    "target_language_name": " Southern Pashto",
+    "target_language_name": "Southern Pashto",
     "speakers": 10900000,
-    "bleu": 38.548696222210154
+    "bleu": 38.3124819373775,
+    "bert_score": 0.9212681790192921
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -709,15 +797,17 @@
     "target_language": "lij_Latn",
     "target_language_name": "Ligurian",
     "speakers": 500000,
-    "bleu": 55.85306363017816
+    "bleu": 55.85306363017816,
+    "bert_score": 0.904762077331543
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "knc_Latn",
-    "target_language_name": " Yerwa Kanuri",
+    "target_language_name": "Yerwa Kanuri",
     "speakers": 0,
-    "bleu": 22.241385961047616
+    "bleu": 22.062110974228755,
+    "bert_score": 0.8124950389067332
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -725,7 +815,8 @@
     "target_language": "chv_Cyrl",
     "target_language_name": "Chuvash",
     "speakers": 1279650,
-    "bleu": 45.05466587233098
+    "bleu": 45.05466587233098,
+    "bert_score": 0.9203916192054749
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -733,7 +824,8 @@
     "target_language": "asm_Beng",
     "target_language_name": "Assamese",
     "speakers": 15300000,
-    "bleu": 47.03513316051628
+    "bleu": 47.03513316051628,
+    "bert_score": 0.9281195739905039
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -741,7 +833,8 @@
     "target_language": "ace_Arab",
     "target_language_name": "Aceh",
     "speakers": 3500032,
-    "bleu": 23.349267705271775
+    "bleu": 23.349267705271775,
+    "bert_score": 0.8943273961544037
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -749,7 +842,8 @@
     "target_language": "tha_Thai",
     "target_language_name": "Thai",
     "speakers": 40000000,
-    "bleu": 62.81253609435389
+    "bleu": 62.81253609435389,
+    "bert_score": 0.9225328485171
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -757,7 +851,8 @@
     "target_language": "fao_Latn",
     "target_language_name": "Faroese",
     "speakers": 69150,
-    "bleu": 65.91479024829229
+    "bleu": 65.91479024829229,
+    "bert_score": 0.9332413752873738
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -765,7 +860,8 @@
     "target_language": "nqo_Nkoo",
     "target_language_name": "N’Ko",
     "speakers": 0,
-    "bleu": 32.48349079900792
+    "bleu": 32.48349079900792,
+    "bert_score": 0.9823745767275492
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -773,7 +869,8 @@
     "target_language": "ilo_Latn",
     "target_language_name": "Ilocano",
     "speakers": 9100000,
-    "bleu": 62.605886459379576
+    "bleu": 62.605886459379576,
+    "bert_score": 0.9115280091762543
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -781,15 +878,17 @@
     "target_language": "kat_Geor",
     "target_language_name": "Georgian",
     "speakers": 3700000,
-    "bleu": 61.016636144241765
+    "bleu": 61.016636144241765,
+    "bert_score": 0.9546662310759226
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "ayr_Latn",
-    "target_language_name": " Central Aymara",
+    "target_language_name": "Central Aymara",
     "speakers": 0,
-    "bleu": 40.77379070593447
+    "bleu": 42.769843666920714,
+    "bert_score": 0.8625142018000285
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -797,7 +896,8 @@
     "target_language": "dan_Latn",
     "target_language_name": "Danish",
     "speakers": 6000000,
-    "bleu": 78.0935433283814
+    "bleu": 78.0935433283814,
+    "bert_score": 0.9506490747133891
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -805,7 +905,8 @@
     "target_language": "brx_Deva",
     "target_language_name": "Boro (India)",
     "speakers": 1482929,
-    "bleu": 36.11004749691388
+    "bleu": 36.11004749691388,
+    "bert_score": 0.9251878539721171
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -813,15 +914,17 @@
     "target_language": "sag_Latn",
     "target_language_name": "Sango",
     "speakers": 4600000,
-    "bleu": 34.875422265717596
+    "bleu": 34.875422265717596,
+    "bert_score": 0.8720244228839874
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "lvs_Latn",
-    "target_language_name": " Standard Latvian",
+    "target_language_name": "Standard Latvian",
     "speakers": 0,
-    "bleu": 64.89951881611144
+    "bleu": 65.08332100371138,
+    "bert_score": 0.9217625757058462
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -829,7 +932,8 @@
     "target_language": "jpn_Jpan",
     "target_language_name": "Japanese",
     "speakers": 128000000,
-    "bleu": 49.91661356931259
+    "bleu": 49.91661356931259,
+    "bert_score": 0.9425287286440531
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -837,7 +941,8 @@
     "target_language": "uig_Arab",
     "target_language_name": "Uyghur",
     "speakers": 10400000,
-    "bleu": 53.53468771030665
+    "bleu": 53.53468771030665,
+    "bert_score": 0.9397906005382538
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -845,7 +950,8 @@
     "target_language": "fra_Latn",
     "target_language_name": "French",
     "speakers": 208157220,
-    "bleu": 79.3023871219446
+    "bleu": 79.3023871219446,
+    "bert_score": 0.9554367423057556
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -853,7 +959,8 @@
     "target_language": "jav_Latn",
     "target_language_name": "Javanese",
     "speakers": 84308740,
-    "bleu": 60.44033529900538
+    "bleu": 60.44033529900538,
+    "bert_score": 0.9125308076540629
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -861,7 +968,8 @@
     "target_language": "sun_Latn",
     "target_language_name": "Sunda",
     "speakers": 32400000,
-    "bleu": 56.40659991041485
+    "bleu": 56.40659991041485,
+    "bert_score": 0.9077177822589875
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -869,7 +977,8 @@
     "target_language": "umb_Latn",
     "target_language_name": "Umbundu",
     "speakers": 6000000,
-    "bleu": 21.080277559665817
+    "bleu": 21.080277559665817,
+    "bert_score": 0.8461364289124806
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -877,7 +986,8 @@
     "target_language": "bel_Cyrl",
     "target_language_name": "Belarusian",
     "speakers": 7900000,
-    "bleu": 54.51951664423131
+    "bleu": 54.51951664423131,
+    "bert_score": 0.9329862594604492
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -885,15 +995,17 @@
     "target_language": "cjk_Latn",
     "target_language_name": "Chokwe",
     "speakers": 0,
-    "bleu": 10.186407416077753
+    "bleu": 10.186407416077753,
+    "bert_score": 0.727788798014323
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "yue_Hant",
-    "target_language_name": " Yue Chinese",
+    "target_language_name": "Yue Chinese",
     "speakers": 73100000,
-    "bleu": 34.25609770821219
+    "bleu": 34.561465122815996,
+    "bert_score": 0.9634495397408803
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -901,15 +1013,17 @@
     "target_language": "hat_Latn",
     "target_language_name": "Haitian Creole",
     "speakers": 9600000,
-    "bleu": 63.85321875910916
+    "bleu": 63.85321875910916,
+    "bert_score": 0.9323611199855805
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "kmr_Latn",
-    "target_language_name": " Northern Kurdish",
+    "target_language_name": "Northern Kurdish",
     "speakers": 14600000,
-    "bleu": 55.00856002671919
+    "bleu": 55.79658782267678,
+    "bert_score": 0.9104436457157135
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -917,7 +1031,8 @@
     "target_language": "ceb_Latn",
     "target_language_name": "Cebuano",
     "speakers": 15900000,
-    "bleu": 69.455795865483
+    "bleu": 69.455795865483,
+    "bert_score": 0.932128123442332
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -925,15 +1040,17 @@
     "target_language": "dzo_Tibt",
     "target_language_name": "Dzongkha",
     "speakers": 237080,
-    "bleu": 44.35738140173861
+    "bleu": 44.35738140173861,
+    "bert_score": 0.9664796074231465
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "deu_Latn",
-    "target_language_name": " Standard German",
+    "target_language_name": "Standard German",
     "speakers": 105000000,
-    "bleu": 77.22130383692244
+    "bleu": 77.19665151067797,
+    "bert_score": 0.9468763132890066
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -941,7 +1058,8 @@
     "target_language": "ibo_Latn",
     "target_language_name": "Igbo",
     "speakers": 27000000,
-    "bleu": 46.40173449341075
+    "bleu": 46.40173449341075,
+    "bert_score": 0.9137314637502034
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -949,23 +1067,26 @@
     "target_language": "vie_Latn",
     "target_language_name": "Vietnamese",
     "speakers": 76000000,
-    "bleu": 70.35607494641172
+    "bleu": 70.35607494641172,
+    "bert_score": 0.9527418712774912
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "quy_Latn",
-    "target_language_name": " Ayacucho Quechua",
+    "target_language_name": "Ayacucho Quechua",
     "speakers": 918200,
-    "bleu": 46.24441292595311
+    "bleu": 45.653492702784725,
+    "bert_score": 0.8731370111306508
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "cmn_Hant",
-    "target_language_name": " Mandarin Chinese",
+    "target_language_name": "Mandarin Chinese",
     "speakers": 1074000000,
-    "bleu": 41.46450104859355
+    "bleu": 41.61854589430943,
+    "bert_score": 0.9654350221157074
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -973,7 +1094,8 @@
     "target_language": "mai_Deva",
     "target_language_name": "Maithili",
     "speakers": 33900000,
-    "bleu": 54.65300713908629
+    "bleu": 54.65300713908629,
+    "bert_score": 0.9433513383070627
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -981,7 +1103,8 @@
     "target_language": "gla_Latn",
     "target_language_name": "Scottish Gaelic",
     "speakers": 60130,
-    "bleu": 62.604437133773324
+    "bleu": 62.604437133773324,
+    "bert_score": 0.9264988481998444
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -989,7 +1112,8 @@
     "target_language": "urd_Arab",
     "target_language_name": "Urdu",
     "speakers": 94022900,
-    "bleu": 61.12554572717868
+    "bleu": 61.12554572717868,
+    "bert_score": 0.9538880089918772
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -997,7 +1121,8 @@
     "target_language": "shn_Mymr",
     "target_language_name": "Shan",
     "speakers": 3000000,
-    "bleu": 29.21299485766884
+    "bleu": 29.21299485766884,
+    "bert_score": 0.9378574808438619
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1005,15 +1130,17 @@
     "target_language": "wol_Latn",
     "target_language_name": "Wolof",
     "speakers": 3700000,
-    "bleu": 42.64301275691043
+    "bleu": 42.64301275691043,
+    "bert_score": 0.8762976408004761
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "cmn_Hans",
-    "target_language_name": " Mandarin Chinese",
+    "target_language_name": "Mandarin Chinese",
     "speakers": 1074000000,
-    "bleu": 43.72017219180501
+    "bleu": 43.441487462618014,
+    "bert_score": 0.9615364015102387
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1021,15 +1148,17 @@
     "target_language": "guj_Gujr",
     "target_language_name": "Gujarati",
     "speakers": 56400000,
-    "bleu": 55.588451345198735
+    "bleu": 55.588451345198735,
+    "bert_score": 0.9753397226333618
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "ekk_Latn",
-    "target_language_name": " Standard Estonian",
+    "target_language_name": "Standard Estonian",
     "speakers": 1164770,
-    "bleu": 68.06935269432235
+    "bleu": 67.41569195167845,
+    "bert_score": 0.9277306814988454
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1037,7 +1166,8 @@
     "target_language": "luo_Latn",
     "target_language_name": "Dholuo",
     "speakers": 3000000,
-    "bleu": 46.41194790710186
+    "bleu": 46.41194790710186,
+    "bert_score": 0.8803233822186788
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1045,15 +1175,17 @@
     "target_language": "hrv_Latn",
     "target_language_name": "Croatian",
     "speakers": 7000000,
-    "bleu": 69.54569836615161
+    "bleu": 69.54569836615161,
+    "bert_score": 0.9444877982139588
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "uzn_Latn",
-    "target_language_name": " Northern Uzbek",
+    "target_language_name": "Northern Uzbek",
     "speakers": 26912410,
-    "bleu": 64.07804482004295
+    "bleu": 63.20557385096708,
+    "bert_score": 0.9120756924152374
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1061,7 +1193,8 @@
     "target_language": "ben_Beng",
     "target_language_name": "Bengali",
     "speakers": 300000000,
-    "bleu": 57.14175888160181
+    "bleu": 57.14175888160181,
+    "bert_score": 0.9483523646990458
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1069,7 +1202,8 @@
     "target_language": "nya_Latn",
     "target_language_name": "Chichewa",
     "speakers": 12000000,
-    "bleu": 59.76016801606614
+    "bleu": 59.76016801606614,
+    "bert_score": 0.9069253901640574
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1077,7 +1211,8 @@
     "target_language": "tsn_Latn",
     "target_language_name": "Setswana",
     "speakers": 4500000,
-    "bleu": 55.22888902281337
+    "bleu": 55.22888902281337,
+    "bert_score": 0.9117900888125102
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1085,15 +1220,17 @@
     "target_language": "fin_Latn",
     "target_language_name": "Finnish",
     "speakers": 5413380,
-    "bleu": 70.94250295175219
+    "bleu": 70.94250295175219,
+    "bert_score": 0.9320579687754313
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "nso_Latn",
-    "target_language_name": " Northern Sotho",
+    "target_language_name": "Northern Sotho",
     "speakers": 4100000,
-    "bleu": 63.048250806570664
+    "bleu": 62.87694016917069,
+    "bert_score": 0.9261207898457845
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1101,7 +1238,8 @@
     "target_language": "sna_Latn",
     "target_language_name": "Shona",
     "speakers": 9023000,
-    "bleu": 51.55921914049446
+    "bleu": 51.55921914049446,
+    "bert_score": 0.8798740128676097
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1109,7 +1247,8 @@
     "target_language": "snd_Arab",
     "target_language_name": "Sindhi",
     "speakers": 25000000,
-    "bleu": 56.33027730975489
+    "bleu": 56.33027730975489,
+    "bert_score": 0.9470286051432292
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1117,7 +1256,8 @@
     "target_language": "xho_Latn",
     "target_language_name": "Xhosa",
     "speakers": 11000000,
-    "bleu": 55.46880910094653
+    "bleu": 55.46880910094653,
+    "bert_score": 0.9008744815985362
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1125,7 +1265,8 @@
     "target_language": "kik_Latn",
     "target_language_name": "Gikuyu",
     "speakers": 6623000,
-    "bleu": 40.92882752909001
+    "bleu": 40.92882752909001,
+    "bert_score": 0.8850945432980856
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1133,7 +1274,8 @@
     "target_language": "tso_Latn",
     "target_language_name": "Tsonga",
     "speakers": 13000000,
-    "bleu": 58.35165735971044
+    "bleu": 58.35165735971044,
+    "bert_score": 0.9134832978248596
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1141,7 +1283,8 @@
     "target_language": "tat_Cyrl",
     "target_language_name": "Tatar",
     "speakers": 5427318,
-    "bleu": 60.3447467212788
+    "bleu": 60.3447467212788,
+    "bert_score": 0.9364115715026855
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1149,15 +1292,17 @@
     "target_language": "awa_Deva",
     "target_language_name": "Awadhi",
     "speakers": 22000000,
-    "bleu": 46.0797144146192
+    "bleu": 46.0797144146192,
+    "bert_score": 0.9333642820517222
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "gom_Deva",
-    "target_language_name": " Goan Konkani",
+    "target_language_name": "Goan Konkani",
     "speakers": 3633900,
-    "bleu": 46.88835079678478
+    "bleu": 47.108401794496295,
+    "bert_score": 0.931428724527359
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1165,7 +1310,8 @@
     "target_language": "amh_Ethi",
     "target_language_name": "Amharic",
     "speakers": 25000000,
-    "bleu": 43.15445686971015
+    "bleu": 43.15445686971015,
+    "bert_score": 0.9891169210275014
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1173,7 +1319,8 @@
     "target_language": "tam_Taml",
     "target_language_name": "Tamil",
     "speakers": 75000000,
-    "bleu": 65.78632210538115
+    "bleu": 65.78632210538115,
+    "bert_score": 0.9536473691463471
   },
   {
     "model": "openai/gpt-4o-mini",
@@ -1181,7 +1328,8 @@
     "target_language": "isl_Latn",
     "target_language_name": "Icelandic",
     "speakers": 358000,
-    "bleu": 61.13552606922321
+    "bleu": 61.13552606922321,
+    "bert_score": 0.9258354703585306
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1189,7 +1337,8 @@
     "target_language": "isl_Latn",
     "target_language_name": "Icelandic",
     "speakers": 358000,
-    "bleu": 66.67473000551618
+    "bleu": 66.67473000551618,
+    "bert_score": 0.938145500421524
   },
   {
     "model": "meta-llama/llama-3.1-70b-instruct",
@@ -1197,7 +1346,8 @@
     "target_language": "isl_Latn",
     "target_language_name": "Icelandic",
     "speakers": 358000,
-    "bleu": 58.60923195347865
+    "bleu": 58.60923195347865,
+    "bert_score": 0.9203641970952352
   },
   {
     "model": "mistralai/mistral-nemo",
@@ -1205,7 +1355,8 @@
     "target_language": "isl_Latn",
     "target_language_name": "Icelandic",
     "speakers": 358000,
-    "bleu": 45.58482442810681
+    "bleu": 45.58482442810681,
+    "bert_score": 0.8916285157203674
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
@@ -1213,7 +1364,8 @@
     "target_language": "isl_Latn",
     "target_language_name": "Icelandic",
     "speakers": 358000,
-    "bleu": 40.16071522003955
+    "bleu": 40.16071522003955,
+    "bert_score": 0.8842564543088277
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1221,15 +1373,17 @@
     "target_language": "san_Deva",
     "target_language_name": "Sanskrit",
     "speakers": 49736,
-    "bleu": 32.78132499113236
+    "bleu": 32.78132499113236,
+    "bert_score": 0.8987655500570934
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "als_Latn",
-    "target_language_name": " Tosk Albanian",
+    "target_language_name": "Tosk Albanian",
     "speakers": 3000000,
-    "bleu": 69.24285560147364
+    "bleu": 69.4218765092482,
+    "bert_score": 0.940268095334371
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1237,7 +1391,8 @@
     "target_language": "ron_Latn",
     "target_language_name": "Romanian",
     "speakers": 24300000,
-    "bleu": 76.4907159034647
+    "bleu": 76.4907159034647,
+    "bert_score": 0.9455295324325561
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1245,7 +1400,8 @@
     "target_language": "kaz_Cyrl",
     "target_language_name": "Kazakh",
     "speakers": 13161980,
-    "bleu": 61.12516213751114
+    "bleu": 61.12516213751114,
+    "bert_score": 0.9379647115866343
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1253,7 +1409,8 @@
     "target_language": "sat_Olck",
     "target_language_name": "Santhali",
     "speakers": 7200000,
-    "bleu": 31.51192472690372
+    "bleu": 31.51192472690372,
+    "bert_score": 0.9440957049528758
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1261,15 +1418,17 @@
     "target_language": "ukr_Cyrl",
     "target_language_name": "Ukrainian",
     "speakers": 34710100,
-    "bleu": 68.09762325436868
+    "bleu": 68.09762325436868,
+    "bert_score": 0.9468558847904205
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "khk_Cyrl",
-    "target_language_name": " Halh Mongolian",
+    "target_language_name": "Halh Mongolian",
     "speakers": 2704030,
-    "bleu": 59.14263972986465
+    "bleu": 58.50377899708198,
+    "bert_score": 0.9380823055903117
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1277,7 +1436,8 @@
     "target_language": "bjn_Latn",
     "target_language_name": "Banjar",
     "speakers": 3500000,
-    "bleu": 56.309519555010915
+    "bleu": 56.309519555010915,
+    "bert_score": 0.901931474606196
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1285,7 +1445,8 @@
     "target_language": "fon_Latn",
     "target_language_name": "Fon",
     "speakers": 1935500,
-    "bleu": 25.279777366609945
+    "bleu": 25.279777366609945,
+    "bert_score": 0.8664443592230479
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1293,7 +1454,8 @@
     "target_language": "sin_Sinh",
     "target_language_name": "Sinhala",
     "speakers": 15300000,
-    "bleu": 56.75673117959971
+    "bleu": 56.75673117959971,
+    "bert_score": 0.9713358581066132
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1301,7 +1463,8 @@
     "target_language": "nno_Latn",
     "target_language_name": "nno",
     "speakers": 0,
-    "bleu": 71.86156462958435
+    "bleu": 71.86156462958435,
+    "bert_score": 0.9335320313771566
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1309,7 +1472,8 @@
     "target_language": "hau_Latn",
     "target_language_name": "Hausa",
     "speakers": 43900000,
-    "bleu": 56.34319579006431
+    "bleu": 56.34319579006431,
+    "bert_score": 0.9012877802054088
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1317,7 +1481,8 @@
     "target_language": "prs_Arab",
     "target_language_name": "Dari",
     "speakers": 9600000,
-    "bleu": 52.55397957953147
+    "bleu": 52.55397957953147,
+    "bert_score": 0.9466466506322225
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1325,7 +1490,8 @@
     "target_language": "ell_Grek",
     "target_language_name": "Greek",
     "speakers": 15000000,
-    "bleu": 66.23477821529342
+    "bleu": 66.23477821529342,
+    "bert_score": 0.9577525118986766
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1333,7 +1499,8 @@
     "target_language": "tpi_Latn",
     "target_language_name": "Tok Pisin",
     "speakers": 4000000,
-    "bleu": 56.54077603673191
+    "bleu": 56.54077603673191,
+    "bert_score": 0.903118242820104
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1341,7 +1508,8 @@
     "target_language": "hye_Armn",
     "target_language_name": "Armenian",
     "speakers": 6700000,
-    "bleu": 64.68044008058686
+    "bleu": 64.68044008058686,
+    "bert_score": 0.9550812800725301
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1349,7 +1517,8 @@
     "target_language": "eus_Latn",
     "target_language_name": "Basque",
     "speakers": 750000,
-    "bleu": 65.89687213771296
+    "bleu": 65.89687213771296,
+    "bert_score": 0.9192741294701894
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1357,7 +1526,8 @@
     "target_language": "nob_Latn",
     "target_language_name": "Bokmål",
     "speakers": 4000000,
-    "bleu": 77.49395130155645
+    "bleu": 77.49395130155645,
+    "bert_score": 0.9550971885522207
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1365,15 +1535,17 @@
     "target_language": "slk_Latn",
     "target_language_name": "Slovak",
     "speakers": 6000000,
-    "bleu": 67.92848040860814
+    "bleu": 67.92848040860814,
+    "bert_score": 0.9360236605008443
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "knc_Arab",
-    "target_language_name": " Yerwa Kanuri",
+    "target_language_name": "Yerwa Kanuri",
     "speakers": 0,
-    "bleu": 14.714612284264362
+    "bleu": 14.954246536984446,
+    "bert_score": 0.8674997230370839
   },
   {
     "model": "openai/gpt-4o-mini",
@@ -1381,7 +1553,8 @@
     "target_language": "lin_Latn",
     "target_language_name": "Lingala",
     "speakers": 20000000,
-    "bleu": 50.384710146677506
+    "bleu": 50.384710146677506,
+    "bert_score": 0.887447464466095
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1389,7 +1562,8 @@
     "target_language": "lin_Latn",
     "target_language_name": "Lingala",
     "speakers": 20000000,
-    "bleu": 56.735518064625495
+    "bleu": 56.735518064625495,
+    "bert_score": 0.900246125459671
   },
   {
     "model": "meta-llama/llama-3.1-70b-instruct",
@@ -1397,7 +1571,8 @@
     "target_language": "lin_Latn",
     "target_language_name": "Lingala",
     "speakers": 20000000,
-    "bleu": 19.732953348932526
+    "bleu": 19.732953348932526,
+    "bert_score": 0.8526991029580434
   },
   {
     "model": "mistralai/mistral-nemo",
@@ -1405,7 +1580,8 @@
     "target_language": "lin_Latn",
     "target_language_name": "Lingala",
     "speakers": 20000000,
-    "bleu": 8.64985622273109
+    "bleu": 8.64985622273109,
+    "bert_score": 0.8075945158799489
   },
   {
     "model": "qwen/qwen-2.5-72b-instruct",
@@ -1413,7 +1589,8 @@
     "target_language": "lin_Latn",
     "target_language_name": "Lingala",
     "speakers": 20000000,
-    "bleu": 16.658410482633357
+    "bleu": 16.658410482633357,
+    "bert_score": 0.8286310772101084
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1421,15 +1598,17 @@
     "target_language": "bam_Latn",
     "target_language_name": "Bamanankan",
     "speakers": 2700000,
-    "bleu": 38.693909140769804
+    "bleu": 38.693909140769804,
+    "bert_score": 0.887204376856486
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "sot_Latn",
-    "target_language_name": " Southern Sotho",
+    "target_language_name": "Southern Sotho",
     "speakers": 6000000,
-    "bleu": 57.153751026567605
+    "bleu": 56.73529955399566,
+    "bert_score": 0.9102749407291413
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1437,23 +1616,26 @@
     "target_language": "min_Arab",
     "target_language_name": "Minangkabau",
     "speakers": 5530000,
-    "bleu": 37.44925084737469
+    "bleu": 37.44925084737469,
+    "bert_score": 0.9340883692105612
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "zgh_Tfng",
-    "target_language_name": " Standard Moroccan Tamazight",
+    "target_language_name": "Standard Moroccan Tamazight",
     "speakers": 0,
-    "bleu": 36.02110203894128
+    "bleu": 35.62476481092257,
+    "bert_score": 0.9847298423449199
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "gug_Latn",
-    "target_language_name": " Paraguayan Guaraní",
+    "target_language_name": "Paraguayan Guaraní",
     "speakers": 0,
-    "bleu": 42.90235038974312
+    "bleu": 41.79298637071421,
+    "bert_score": 0.8764786461989085
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1461,7 +1643,8 @@
     "target_language": "lmo_Latn",
     "target_language_name": "Lombard",
     "speakers": 3900000,
-    "bleu": 46.38844026736926
+    "bleu": 46.38844026736926,
+    "bert_score": 0.8643471499284109
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1469,7 +1652,8 @@
     "target_language": "yor_Latn",
     "target_language_name": "Yoruba",
     "speakers": 40000000,
-    "bleu": 34.264254226792296
+    "bleu": 34.264254226792296,
+    "bert_score": 0.9001545011997223
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1477,7 +1661,8 @@
     "target_language": "taq_Tfng",
     "target_language_name": "Tamasheq",
     "speakers": 500000,
-    "bleu": 10.997033033155907
+    "bleu": 10.997033033155907,
+    "bert_score": 0.8574198484420776
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1485,15 +1670,17 @@
     "target_language": "tgk_Cyrl",
     "target_language_name": "Tajik",
     "speakers": 14000000,
-    "bleu": 60.97836841576954
+    "bleu": 60.97836841576954,
+    "bert_score": 0.9378365337848663
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "fuv_Latn",
-    "target_language_name": " Nigerian Fulfulde",
+    "target_language_name": "Nigerian Fulfulde",
     "speakers": 14500000,
-    "bleu": 28.24585718309509
+    "bleu": 28.17610559128895,
+    "bert_score": 0.8343587597211202
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1501,7 +1688,8 @@
     "target_language": "mal_Mlym",
     "target_language_name": "Malayalam",
     "speakers": 37100000,
-    "bleu": 64.06558940908465
+    "bleu": 64.06558940908465,
+    "bert_score": 0.9803075671195984
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1509,15 +1697,17 @@
     "target_language": "tel_Telu",
     "target_language_name": "Telugu",
     "speakers": 82000000,
-    "bleu": 61.635245762892694
+    "bleu": 61.635245762892694,
+    "bert_score": 0.9790697515010833
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "arb_Arab",
-    "target_language_name": " Standard Arabic",
+    "target_language_name": "Standard Arabic",
     "speakers": 0,
-    "bleu": 65.45362559909618
+    "bleu": 65.04139779040646,
+    "bert_score": 0.9535989860693613
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1525,7 +1715,8 @@
     "target_language": "khm_Khmr",
     "target_language_name": "Khmer",
     "speakers": 16600000,
-    "bleu": 49.209825704340375
+    "bleu": 49.209825704340375,
+    "bert_score": 0.8907732884089152
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1533,7 +1724,8 @@
     "target_language": "scn_Latn",
     "target_language_name": "Sicilian",
     "speakers": 4700000,
-    "bleu": 58.589535944250635
+    "bleu": 58.589535944250635,
+    "bert_score": 0.9042834500471751
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1541,7 +1733,8 @@
     "target_language": "ltz_Latn",
     "target_language_name": "Luxembourgish",
     "speakers": 391200,
-    "bleu": 70.8338190437548
+    "bleu": 70.8338190437548,
+    "bert_score": 0.9297492106755575
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1549,7 +1742,8 @@
     "target_language": "pag_Latn",
     "target_language_name": "Pangasinan",
     "speakers": 1100000,
-    "bleu": 56.00481838266269
+    "bleu": 56.00481838266269,
+    "bert_score": 0.890628065665563
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1557,7 +1751,8 @@
     "target_language": "kab_Latn",
     "target_language_name": "Kabyle",
     "speakers": 5586000,
-    "bleu": 41.14429925869902
+    "bleu": 41.14429925869902,
+    "bert_score": 0.8803219795227051
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1565,7 +1760,8 @@
     "target_language": "bak_Cyrl",
     "target_language_name": "Bashkort",
     "speakers": 1200000,
-    "bleu": 57.54538429274717
+    "bleu": 57.54538429274717,
+    "bert_score": 0.9298217594623566
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1573,7 +1769,8 @@
     "target_language": "twi_Latn_akua1239",
     "target_language_name": "Twi",
     "speakers": 3000000,
-    "bleu": 45.1519376004116
+    "bleu": 45.1519376004116,
+    "bert_score": 0.8945407330989837
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1581,7 +1778,8 @@
     "target_language": "hin_Deva",
     "target_language_name": "Hindi",
     "speakers": 341000000,
-    "bleu": 64.936216689785
+    "bleu": 64.936216689785,
+    "bert_score": 0.9463364283243815
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1589,7 +1787,8 @@
     "target_language": "kas_Arab",
     "target_language_name": "Kashmiri",
     "speakers": 6900000,
-    "bleu": 38.28328065553461
+    "bleu": 38.28328065553461,
+    "bert_score": 0.9321333905061086
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1597,7 +1796,8 @@
     "target_language": "mlt_Latn",
     "target_language_name": "Maltese",
     "speakers": 570000,
-    "bleu": 80.08667772627608
+    "bleu": 80.08667772627608,
+    "bert_score": 0.9520254651705424
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1605,7 +1805,8 @@
     "target_language": "som_Latn",
     "target_language_name": "Somali",
     "speakers": 16200000,
-    "bleu": 55.370649647294535
+    "bleu": 55.370649647294535,
+    "bert_score": 0.9085715929667155
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1613,7 +1814,8 @@
     "target_language": "hne_Deva",
     "target_language_name": "Chhattisgarhi",
     "speakers": 16300000,
-    "bleu": 47.979750130407254
+    "bleu": 47.979750130407254,
+    "bert_score": 0.9363766014575958
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1621,7 +1823,8 @@
     "target_language": "glg_Latn",
     "target_language_name": "Galician",
     "speakers": 2500000,
-    "bleu": 68.70247869041181
+    "bleu": 68.70247869041181,
+    "bert_score": 0.9283550182978312
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1629,7 +1832,8 @@
     "target_language": "ory_Orya",
     "target_language_name": "Odia",
     "speakers": 34500000,
-    "bleu": 57.362809651798656
+    "bleu": 57.362809651798656,
+    "bert_score": 0.9768644154071808
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1637,15 +1841,17 @@
     "target_language": "nld_Latn",
     "target_language_name": "Dutch",
     "speakers": 23100000,
-    "bleu": 71.18493263152928
+    "bleu": 71.18493263152928,
+    "bert_score": 0.9376831948757172
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "apc_Arab_sout3123",
-    "target_language_name": " Levantine Arabic",
+    "target_language_name": "Levantine Arabic",
     "speakers": 44000000,
-    "bleu": 55.666484540051364
+    "bleu": 56.235711236638,
+    "bert_score": 0.9452390710512797
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1653,7 +1859,8 @@
     "target_language": "oci_Latn",
     "target_language_name": "Occitan",
     "speakers": 542000,
-    "bleu": 71.53274018395614
+    "bleu": 71.53274018395614,
+    "bert_score": 0.9337525626023611
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1661,7 +1868,8 @@
     "target_language": "mni_Beng",
     "target_language_name": "Meitei",
     "speakers": 1470000,
-    "bleu": 40.61648039338993
+    "bleu": 40.61648039338993,
+    "bert_score": 0.9325185577074687
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1669,7 +1877,8 @@
     "target_language": "hun_Latn",
     "target_language_name": "Hungarian",
     "speakers": 12600000,
-    "bleu": 66.13011194084116
+    "bleu": 66.13011194084116,
+    "bert_score": 0.924921864271164
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1677,7 +1886,8 @@
     "target_language": "bho_Deva",
     "target_language_name": "Bhojpuri",
     "speakers": 52200000,
-    "bleu": 44.54123379070156
+    "bleu": 44.54123379070156,
+    "bert_score": 0.9288184980551402
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1685,7 +1895,8 @@
     "target_language": "mya_Mymr",
     "target_language_name": "Burmese",
     "speakers": 32900000,
-    "bleu": 55.723591167735165
+    "bleu": 55.723591167735165,
+    "bert_score": 0.975975106159846
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1693,7 +1904,8 @@
     "target_language": "run_Latn",
     "target_language_name": "Rundi",
     "speakers": 10800000,
-    "bleu": 48.94351362900039
+    "bleu": 48.94351362900039,
+    "bert_score": 0.8933652222156525
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1701,7 +1913,8 @@
     "target_language": "ast_Latn",
     "target_language_name": "Asturian",
     "speakers": 450000,
-    "bleu": 71.34456234933488
+    "bleu": 71.34456234933488,
+    "bert_score": 0.931475841999054
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1709,7 +1922,8 @@
     "target_language": "tir_Ethi",
     "target_language_name": "Tigrigna",
     "speakers": 7507780,
-    "bleu": 32.87119617033141
+    "bleu": 32.87119617033141,
+    "bert_score": 0.9852415164311726
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1717,31 +1931,35 @@
     "target_language": "kac_Latn",
     "target_language_name": "Jingpho",
     "speakers": 940000,
-    "bleu": 43.550058140290794
+    "bleu": 43.550058140290794,
+    "bert_score": 0.8727998991807302
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "acm_Arab",
-    "target_language_name": " Mesopotamian Arabic",
+    "target_language_name": "Mesopotamian Arabic",
     "speakers": 15700000,
-    "bleu": 50.086563426937225
+    "bleu": 49.51848652969806,
+    "bert_score": 0.9382626354694367
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "arz_Arab",
-    "target_language_name": " Egyptian Arabic",
+    "target_language_name": "Egyptian Arabic",
     "speakers": 100542400,
-    "bleu": 54.06827805197923
+    "bleu": 53.68180810376352,
+    "bert_score": 0.9394114673137665
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "mhr_Cyrl",
-    "target_language_name": " Meadow Mari",
+    "target_language_name": "Meadow Mari",
     "speakers": 482000,
-    "bleu": 49.560611727256386
+    "bleu": 49.791168058232124,
+    "bert_score": 0.929511696100235
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1749,7 +1967,8 @@
     "target_language": "ita_Latn",
     "target_language_name": "Italian",
     "speakers": 64819790,
-    "bleu": 69.15883435724486
+    "bleu": 69.15883435724486,
+    "bert_score": 0.9358606537183126
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1757,23 +1976,35 @@
     "target_language": "spa_Latn",
     "target_language_name": "Spanish",
     "speakers": 485000000,
-    "bleu": 63.84670733785411
+    "bleu": 63.84670733785411,
+    "bert_score": 0.922440630197525
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "ydd_Hebr",
-    "target_language_name": " Eastern Yiddish",
+    "target_language_name": "Eastern Yiddish",
     "speakers": 0,
-    "bleu": 49.97450075850061
+    "bleu": 47.55620093253461,
+    "bert_score": 0.9590989410877228
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "gaz_Latn",
-    "target_language_name": " West Central Oromo",
+    "target_language_name": "West Central Oromo",
     "speakers": 0,
-    "bleu": 47.19114355070805
+    "bleu": 46.909035002775134,
+    "bert_score": 0.8845542371273041
+  },
+  {
+    "model": "anthropic/claude-3.5-sonnet",
+    "original_language": "eng_Latn",
+    "target_language": "eng_Latn",
+    "target_language_name": "English",
+    "speakers": 1132366680,
+    "bleu": 75.35011734860745,
+    "bert_score": 0.880733436346054
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1781,7 +2012,8 @@
     "target_language": "ktu_Latn",
     "target_language_name": "Kituba (Democratic Republic of the Congo)",
     "speakers": 0,
-    "bleu": 52.848460160201476
+    "bleu": 52.848460160201476,
+    "bert_score": 0.9017938395341237
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1789,7 +2021,8 @@
     "target_language": "dyu_Latn",
     "target_language_name": "Jula",
     "speakers": 2700000,
-    "bleu": 29.541518029704612
+    "bleu": 29.541518029704612,
+    "bert_score": 0.8223321119944255
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1797,15 +2030,17 @@
     "target_language": "ace_Latn",
     "target_language_name": "Aceh",
     "speakers": 3500032,
-    "bleu": 54.98266447488466
+    "bleu": 54.98266447488466,
+    "bert_score": 0.9054659227530162
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
     "original_language": "eng_Latn",
     "target_language": "ckb_Arab",
-    "target_language_name": " Central Kurdish",
+    "target_language_name": "Central Kurdish",
     "speakers": 7250000,
-    "bleu": 58.304911173323845
+    "bleu": 59.19279106924606,
+    "bert_score": 0.933256882429123
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1813,7 +2048,8 @@
     "target_language": "mos_Latn",
     "target_language_name": "Moore",
     "speakers": 7600000,
-    "bleu": 32.845809798291015
+    "bleu": 32.845809798291015,
+    "bert_score": 0.8583020627498626
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1821,7 +2057,8 @@
     "target_language": "kir_Cyrl",
     "target_language_name": "Kyrgyz",
     "speakers": 4568480,
-    "bleu": 57.082442245268965
+    "bleu": 57.082442245268965,
+    "bert_score": 0.9317750076452891
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1829,7 +2066,8 @@
     "target_language": "npi_Deva",
     "target_language_name": "Nepali",
     "speakers": 0,
-    "bleu": 55.29193473519464
+    "bleu": 55.29193473519464,
+    "bert_score": 0.9358912428220113
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1837,7 +2075,8 @@
     "target_language": "kbp_Latn",
     "target_language_name": "Kabiyè",
     "speakers": 1000000,
-    "bleu": 22.549850465519835
+    "bleu": 22.549850465519835,
+    "bert_score": 0.8587520639101665
   },
   {
     "model": "anthropic/claude-3.5-sonnet",
@@ -1845,6 +2084,7 @@
     "target_language": "bem_Latn",
     "target_language_name": "Bemba",
     "speakers": 3600000,
-    "bleu": 47.80685489558032
+    "bleu": 47.80685489558032,
+    "bert_score": 0.889907830953598
   }
 ]

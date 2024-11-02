@@ -35,12 +35,14 @@
         import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
 
         async function init() {
+            const scoreKey = "bleu"
+            const scoreName = "BLEU Score"
             const chartsDiv = document.getElementById('charts');
 
             const summary = await fetch('results_summary.json');
             const summaryData = await summary.json();
             // Format captions
-            const formatTitle = d => d.target_language_name + "\n" + parseInt(d.speakers / 1_000_00) / 10 + "M speakers\nBLEU score: " + d.bleu.toFixed(1)
+            const formatTitle = d => (d.target_language_name + "\n" + parseInt(d.speakers / 1_000_00) / 10 + "M speakers\n" + scoreName + ": " + d[scoreKey].toFixed(1))
 
             // Create summary plot
             const summaryPlot = Plot.plot({
@@ -48,29 +50,29 @@
                 height: 400,
                 marginBottom: 100,
                 x: { label: "Number of speakers", axis: null },
-                y: { label: "BLEU Score (average across models)" },
+                y: { label: `${scoreName} (average across models)` },
                 // color: { scheme: "BrBG" },
                 marks: [
                     Plot.rectY(summaryData, Plot.stackX({
                         x: "speakers",
-                        order: "bleu",
+                        order: scoreKey,
                         reverse: true,
-                        y2: "bleu", // y2 to avoid stacking by y
+                        y2: scoreKey, // y2 to avoid stacking by y
                         title: formatTitle,
                         tip: true,
                         // fill: d => -d.bleu
                     })),
                     Plot.rectY(summaryData, Plot.pointerX(Plot.stackX({
                         x: "speakers",
-                        order: "bleu",
+                        order: scoreKey,
                         reverse: true,
-                        y2: "bleu", // y2 to avoid stacking by y
+                        y2: scoreKey, // y2 to avoid stacking by y
                         fill: "grey",
                     }))),
                     Plot.text(summaryData, Plot.stackX({
                         x: "speakers",
-                        y2: "bleu",
-                        order: "bleu",
+                        y2: scoreKey,
+                        order: scoreKey,
                         reverse: true,
                         text: "target_language_name",
                         frameAnchor: "bottom",
@@ -135,13 +137,13 @@
                         height: 200,
                         margin: 30,
                         y: {
-                            domain: [0, 100],
-                            label: "BLEU"
+                            domain: [0, 1],
+                            label: scoreName
                         },
                         marks: [
                             Plot.barY(languageData, {
                                 x: d => descriptor(d.model),
-                                y: "bleu"
+                                y: scoreKey
                             })
                         ]
                     });
