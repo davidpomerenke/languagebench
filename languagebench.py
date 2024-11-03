@@ -1,7 +1,6 @@
 import asyncio
 import json
 import os
-import random
 from os import getenv
 
 import evaluate
@@ -12,22 +11,19 @@ from dotenv import load_dotenv
 from joblib.memory import Memory
 from openai import AsyncOpenAI
 from tqdm.asyncio import tqdm_asyncio
+from transformers import NllbTokenizer
 
 # config
 models = [
-    "openai/gpt-4o-mini",
+    "openai/gpt-4o",
     "anthropic/claude-3.5-sonnet",
-    "meta-llama/llama-3.1-70b-instruct",  # lots of slow repetitions for LRLs
-    "mistralai/mistral-nemo",
+    "meta-llama/llama-3.1-405b-instruct",  # lots of slow repetitions for LRLs
+    "mistralai/mistral-large",
     # "google/gemini-flash-1.5",  # very fast
     "qwen/qwen-2.5-72b-instruct",  # somewhat slow
 ]
 fast_model = "anthropic/claude-3.5-sonnet"
-original_language = "eng_Latn"
-dataset = "floresp-v2.0-rc.3/dev"
-random.seed(42)
-target_languages = [f.split(".")[1] for f in os.listdir(dataset)]
-detailed_target_languages = random.choices(target_languages, k=5)
+n_sentences = 30
 
 # setup
 load_dotenv()
@@ -36,9 +32,10 @@ client = AsyncOpenAI(
     api_key=getenv("OPENROUTER_API_KEY"),
 )
 cache = Memory(location=".cache", verbose=0).cache
-bleu = evaluate.load("sacrebleu")
+bleu = evaluate.load("bleu")
 bertscore = evaluate.load("bertscore")
-rate_limit = AsyncLimiter(max_rate=15, time_period=1)
+tokenizer = NllbTokenizer.from_pretrained("facebook/nllb-200-distilled-600M")
+rate_limit = AsyncLimiter(max_rate=20, time_period=1)
 
 
 def reorder(language_name):
@@ -47,10 +44,65 @@ def reorder(language_name):
     return language_name
 
 
-language_names = pd.read_csv("LanguageCodes.tab", sep="\t")
-language_names["Name"] = language_names["Name"].apply(reorder).str.strip()
-language_stats = pd.read_csv("languages.tsv", sep="\t")
-script_names = pd.read_csv("ScriptCodes.csv")
+# load benchmark languages and scripts
+benchmark_dir = "floresp-v2.0-rc.3/dev"
+benchmark_languages = pd.DataFrame(
+    [f.split(".")[1].split("_", 1) for f in os.listdir(benchmark_dir)],
+    columns=["language_code", "script_code"],
+)
+# hack: drop additional script codes for languages with multiple scripts
+benchmark_languages = benchmark_languages.groupby("language_code").head(1)
+benchmark_languages["in_benchmark"] = True
+
+# load Ethnologue language names
+language_names = (
+    pd.read_csv("LanguageCodes.tab", sep="\t")
+    .rename(columns={"LangID": "language_code", "Name": "language_name"})[
+        ["language_code", "language_name"]
+    ]
+    .assign(language_name=lambda df: df["language_name"].apply(reorder).str.strip())
+)
+
+# load Wikidata speaker stats
+language_stats = (
+    pd.read_csv("languages.tsv", sep="\t")
+    .rename(columns={"iso639_3": "language_code", "maxSpeakers": "speakers"})[
+        ["language_code", "speakers"]
+    ]
+    .dropna(subset=["language_code"])
+)
+language_stats["speakers"] = pd.to_numeric(language_stats["speakers"], errors="coerce")
+ignored_languages = [
+    "zho",  # Chinese -> use Mandarin (cmn) instead
+    "ara",  # Arabic -> use Standard Arabic (arb) instead
+    "pus",  # Pashto -> use Nothern / Central / Southern Pashto instead (pbt / pst / pbu)
+    "fas",  # Persian -> use Iranian Persian (pes) instead
+    "msa",  # Malay -> use Indonesian (ind) instead
+]
+language_stats = language_stats[
+    ~language_stats["language_code"].isin(ignored_languages)
+]
+
+# load unicode script names
+script_names = pd.read_csv("ScriptCodes.csv").rename(
+    columns={"Code": "script_code", "English Name": "script_name"}
+)[["script_code", "script_name"]]
+
+# merge data
+languages = pd.merge(language_stats, language_names, on="language_code", how="outer")
+languages = pd.merge(benchmark_languages, languages, on="language_code", how="outer")
+languages = pd.merge(languages, script_names, on="script_code", how="left")
+languages["in_benchmark"] = languages["in_benchmark"].fillna(False)
+languages = languages.sort_values(by="speakers", ascending=False)
+
+# sample languages to translate from
+original_languages = languages[languages["in_benchmark"]].sample(
+    n=n_sentences, weights="speakers", replace=True, random_state=42
+)
+# sample languages to analyze with all models
+detailed_target_languages = languages[languages["in_benchmark"]].sample(
+    n=25, random_state=42
+)
 
 
 # utils
@@ -94,73 +146,77 @@ async def translate(model, target_language, target_script, sentence):
     return reply.choices[0].message.content
 
 
-def get_language_stats(language_code):
-    lang, script = language_code.split("_", 1)
-    script = script.split("_", 1)[0]
-    stats = language_stats[language_stats["iso639_3"] == lang]
-    if not stats.empty:
-        stats = stats.iloc[0].to_dict()
-    else:
-        stats = dict()
-    stats["script"] = script_names[script_names["Code"] == script]["English Name"].iloc[
-        0
-    ]
-    name_series = language_names[language_names["LangID"] == lang]["Name"]
-    stats["name"] = (
-        name_series.iloc[0]
-        if not name_series.empty
-        else stats.get("itemLabel_en") or stats.get("itemLabel", lang)
-    )
-    return stats
-
-
 def mean(l):
-    return sum(l) / len(l)
+    return sum(l) / len(l) if l else 0
+
+
+def load_sentences(language):
+    return open(
+        f"{benchmark_dir}/dev.{language.language_code}_{language.script_code}"
+    ).readlines()
 
 
 # evaluation!
 async def main():
-    n = 30
     results = []
-    original_sentences = open(f"{dataset}/dev.{original_language}").readlines()
-    for target_language in target_languages:
-        target_sentences = open(f"{dataset}/dev.{target_language}").readlines()
-        for model in models:
-            if model != fast_model and target_language not in detailed_target_languages:
-                continue
-            stats = get_language_stats(target_language)
-            print(f"{model} -> {stats['name']}")
-            predictions = [
-                translate(model, stats["name"], stats["script"], sentence)
-                for sentence in original_sentences[:n]
-            ]
-            predictions = await tqdm_asyncio.gather(*predictions, miniters=1)
-            metrics = bleu.compute(
-                predictions=predictions,
-                references=target_sentences[:n],
-                tokenize="char",
-            )
-            bert_metrics = bertscore.compute(
-                predictions=predictions,
-                references=target_sentences[:n],
-                model_type="distilbert-base-uncased",
-            )
-            results.append(
-                {
-                    "model": model,
-                    "original_language": original_language,
-                    "target_language": target_language,
-                    "target_language_name": stats["name"],
-                    "speakers": int(stats.get("maxSpeakers", 0)),
-                    "bleu": metrics["score"],
-                    "bert_score": mean(bert_metrics["f1"]),
-                }
-            )
-            with open("results.json", "w") as f:
-                json.dump(results, f, indent=2, ensure_ascii=False)
-            pd.DataFrame(results).groupby("target_language_name").agg(
-                {"bleu": "mean", "bert_score": "mean", "speakers": "mean"}
-            ).reset_index().to_json("results_summary.json", indent=2, orient="records")
+    for language in languages.itertuples():
+        name = (
+            language.language_name
+            if not pd.isna(language.language_name)
+            else language.language_code
+        )
+        print(name)
+        scores = []
+        if language.in_benchmark:
+            target_sentences = load_sentences(language)[:n_sentences]
+            for model in models:
+                if (
+                    model != fast_model
+                    and language.language_code
+                    not in detailed_target_languages.language_code.values
+                ):
+                    continue
+                original_sentences = [
+                    load_sentences(lang)[i]
+                    for i, lang in enumerate(original_languages.itertuples())
+                ]
+                print(model)
+                predictions = [
+                    translate(
+                        model, language.language_name, language.script_name, sentence
+                    )
+                    for sentence in original_sentences
+                ]
+                predictions = await tqdm_asyncio.gather(*predictions, miniters=1)
+                metrics_bleu = bleu.compute(
+                    predictions=predictions,
+                    references=target_sentences,
+                    tokenizer=tokenizer.tokenize,
+                )
+                # metrics_bert = bertscore.compute(
+                #     predictions=predictions,
+                #     references=target_sentences,
+                #     model_type="distilbert-base-uncased",
+                # )
+                scores.append(
+                    {
+                        "model": model,
+                        "bleu": metrics_bleu["bleu"],
+                        # "bert_score": mean(metrics_bert["f1"]),
+                    }
+                )
+        results.append(
+            {
+                "language_name": name,
+                "language_code": language.language_code,
+                "speakers": language.speakers if not pd.isna(language.speakers) else 0,
+                "scores": scores,
+                "bleu": mean([s["bleu"] for s in scores]) or -0.02,
+                # "bert_score": mean([s["bert_score"] for s in scores]),
+            }
+        )
+        with open("results.json", "w") as f:
+            json.dump(results, f, indent=2, ensure_ascii=False)
 
 
 if __name__ == "__main__":

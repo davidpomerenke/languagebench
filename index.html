@@ -39,42 +39,43 @@
             const scoreName = "BLEU Score"
             const chartsDiv = document.getElementById('charts');
 
-            const summary = await fetch('results_summary.json');
-            const summaryData = await summary.json();
+            const response = await fetch('results.json');
+            const data = await response.json();
             // Format captions
-            const formatTitle = d => (d.target_language_name + "\n" + parseInt(d.speakers / 1_000_00) / 10 + "M speakers\n" + scoreName + ": " + d[scoreKey].toFixed(1))
+            const formatScore = (score) => score > 0 ? score.toFixed(2) : "No benchmark available!"
+            const formatTitle = d => (d.language_name + "\n" + parseInt(d.speakers / 1_000_00) / 10 + "M speakers\n" + scoreName + ": " + formatScore(d[scoreKey]))
 
             // Create summary plot
             const summaryPlot = Plot.plot({
-                width: 800,
+                width: chartsDiv.clientWidth,
                 height: 400,
                 marginBottom: 100,
                 x: { label: "Number of speakers", axis: null },
                 y: { label: `${scoreName} (average across models)` },
                 // color: { scheme: "BrBG" },
                 marks: [
-                    Plot.rectY(summaryData, Plot.stackX({
+                    Plot.rectY(data, Plot.stackX({
                         x: "speakers",
                         order: scoreKey,
                         reverse: true,
                         y2: scoreKey, // y2 to avoid stacking by y
                         title: formatTitle,
                         tip: true,
-                        // fill: d => -d.bleu
+                        fill: d => d[scoreKey] > 0 ? "black" : "pink"
                     })),
-                    Plot.rectY(summaryData, Plot.pointerX(Plot.stackX({
+                    Plot.rectY(data, Plot.pointerX(Plot.stackX({
                         x: "speakers",
                         order: scoreKey,
                         reverse: true,
                         y2: scoreKey, // y2 to avoid stacking by y
                         fill: "grey",
                     }))),
-                    Plot.text(summaryData, Plot.stackX({
+                    Plot.text(data, Plot.stackX({
                         x: "speakers",
                         y2: scoreKey,
                         order: scoreKey,
                         reverse: true,
-                        text: "target_language_name",
+                        text: "language_name",
                         frameAnchor: "bottom",
                         textAnchor: "end",
                         dy: 10,
@@ -87,14 +88,11 @@
             // Add summary plot at the top
             chartsDiv.insertBefore(summaryPlot, chartsDiv.firstChild);
 
-            const response = await fetch('results.json');
-            const results = await response.json();
-
             // Get unique languages with their speaker counts
             const languageMap = new Map();
-            results.forEach(r => {
-                if (!languageMap.has(r.target_language_name)) {
-                    languageMap.set(r.target_language_name, r.speakers);
+            data.forEach(r => {
+                if (!languageMap.has(r.language_name)) {
+                    languageMap.set(r.language_name, r.speakers);
                 }
             });
 
@@ -122,7 +120,7 @@
                 headerDiv.appendChild(speakerP);
                 chartsDiv.appendChild(headerDiv);
 
-                const languageData = results.filter(r => r.target_language_name === language);
+                const languageData = data.filter(r => r.language_name === language)[0]["scores"];
 
                 const descriptor = code => {
                     let [org, model] = code.split("/")
@@ -130,8 +128,7 @@
                 }
 
                 // Plot for how well the models perform on this language
-                if (languageData.length > 2) {
-                    console.log(languageData);
+                if (languageData && languageData.length > 1) {
                     const plot = Plot.plot({
                         width: 400,
                         height: 200,
