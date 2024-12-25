@@ -2,10 +2,10 @@
 <html>
 
 <head>
-    <title>Language Bench</title>
+    <title>Local Language Monitor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             font-family: sans-serif;
@@ -27,17 +27,98 @@
 </head>
 
 <body>
-    <h1>Language Bench</h1>
-    <div id="charts"></div>
+    <nav class="border-b border-gray-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Mobile menu button -->
+            <div class="sm:hidden absolute left-4 top-4">
+                <button onclick="toggleMobileMenu()" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobileMenu" class="hidden sm:hidden absolute left-0 top-16 w-full bg-white border-b border-gray-200 py-2">
+                <div class="flex flex-col space-y-2 px-4">
+                    <a href="#" onclick="showSection('coverage'); toggleMobileMenu()" class="nav-link block px-3 py-2 text-base font-medium text-gray-700">
+                        Language Coverage
+                    </a>
+                    <a href="#" onclick="showSection('comparison'); toggleMobileMenu()" class="nav-link block px-3 py-2 text-base font-medium text-gray-700">
+                        LLM Comparison
+                    </a>
+                    <a href="#" onclick="showSection('results'); toggleMobileMenu()" class="nav-link block px-3 py-2 text-base font-medium text-gray-700">
+                        Results by Language
+                    </a>
+                </div>
+            </div>
+
+            <!-- Desktop menu -->
+            <div class="hidden sm:flex justify-center h-16">
+                <div class="flex">
+                    <div class="flex space-x-8">
+                        <a href="#" onclick="showSection('coverage')" class="nav-link active inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm font-medium text-gray-900">
+                            Language Coverage
+                        </a>
+                        <a href="#" onclick="showSection('comparison')" class="nav-link inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                            LLM Comparison
+                        </a>
+                        <a href="#" onclick="showSection('results')" class="nav-link inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                            Results by Language
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="p-6">
+        <section id="coverage" class="section">
+            <div id="summary-chart"></div>
+        </section>
+
+        <section id="comparison" class="section hidden">
+            <p class="text-gray-600">Coming soon...</p>
+        </section>
+
+        <section id="results" class="section hidden">
+            <div id="language-list"></div>
+        </section>
+    </div>
 
     <script type="module">
         // Import Plot using ESM
         import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm";
 
+        function showSection(sectionId) {
+            // Update nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('border-indigo-500', 'text-gray-900');
+                link.classList.add('border-transparent', 'text-gray-500');
+            });
+            const activeLink = document.querySelector(`[onclick="showSection('${sectionId}')"]`);
+            activeLink.classList.remove('border-transparent', 'text-gray-500');
+            activeLink.classList.add('border-indigo-500', 'text-gray-900');
+
+            // Show/hide sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+        window.showSection = showSection;
+
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+        window.toggleMobileMenu = toggleMobileMenu;
+
         async function init() {
             const scoreKey = "bleu"
             const scoreName = "BLEU Score"
-            const chartsDiv = document.getElementById('charts');
+            const summaryChartDiv = document.getElementById('summary-chart');
+            const languageListDiv = document.getElementById('language-list');
 
             const response = await fetch('results.json');
             const data = await response.json();
@@ -47,7 +128,7 @@
 
             // Create summary plot
             const summaryPlot = Plot.plot({
-                width: chartsDiv.clientWidth,
+                width: summaryChartDiv.clientWidth,
                 height: 400,
                 marginBottom: 100,
                 x: { label: "Number of speakers", axis: null },
@@ -85,8 +166,8 @@
                 ]
             });
 
-            // Add summary plot at the top
-            chartsDiv.insertBefore(summaryPlot, chartsDiv.firstChild);
+            // Add summary plot to the coverage section
+            summaryChartDiv.appendChild(summaryPlot);
 
             // Get unique languages with their speaker counts
             const languageMap = new Map();
@@ -100,7 +181,6 @@
             const languages = [...languageMap.entries()]
                 .sort((a, b) => b[1] - a[1])
                 .map(([lang]) => lang);
-
 
             // Section for each language
             languages.forEach(language => {
@@ -118,7 +198,7 @@
 
                 headerDiv.appendChild(h2);
                 headerDiv.appendChild(speakerP);
-                chartsDiv.appendChild(headerDiv);
+                languageListDiv.appendChild(headerDiv);
 
                 const languageData = data.filter(r => r.language_name === language)[0]["scores"];
 
@@ -144,10 +224,8 @@
                             })
                         ]
                     });
-                    chartsDiv.appendChild(plot);
+                    languageListDiv.appendChild(plot);
                 }
-
-
             });
         }
 

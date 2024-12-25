@@ -1,4 +1,4 @@
-# languagebench 🌍
+# Local Language Monitor 🌍
 
 Benchmarking all big AI models on all benchmarkable languages.
 
