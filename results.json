@@ -6,10 +6,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.44035095716211076
+        "bleu": 0.438607997913414
       }
     ],
-    "bleu": 0.44035095716211076
+    "bleu": 0.438607997913414
   },
   {
     "language_name": "Mandarin Chinese",
@@ -18,10 +18,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.4863759231444335
+        "bleu": 0.28859709196576455
       }
     ],
-    "bleu": 0.4863759231444335
+    "bleu": 0.28859709196576455
   },
   {
     "language_name": "Spanish",
@@ -30,10 +30,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.31421313286521146
+        "bleu": 0.31529908667129014
       }
     ],
-    "bleu": 0.31421313286521146
+    "bleu": 0.31529908667129014
   },
   {
     "language_name": "Hindi",
@@ -42,10 +42,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.3904883925679598
+        "bleu": 0.3063790221508274
       }
     ],
-    "bleu": 0.3904883925679598
+    "bleu": 0.3063790221508274
   },
   {
     "language_name": "Bengali",
@@ -54,10 +54,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.3297736038355109
+        "bleu": 0.2932161392776923
       }
     ],
-    "bleu": 0.3297736038355109
+    "bleu": 0.2932161392776923
   },
   {
     "language_name": "Portuguese",
@@ -78,10 +78,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.4387903665095541
+        "bleu": 0.4225557942193369
       }
     ],
-    "bleu": 0.4387903665095541
+    "bleu": 0.4225557942193369
   },
   {
     "language_name": "Indonesian",
@@ -114,10 +114,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.3324495319019684
+        "bleu": 0.3224776412158195
       }
     ],
-    "bleu": 0.3324495319019684
+    "bleu": 0.3224776412158195
   },
   {
     "language_name": "Eastern Punjabi",
@@ -126,10 +126,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.3928664264809312
+        "bleu": 0.3441710075977166
       }
     ],
-    "bleu": 0.3928664264809312
+    "bleu": 0.3441710075977166
   },
   {
     "language_name": "Standard German",
@@ -213,27 +213,11 @@
     "speakers": 83100000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.22522575757065674
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.2333407635240652
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.10203588314680621
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.16554398005927695
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.0743622715348743
       }
     ],
-    "bleu": 0.16010173116713589
+    "bleu": 0.2333407635240652
   },
   {
     "language_name": "Swahili",
@@ -254,10 +238,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.3391095199409747
+        "bleu": 0.31845792720586547
       }
     ],
-    "bleu": 0.3391095199409747
+    "bleu": 0.31845792720586547
   },
   {
     "language_name": "Telugu",
@@ -285,10 +269,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.3327815413417786
+        "bleu": 0.28861844740070713
       }
     ],
-    "bleu": 0.3327815413417786
+    "bleu": 0.28861844740070713
   },
   {
     "language_name": "Vietnamese",
@@ -357,10 +341,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.2760973768717978
+        "bleu": 0.27067019149599314
       }
     ],
-    "bleu": 0.2760973768717978
+    "bleu": 0.27067019149599314
   },
   {
     "language_name": "Bhojpuri",
@@ -415,27 +399,11 @@
     "speakers": 44000000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.3018366486807633
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.21013619903144296
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.1499005259127334
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.18169602550114305
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.02549625724666183
       }
     ],
-    "bleu": 0.17381313127454892
+    "bleu": 0.21013619903144296
   },
   {
     "language_name": "Hausa",
@@ -515,10 +483,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.4072481008205514
+        "bleu": 0.4055817497511186
       }
     ],
-    "bleu": 0.4072481008205514
+    "bleu": 0.4055817497511186
   },
   {
     "language_name": "Xiang Chinese",
@@ -653,10 +621,10 @@
     "scores": [
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.1643090786763395
+        "bleu": 0.17452025039334695
       }
     ],
-    "bleu": 0.1643090786763395
+    "bleu": 0.17452025039334695
   },
   {
     "language_name": "Northern Uzbek",
@@ -700,27 +668,11 @@
     "speakers": 24600000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.3018366486807633
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.21013619903144296
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.1499005259127334
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.18169602550114305
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.02549625724666183
       }
     ],
-    "bleu": 0.17381313127454892
+    "bleu": 0.21013619903144296
   },
   {
     "language_name": "Romanian",
@@ -918,27 +870,11 @@
     "speakers": 15700000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.22516622902472544
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.20245371733247658
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.0378198916279553
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.0515062321283951
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.01701042472693127
       }
     ],
-    "bleu": 0.10679129896809673
+    "bleu": 0.20245371733247658
   },
   {
     "language_name": "Mesopotamian Arabic",
@@ -1105,27 +1041,11 @@
     "speakers": 13161980.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.2865687127063326
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.25054345947985385
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.181288673149438
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.188276270677333
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.054576267347929
       }
     ],
-    "bleu": 0.19225067667217727
+    "bleu": 0.25054345947985385
   },
   {
     "language_name": "Chittagonian",
@@ -1140,27 +1060,11 @@
     "speakers": 13000000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.17202786716122928
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.1952038863089787
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.0866195039237461
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.06062634407793842
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.014720823522746878
       }
     ],
-    "bleu": 0.10583968499892786
+    "bleu": 0.1952038863089787
   },
   {
     "language_name": "Hungarian",
@@ -1180,27 +1084,11 @@
     "speakers": 12100000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.22728268497187282
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.21847668603031067
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.10074185841058973
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.059392901501730454
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.0074286483802763524
       }
     ],
-    "bleu": 0.12266455585895601
+    "bleu": 0.21847668603031067
   },
   {
     "language_name": "Chichewa",
@@ -1208,27 +1096,11 @@
     "speakers": 12000000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.1895725455230325
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.17401113784791736
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.09658218667531897
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.04964676481672043
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.02040785086927957
       }
     ],
-    "bleu": 0.10604409714645376
+    "bleu": 0.17401113784791736
   },
   {
     "language_name": "Tunisian Arabic",
@@ -1395,27 +1267,11 @@
     "speakers": 9600000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.288129435659592
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.3053888119917926
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.26523811773703404
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.20181127876225555
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.10821493612429332
+        "bleu": 0.2780257097562799
       }
     ],
-    "bleu": 0.23375651605499342
+    "bleu": 0.2780257097562799
   },
   {
     "language_name": "Dari",
@@ -1459,27 +1315,11 @@
     "speakers": 9220610.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.20542741434113335
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.24029548337141315
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.1985709579217795
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.16426254772371085
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.029108557467416214
       }
     ],
-    "bleu": 0.1675329921650906
+    "bleu": 0.24029548337141315
   },
   {
     "language_name": "Congo Swahili",
@@ -1698,27 +1538,11 @@
     "speakers": 6900000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.058464446367472944
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.06589195125918151
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.04553335750357841
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.0441481215103373
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.038143033479956526
       }
     ],
-    "bleu": 0.05043618202410534
+    "bleu": 0.06589195125918151
   },
   {
     "language_name": "Armenian",
@@ -1739,26 +1563,26 @@
     "scores": [
       {
         "model": "openai/gpt-4o",
-        "bleu": 0.028795542086220486
+        "bleu": 0.0315377397347853
       },
       {
         "model": "anthropic/claude-3.5-sonnet",
-        "bleu": 0.10774605838812318
+        "bleu": 0.09333641225693347
       },
       {
         "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.022737318691929916
+        "bleu": 0.030121023774013433
       },
       {
         "model": "mistralai/mistral-large",
-        "bleu": 0.06144543752598748
+        "bleu": 0.04230836190600749
       },
       {
         "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.028275143039527356
+        "bleu": 0.027727350391206936
       }
     ],
-    "bleu": 0.04979989994635768
+    "bleu": 0.04500617761258932
   },
   {
     "language_name": "Central Pashto",
@@ -2134,27 +1958,11 @@
     "speakers": 4000000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.2826991552063554
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.30370845804188434
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.2787991559825463
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.22260546031191955
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.13004923167033042
       }
     ],
-    "bleu": 0.2435722922426072
+    "bleu": 0.30370845804188434
   },
   {
     "language_name": "Tok Pisin",
@@ -2293,27 +2101,11 @@
     "speakers": 3500032.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.025447626712218067
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.06711853873605253
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.002679704493921361
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.013442877254370728
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.005062086703614178
       }
     ],
-    "bleu": 0.022750166780035372
+    "bleu": 0.06711853873605253
   },
   {
     "language_name": "Banjar",
@@ -2406,27 +2198,11 @@
     "speakers": 3000000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.01735238801571977
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.08106169448483001
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.010779616104049154
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.037190408434750306
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.006988505107902836
       }
     ],
-    "bleu": 0.030674522429450412
+    "bleu": 0.08106169448483001
   },
   {
     "language_name": "Tosk Albanian",
@@ -3159,27 +2935,11 @@
     "speakers": 1300000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.039786729911513496
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.01817225070836904
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.0
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.03789690570026145
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.028031956319831585
       }
     ],
-    "bleu": 0.024777568527995116
+    "bleu": 0.01817225070836904
   },
   {
     "language_name": "Emilian",
@@ -3286,27 +3046,11 @@
     "speakers": 1164770.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.32857986618400864
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.3107627601397992
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.264677035091384
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.23351285522302628
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.1151818587731128
       }
     ],
-    "bleu": 0.2505428750822662
+    "bleu": 0.3107627601397992
   },
   {
     "language_name": "Muong",
@@ -3549,27 +3293,11 @@
     "speakers": 918200.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.04264750796981389
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.07871425240461387
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.016883187863719572
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.04439823175345493
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.013066506239359036
       }
     ],
-    "bleu": 0.039141937246192256
+    "bleu": 0.07871425240461387
   },
   {
     "language_name": "Nuer",
@@ -4146,27 +3874,11 @@
     "speakers": 522000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.1560774913216495
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.17422519619712065
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.12400774609673239
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.09674030113339326
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.096266902845627
       }
     ],
-    "bleu": 0.12946352751890455
+    "bleu": 0.17422519619712065
   },
   {
     "language_name": "Flaaitaal",
@@ -4409,27 +4121,11 @@
     "speakers": 415720.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.21326629811705108
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.2024917287660747
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.16385599822945093
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.08705749106630675
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.021765197503505862
       }
     ],
-    "bleu": 0.1376873427364779
+    "bleu": 0.2024917287660747
   },
   {
     "language_name": "Sranan Tongo",
@@ -4683,27 +4379,11 @@
     "speakers": 321300.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.22785468046191032
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.28092666579128994
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.22002899232464
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.11261357394303675
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.06527147003401967
       }
     ],
-    "bleu": 0.18133907651097933
+    "bleu": 0.28092666579128994
   },
   {
     "language_name": "Kiembu",
@@ -5197,27 +4877,11 @@
     "speakers": 200000.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.06220005456851305
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.16898752975227693
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.07373773186072476
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.04077981475688863
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.02988351640091225
       }
     ],
-    "bleu": 0.07511772946786313
+    "bleu": 0.16898752975227693
   },
   {
     "language_name": "Dongxiang",
@@ -13904,27 +13568,11 @@
     "speakers": 0.0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.09526855781979184
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.1160671201312185
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.04096256526230796
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.07433538408053277
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.012873795681693922
       }
     ],
-    "bleu": 0.067901484595109
+    "bleu": 0.1160671201312185
   },
   {
     "language_name": "ocm",
@@ -22298,27 +21946,11 @@
     "speakers": 0,
     "scores": [
       {
-        "model": "openai/gpt-4o",
-        "bleu": 0.0071179726075512725
-      },
-      {
         "model": "anthropic/claude-3.5-sonnet",
         "bleu": 0.04004591158378547
-      },
-      {
-        "model": "meta-llama/llama-3.1-405b-instruct",
-        "bleu": 0.012071851713508174
-      },
-      {
-        "model": "mistralai/mistral-large",
-        "bleu": 0.021620964225193613
-      },
-      {
-        "model": "qwen/qwen-2.5-72b-instruct",
-        "bleu": 0.009725228948559986
       }
     ],
-    "bleu": 0.018116385815719706
+    "bleu": 0.04004591158378547
   },
   {
     "language_name": "Dilling",

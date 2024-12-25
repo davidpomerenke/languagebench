@@ -96,12 +96,13 @@ languages["in_benchmark"] = languages["in_benchmark"].fillna(False)
 languages = languages.sort_values(by="speakers", ascending=False)
 
 # sample languages to translate from
+# when translating e.g. to Mandarin, we drop Mandarin from the sample and use the next samples from the list instead; therefore we need to sample more than n_sentences
 original_languages = languages[languages["in_benchmark"]].sample(
-    n=n_sentences, weights="speakers", replace=True, random_state=42
+    n=n_sentences * 2, weights="speakers", replace=True, random_state=42
 )
 # sample languages to analyze with all models
 detailed_target_languages = languages[languages["in_benchmark"]].sample(
-    n=25, random_state=42
+    n=3, random_state=42
 )
 
 
@@ -176,9 +177,13 @@ async def main():
                     not in detailed_target_languages.language_code.values
                 ):
                     continue
+                # drop the target language from the original languages sample
+                _original_languages = original_languages[
+                    original_languages.language_code != language.language_code
+                ].iloc[:n_sentences]
                 original_sentences = [
                     load_sentences(lang)[i]
-                    for i, lang in enumerate(original_languages.itertuples())
+                    for i, lang in enumerate(_original_languages.itertuples())
                 ]
                 print(model)
                 predictions = [
