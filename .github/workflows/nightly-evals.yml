@@ -29,12 +29,14 @@ jobs:
           set -e
           echo "Checking OpenRouter balance..."
           # Try per-key remaining first (covers per-key caps).
-          auth_resp=$(curl -sS -H "Authorization: Bearer $OPENROUTER_API_KEY" \
+          auth_resp=$(curl -sS --retry 3 --retry-all-errors --max-time 15 \
+            -H "Authorization: Bearer $OPENROUTER_API_KEY" \
             https://openrouter.ai/api/v1/auth/key 2>/dev/null || echo '{}')
           remaining=$(echo "$auth_resp" | jq -r '.data.limit_remaining // empty' 2>/dev/null || echo '')
           if [ -z "$remaining" ] || [ "$remaining" = "null" ]; then
             # No per-key cap configured: fall back to account-level balance.
-            credits_resp=$(curl -sS -H "Authorization: Bearer $OPENROUTER_API_KEY" \
+            credits_resp=$(curl -sS --retry 3 --retry-all-errors --max-time 15 \
+              -H "Authorization: Bearer $OPENROUTER_API_KEY" \
               https://openrouter.ai/api/v1/credits 2>/dev/null || echo '{}')
             remaining=$(echo "$credits_resp" | \
               jq -r '.data | ((.total_credits // 0) - (.total_usage // 0))' 2>/dev/null || echo '')
@@ -50,7 +52,11 @@ jobs:
             echo "::notice::OpenRouter balance OK: \$$remaining remaining (threshold \$$threshold). Proceeding."
           else
             echo "proceed=false" >> "$GITHUB_OUTPUT"
-            echo "::error::OpenRouter balance below threshold: \$$remaining (need >= \$$threshold). Not starting the eval. Top up at https://openrouter.ai/credits or raise the API key's spend limit (a 'total' key limit never resets)."
+            if [ "$remaining" = "-1" ]; then
+              echo "::error::Could not determine OpenRouter balance (API unreachable or bad response). Not starting the eval. Check https://openrouter.ai/status and the OPENROUTER_API_KEY secret."
+            else
+              echo "::error::OpenRouter balance below threshold: \$$remaining (need >= \$$threshold). Not starting the eval. Top up at https://openrouter.ai/credits or raise the API key's spend limit (a 'total' key limit never resets)."
+            fi
             exit 1
           fi
 
