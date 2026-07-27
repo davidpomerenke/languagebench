@@ -11,11 +11,12 @@ jobs:
     # checking if this is working in case eval runs take longer than 6h github actions allowance
     timeout-minutes: 1440  # 24 hours timeout
     env:
-      # Minimum balance (USD) required to start an eval run. Below this,
-      # subsequent steps are skipped so a scheduled cron doesn't burn through
-      # the last few cents on partial requests. The FatalAPIError guard in
-      # complete() handles running out mid-run; this is the "don't even start"
-      # gate. Bump if you want a wider safety margin.
+      # Minimum balance (USD) required to start an eval run. Below this, the
+      # preflight fails the run (red) without spending anything, so a dry
+      # balance shows up in the Actions overview and triggers a failure
+      # notification instead of weeks of green no-op runs. The FatalAPIError
+      # guard in complete() handles running out mid-run; this is the "don't
+      # even start" gate. Bump if you want a wider safety margin.
       MIN_OPENROUTER_BALANCE_USD: '1.0'
     steps:
       - uses: actions/checkout@v3
@@ -49,7 +50,8 @@ jobs:
             echo "::notice::OpenRouter balance OK: \$$remaining remaining (threshold \$$threshold). Proceeding."
           else
             echo "proceed=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::OpenRouter balance below threshold: \$$remaining (need >= \$$threshold). Skipping eval. Top up at https://openrouter.ai/credits"
+            echo "::error::OpenRouter balance below threshold: \$$remaining (need >= \$$threshold). Not starting the eval. Top up at https://openrouter.ai/credits or raise the API key's spend limit (a 'total' key limit never resets)."
+            exit 1
           fi
 
       - name: Set up Python
