@@ -1,13 +1,13 @@
 [
   {
-    "model":"baidu\/ernie-4.5-21b-a3b",
+    "model":"deepseek\/deepseek-v3.2-speciale-20251201",
     "total":41,
     "failed":41,
     "score_nonfailed":null,
     "failed_pct":100.0
   },
   {
-    "model":"deepseek\/deepseek-v3.2-speciale-20251201",
+    "model":"baidu\/ernie-4.5-21b-a3b",
     "total":41,
     "failed":41,
     "score_nonfailed":null,
@@ -84,20 +84,6 @@
     "failed_pct":75.0099800399
   },
   {
-    "model":"mistralai\/mistral-medium-3.5-20260430",
-    "total":15078,
-    "failed":10929,
-    "score_nonfailed":0.8846018241,
-    "failed_pct":72.4830879427
-  },
-  {
-    "model":"deepcogito\/cogito-v2.1-671b-20251118",
-    "total":15080,
-    "failed":10563,
-    "score_nonfailed":0.5708075958,
-    "failed_pct":70.0464190981
-  },
-  {
     "model":"nousresearch\/hermes-4-405b",
     "total":15030,
     "failed":10151,
@@ -112,11 +98,25 @@
     "failed_pct":67.2588157019
   },
   {
+    "model":"mistralai\/mistral-medium-3.5-20260430",
+    "total":15080,
+    "failed":10124,
+    "score_nonfailed":0.8606925067,
+    "failed_pct":67.1352785146
+  },
+  {
     "model":"mistralai\/mistral-large-2512",
     "total":15030,
     "failed":9303,
     "score_nonfailed":0.5400137224,
     "failed_pct":61.8962075848
+  },
+  {
+    "model":"deepcogito\/cogito-v2.1-671b-20251118",
+    "total":15080,
+    "failed":9086,
+    "score_nonfailed":0.5754169127,
+    "failed_pct":60.2519893899
   },
   {
     "model":"upstage\/solar-pro-3",
@@ -224,13 +224,6 @@
     "failed_pct":37.0192947438
   },
   {
-    "model":"google\/gemini-3.5-flash-20260519",
-    "total":15078,
-    "failed":5308,
-    "score_nonfailed":0.6580770752,
-    "failed_pct":35.2036079056
-  },
-  {
     "model":"z-ai\/glm-4.5-air",
     "total":15030,
     "failed":4799,
@@ -245,25 +238,11 @@
     "failed_pct":31.7073170732
   },
   {
-    "model":"ai21\/jamba-large-1.7",
-    "total":15080,
-    "failed":4464,
-    "score_nonfailed":0.4806710493,
-    "failed_pct":29.6021220159
-  },
-  {
-    "model":"deepseek\/deepseek-v3.1-terminus",
-    "total":15080,
-    "failed":4324,
-    "score_nonfailed":0.6049424824,
-    "failed_pct":28.6737400531
-  },
-  {
     "model":"arcee-ai\/trinity-mini-20251201",
     "total":15080,
-    "failed":4149,
-    "score_nonfailed":0.3666731261,
-    "failed_pct":27.5132625995
+    "failed":3923,
+    "score_nonfailed":0.3700186904,
+    "failed_pct":26.0145888594
   },
   {
     "model":"nousresearch\/hermes-4-70b",
@@ -271,6 +250,20 @@
     "failed":3832,
     "score_nonfailed":0.2473206013,
     "failed_pct":25.4111405836
+  },
+  {
+    "model":"ai21\/jamba-large-1.7",
+    "total":15080,
+    "failed":3529,
+    "score_nonfailed":0.4794827086,
+    "failed_pct":23.4018567639
+  },
+  {
+    "model":"deepseek\/deepseek-v3.1-terminus",
+    "total":15080,
+    "failed":3390,
+    "score_nonfailed":0.6024125473,
+    "failed_pct":22.4801061008
   },
   {
     "model":"deepseek\/deepseek-chat-v3.1",
@@ -282,16 +275,9 @@
   {
     "model":"amazon\/nova-2-lite-v1",
     "total":15080,
-    "failed":3197,
-    "score_nonfailed":0.5306743634,
-    "failed_pct":21.200265252
-  },
-  {
-    "model":"deepseek\/deepseek-v4-pro",
-    "total":15078,
-    "failed":2829,
-    "score_nonfailed":0.6879473714,
-    "failed_pct":18.7624353363
+    "failed":2871,
+    "score_nonfailed":0.528535896,
+    "failed_pct":19.0384615385
   },
   {
     "model":"bytedance-seed\/seed-1.6-flash-20250625",
@@ -306,13 +292,6 @@
     "failed":1400,
     "score_nonfailed":0.4370955661,
     "failed_pct":18.0412371134
-  },
-  {
-    "model":"ibm-granite\/granite-4.0-h-micro",
-    "total":15080,
-    "failed":2667,
-    "score_nonfailed":0.3411225636,
-    "failed_pct":17.6856763926
   },
   {
     "model":"deepseek\/deepseek-r1-0528",
@@ -338,16 +317,30 @@
   {
     "model":"microsoft\/phi-4-mini-instruct",
     "total":15080,
-    "failed":2282,
-    "score_nonfailed":0.2616162964,
-    "failed_pct":15.1326259947
+    "failed":2153,
+    "score_nonfailed":0.262022539,
+    "failed_pct":14.2771883289
   },
   {
     "model":"google\/gemma-4-31b-it-20260402",
     "total":15080,
-    "failed":2177,
-    "score_nonfailed":0.6035083328,
-    "failed_pct":14.4363395225
+    "failed":1943,
+    "score_nonfailed":0.6020256837,
+    "failed_pct":12.8846153846
+  },
+  {
+    "model":"google\/gemini-3.5-flash-20260519",
+    "total":15080,
+    "failed":1915,
+    "score_nonfailed":0.6632075035,
+    "failed_pct":12.698938992
+  },
+  {
+    "model":"ibm-granite\/granite-4.0-h-micro",
+    "total":15080,
+    "failed":1895,
+    "score_nonfailed":0.3412995016,
+    "failed_pct":12.5663129973
   },
   {
     "model":"qwen\/qwen3-30b-a3b",
@@ -364,18 +357,18 @@
     "failed_pct":10.8289124668
   },
   {
-    "model":"liquid\/lfm-2-24b-a2b-20260224",
-    "total":15080,
-    "failed":1422,
-    "score_nonfailed":0.3444065389,
-    "failed_pct":9.4297082228
-  },
-  {
     "model":"qwen\/qwen3-30b-a3b-instruct-2507",
     "total":15030,
     "failed":1252,
     "score_nonfailed":0.4588521485,
     "failed_pct":8.3300066534
+  },
+  {
+    "model":"deepseek\/deepseek-v4-pro",
+    "total":15080,
+    "failed":1250,
+    "score_nonfailed":0.6586114784,
+    "failed_pct":8.2891246684
   },
   {
     "model":"x-ai\/grok-4.1-fast",
@@ -397,6 +390,13 @@
     "failed":3,
     "score_nonfailed":0.7847097861,
     "failed_pct":7.3170731707
+  },
+  {
+    "model":"liquid\/lfm-2-24b-a2b-20260224",
+    "total":15080,
+    "failed":1102,
+    "score_nonfailed":0.3432068461,
+    "failed_pct":7.3076923077
   },
   {
     "model":"openai\/gpt-5",
@@ -422,9 +422,9 @@
   {
     "model":"anthropic\/claude-sonnet-4.6",
     "total":15080,
-    "failed":767,
-    "score_nonfailed":0.6487447649,
-    "failed_pct":5.0862068966
+    "failed":719,
+    "score_nonfailed":0.6481560432,
+    "failed_pct":4.7679045093
   },
   {
     "model":"mistralai\/ministral-8b-2512",
@@ -457,23 +457,9 @@
   {
     "model":"mistralai\/ministral-14b-2512",
     "total":15080,
-    "failed":489,
-    "score_nonfailed":0.4569203903,
-    "failed_pct":3.2427055703
-  },
-  {
-    "model":"google\/gemini-3.1-flash-lite",
-    "total":15080,
-    "failed":445,
-    "score_nonfailed":0.6527671954,
-    "failed_pct":2.950928382
-  },
-  {
-    "model":"deepseek\/deepseek-v3.2-exp",
-    "total":15080,
-    "failed":411,
-    "score_nonfailed":0.5804285596,
-    "failed_pct":2.725464191
+    "failed":399,
+    "score_nonfailed":0.4554816031,
+    "failed_pct":2.6458885942
   },
   {
     "model":"openai\/gpt-5-nano",
@@ -483,11 +469,11 @@
     "failed_pct":2.374005305
   },
   {
-    "model":"ibm-granite\/granite-4.1-8b-20260429",
+    "model":"deepseek\/deepseek-v3.2-exp",
     "total":15080,
-    "failed":270,
-    "score_nonfailed":0.4243063326,
-    "failed_pct":1.7904509284
+    "failed":344,
+    "score_nonfailed":0.5800776106,
+    "failed_pct":2.2811671088
   },
   {
     "model":"bytedance-seed\/seed-2.0-mini-20260224",
@@ -504,18 +490,18 @@
     "failed_pct":1.1737400531
   },
   {
-    "model":"google\/gemini-3.1-pro-preview",
-    "total":15080,
-    "failed":173,
-    "score_nonfailed":0.6900094808,
-    "failed_pct":1.1472148541
-  },
-  {
     "model":"openai\/gpt-5.5",
     "total":15030,
     "failed":168,
     "score_nonfailed":0.6520055238,
     "failed_pct":1.1177644711
+  },
+  {
+    "model":"google\/gemini-3.1-pro-preview",
+    "total":15080,
+    "failed":162,
+    "score_nonfailed":0.6901710236,
+    "failed_pct":1.074270557
   },
   {
     "model":"qwen\/qwen3.6-plus-04-02",
@@ -532,11 +518,18 @@
     "failed_pct":0.998003992
   },
   {
-    "model":"anthropic\/claude-opus-4.8",
+    "model":"ibm-granite\/granite-4.1-8b-20260429",
     "total":15080,
-    "failed":111,
-    "score_nonfailed":0.6609524402,
-    "failed_pct":0.7360742706
+    "failed":148,
+    "score_nonfailed":0.4240917581,
+    "failed_pct":0.9814323607
+  },
+  {
+    "model":"google\/gemini-3.1-flash-lite",
+    "total":15080,
+    "failed":123,
+    "score_nonfailed":0.6531875607,
+    "failed_pct":0.8156498674
   },
   {
     "model":"openai\/gpt-5.3-chat-20260303",
@@ -546,18 +539,18 @@
     "failed_pct":0.7252162342
   },
   {
-    "model":"mistralai\/mistral-small-3.2-24b-instruct",
+    "model":"anthropic\/claude-opus-4.8",
     "total":15080,
-    "failed":104,
-    "score_nonfailed":0.4624688777,
-    "failed_pct":0.6896551724
+    "failed":106,
+    "score_nonfailed":0.6609262567,
+    "failed_pct":0.7029177719
   },
   {
     "model":"anthropic\/claude-opus-4.7",
     "total":15080,
-    "failed":100,
-    "score_nonfailed":0.6684399203,
-    "failed_pct":0.6631299735
+    "failed":95,
+    "score_nonfailed":0.6683285811,
+    "failed_pct":0.6299734748
   },
   {
     "model":"x-ai\/grok-4.20",
@@ -565,6 +558,13 @@
     "failed":89,
     "score_nonfailed":0.6311292606,
     "failed_pct":0.5921490353
+  },
+  {
+    "model":"mistralai\/mistral-small-3.2-24b-instruct",
+    "total":15080,
+    "failed":89,
+    "score_nonfailed":0.4620728378,
+    "failed_pct":0.5901856764
   },
   {
     "model":"openai\/gpt-5.2",
@@ -576,9 +576,9 @@
   {
     "model":"bytedance-seed\/seed-2.0-lite-20260309",
     "total":15080,
-    "failed":73,
-    "score_nonfailed":0.5854214454,
-    "failed_pct":0.4840848806
+    "failed":70,
+    "score_nonfailed":0.5855043059,
+    "failed_pct":0.4641909814
   },
   {
     "model":"openai\/gpt-5-mini",
@@ -623,31 +623,17 @@
     "failed_pct":0.0266134398
   },
   {
+    "model":"x-ai\/grok-4-fast",
+    "total":15030,
+    "failed":0,
+    "score_nonfailed":0.5469999688,
+    "failed_pct":0.0
+  },
+  {
     "model":"perplexity\/sonar-reasoning-pro",
     "total":17,
     "failed":0,
     "score_nonfailed":0.7141204358,
-    "failed_pct":0.0
-  },
-  {
-    "model":"baidu\/ernie-4.5-300b-a47b",
-    "total":15030,
-    "failed":0,
-    "score_nonfailed":0.5751447662,
-    "failed_pct":0.0
-  },
-  {
-    "model":"amazon\/nova-micro-v1",
-    "total":17,
-    "failed":0,
-    "score_nonfailed":0.6700323243,
-    "failed_pct":0.0
-  },
-  {
-    "model":"qwen\/qwen3-8b-04-28",
-    "total":113,
-    "failed":0,
-    "score_nonfailed":0.6392222245,
     "failed_pct":0.0
   },
   {
@@ -658,17 +644,10 @@
     "failed_pct":0.0
   },
   {
-    "model":"x-ai\/grok-4-fast",
+    "model":"baidu\/ernie-4.5-300b-a47b",
     "total":15030,
     "failed":0,
-    "score_nonfailed":0.5469999688,
-    "failed_pct":0.0
-  },
-  {
-    "model":"qwen\/qwen3-vl-30b-a3b-thinking",
-    "total":17,
-    "failed":0,
-    "score_nonfailed":0.5794774559,
+    "score_nonfailed":0.5751447662,
     "failed_pct":0.0
   },
   {
@@ -679,13 +658,6 @@
     "failed_pct":0.0
   },
   {
-    "model":"anthropic\/claude-3.5-sonnet",
-    "total":14288,
-    "failed":0,
-    "score_nonfailed":0.6279979071,
-    "failed_pct":0.0
-  },
-  {
     "model":"x-ai\/grok-3",
     "total":170,
     "failed":0,
@@ -693,17 +665,10 @@
     "failed_pct":0.0
   },
   {
-    "model":"amazon\/nova-premier-v1",
-    "total":15080,
+    "model":"qwen\/qwen3-8b-04-28",
+    "total":113,
     "failed":0,
-    "score_nonfailed":0.5266995001,
-    "failed_pct":0.0
-  },
-  {
-    "model":"anthropic\/claude-sonnet-4",
-    "total":15080,
-    "failed":0,
-    "score_nonfailed":0.6235642707,
+    "score_nonfailed":0.6392222245,
     "failed_pct":0.0
   },
   {
@@ -714,17 +679,17 @@
     "failed_pct":0.0
   },
   {
-    "model":"openai\/o4-mini-2025-04-16",
-    "total":167,
+    "model":"qwen\/qwen3-vl-30b-a3b-thinking",
+    "total":17,
     "failed":0,
-    "score_nonfailed":0.646647725,
+    "score_nonfailed":0.5794774559,
     "failed_pct":0.0
   },
   {
-    "model":"anthropic\/claude-haiku-4.5",
-    "total":15080,
+    "model":"anthropic\/claude-3.5-sonnet",
+    "total":14288,
     "failed":0,
-    "score_nonfailed":0.5380086427,
+    "score_nonfailed":0.6279979071,
     "failed_pct":0.0
   },
   {
@@ -735,17 +700,52 @@
     "failed_pct":0.0
   },
   {
-    "model":"google\/gemini-2.0-flash-lite-001",
-    "total":17,
+    "model":"anthropic\/claude-haiku-4.5",
+    "total":15080,
     "failed":0,
-    "score_nonfailed":0.7041712433,
+    "score_nonfailed":0.5380086427,
     "failed_pct":0.0
   },
   {
-    "model":"openai\/gpt-4.1",
+    "model":"anthropic\/claude-sonnet-4",
     "total":15080,
     "failed":0,
-    "score_nonfailed":0.5577101349,
+    "score_nonfailed":0.6235642707,
+    "failed_pct":0.0
+  },
+  {
+    "model":"amazon\/nova-micro-v1",
+    "total":17,
+    "failed":0,
+    "score_nonfailed":0.6700323243,
+    "failed_pct":0.0
+  },
+  {
+    "model":"openai\/o4-mini-2025-04-16",
+    "total":167,
+    "failed":0,
+    "score_nonfailed":0.646647725,
+    "failed_pct":0.0
+  },
+  {
+    "model":"amazon\/nova-premier-v1",
+    "total":15080,
+    "failed":0,
+    "score_nonfailed":0.5266995001,
+    "failed_pct":0.0
+  },
+  {
+    "model":"google\/gemini-2.5-flash",
+    "total":15080,
+    "failed":0,
+    "score_nonfailed":0.4238758246,
+    "failed_pct":0.0
+  },
+  {
+    "model":"openai\/gpt-4.1-mini",
+    "total":170,
+    "failed":0,
+    "score_nonfailed":0.6424898144,
     "failed_pct":0.0
   },
   {
@@ -826,6 +826,13 @@
     "failed_pct":0.0
   },
   {
+    "model":"google\/gemini-2.0-flash-lite-001",
+    "total":17,
+    "failed":0,
+    "score_nonfailed":0.7041712433,
+    "failed_pct":0.0
+  },
+  {
     "model":"google\/gemma-3-27b-it",
     "total":15080,
     "failed":0,
@@ -851,13 +858,6 @@
     "total":15080,
     "failed":0,
     "score_nonfailed":0.5588659385,
-    "failed_pct":0.0
-  },
-  {
-    "model":"google\/gemini-2.5-flash-image",
-    "total":170,
-    "failed":0,
-    "score_nonfailed":0.713401524,
     "failed_pct":0.0
   },
   {
@@ -889,13 +889,6 @@
     "failed_pct":0.0
   },
   {
-    "model":"cohere\/command-r-plus-08-2024",
-    "total":6369,
-    "failed":0,
-    "score_nonfailed":0.3479812964,
-    "failed_pct":0.0
-  },
-  {
     "model":"neversleep\/noromaid-20b",
     "total":170,
     "failed":0,
@@ -907,6 +900,13 @@
     "total":170,
     "failed":0,
     "score_nonfailed":0.6629729711,
+    "failed_pct":0.0
+  },
+  {
+    "model":"cohere\/command-r-plus-08-2024",
+    "total":6369,
+    "failed":0,
+    "score_nonfailed":0.3479812964,
     "failed_pct":0.0
   },
   {
@@ -938,17 +938,17 @@
     "failed_pct":0.0
   },
   {
-    "model":"google\/gemini-2.5-flash",
+    "model":"openai\/gpt-4.1",
     "total":15080,
     "failed":0,
-    "score_nonfailed":0.4238758246,
+    "score_nonfailed":0.5577101349,
     "failed_pct":0.0
   },
   {
-    "model":"openai\/gpt-4.1-mini",
+    "model":"google\/gemini-2.5-flash-image",
     "total":170,
     "failed":0,
-    "score_nonfailed":0.6424898144,
+    "score_nonfailed":0.713401524,
     "failed_pct":0.0
   },
   {
