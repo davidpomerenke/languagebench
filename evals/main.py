@@ -249,7 +249,7 @@ async def evaluate():
     #   2. Then partially-done models, closest-to-complete first, so a model left
     #      half-evaluated by a crash or budget stop is finished (and becomes
     #      publishable) before another is started.
-    # Sorting purely by pending-count would inverted this: a new model has the
+    # Sorting purely by pending-count would invert this: a new model has the
     # WHOLE matrix pending, so it would sort last and be starved behind older
     # models whose errored combos stay pending forever (only status=="ok"
     # counts as done, so failures are re-attempted every run).
@@ -257,17 +257,19 @@ async def evaluate():
     pending_counts = combis["model"].value_counts()
     pending_models.sort(key=lambda m: (m in seen_models, pending_counts.get(m, 0)))
 
-    # Apply the incremental cap AFTER `covered` is computed above. Order is
-    # load-bearing: `covered` is `current_models - pending_models`, so truncating
-    # first would silently reclassify every deferred model as coverage-complete
-    # and publish it on sparse or zero data, the exact inflation bug the
-    # coverage gate exists to prevent.
+    # Truncate to the cap. What keeps this safe is that `covered` is derived from
+    # `unattempted_per_model` (the full matrix vs the log) and NOT from
+    # `pending_models`, so deferring a model cannot reclassify it as
+    # coverage-complete. Keep it that way: the earlier
+    # `covered = current_models - set(pending_models)` would have published every
+    # deferred model on sparse or zero data, the inflation bug the coverage gate
+    # exists to prevent.
     deferred_models = set()
     if max_new_models_per_run and len(pending_models) > max_new_models_per_run:
         deferred_models = set(pending_models[max_new_models_per_run:])
         pending_models = pending_models[:max_new_models_per_run]
         # NB: this module does `from rich import print`, which parses "[tag]" as
-        # markup and silently eats it. Escape as "\[" so the prefix survives , 
+        # markup and silently eats it. Escape as "\[" so the prefix survives;
         # these are the lines you grep for in a CI log.
         print(rf"\[cap] MAX_NEW_MODELS_PER_RUN={max_new_models_per_run}: running "
               f"{len(pending_models)} model(s) this run, {len(deferred_models)} "
@@ -349,9 +351,12 @@ async def evaluate():
             # asyncio.CancelledError. It does NOT cover SIGKILL/SIGTERM from the
             # runner, MAX_RUNTIME_SECONDS is what keeps us clear of that.
             #
-            # model_id is deliberately NOT added to `covered`, so the partial
-            # model lands in results-detailed (its finished combos get skipped
-            # next run) but never enters the published aggregate.
+            # model_id is deliberately NOT added to `covered` here. A brand-new
+            # model therefore stays unpublished until some run attempts its full
+            # matrix, which is the sparse-coverage guard. A model already covered
+            # by earlier runs stays published, correctly: its aggregate is built
+            # from a complete attempt, and this run only added more ok rows.
+            #
             # "\\[" so rich's markup parser doesn't eat the "[crash]" prefix.
             print(f"\n\\[crash] {type(crash).__name__} during {model_id}; "
                   f"saving {len(model_out)} completed rows so the next run can "
