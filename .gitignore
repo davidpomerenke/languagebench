@@ -4,6 +4,8 @@
 results/results-detailed.json
 results/*.csv
 results/*.log
+# DRY_RUN=1 output, partial-scale test snapshots, never published
+results/dry-run/
 data/translations/
 floresp-*
 fleurs

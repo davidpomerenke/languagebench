@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 3 * * 1'  # Weekly: Mondays 3am UTC
   workflow_dispatch:  # Allow manual triggering
+    inputs:
+      max_new_models:
+        description: 'Max not-yet-complete models to work on this run (0 = unlimited). Scheduled runs use 2.'
+        required: false
+        default: '2'
 
 jobs:
   run-evals:
@@ -104,7 +109,24 @@ jobs:
           # Per-model checkpointing makes this safe: completed models are
           # published and skipped next run; a partial model resumes.
           MAX_RUNTIME_SECONDS: 18000
+          # This workflow is for INCREMENTAL additions, "a new model landed,
+          # evaluate it", not for clearing a backlog. Onboarding many models in
+          # one CI run is the expensive/fragile path: every per-model checkpoint
+          # re-pushes the whole results-detailed log, `all_results` is held
+          # entirely in RAM on a 16GB runner, and a crash re-costs the in-flight
+          # model because CI has no sample-level joblib cache (that lives on
+          # local disk, and is deliberately NOT restored here).
+          # Backlogs belong on a local machine, or on a deliberate
+          # workflow_dispatch run with this input set to 0 (unlimited).
+          # Empty for `schedule` (no inputs context); the default is applied in
+          # the shell below, NOT with `${{ ... || '2' }}`. GitHub's expression
+          # truthiness can cast the string '0' to falsy, which would silently
+          # turn the "0 = unlimited" escape hatch back into 2.
+          MAX_NEW_MODELS_PER_RUN: ${{ github.event.inputs.max_new_models }}
         run: |
+          # Default only when genuinely unset/empty (i.e. a scheduled run).
+          export MAX_NEW_MODELS_PER_RUN="${MAX_NEW_MODELS_PER_RUN:-2}"
+          echo "MAX_NEW_MODELS_PER_RUN=$MAX_NEW_MODELS_PER_RUN"
           # `huggingface-cli login` only warms a credential cache; all dataset
           # load/save calls in the code pass token=HUGGINGFACE_ACCESS_TOKEN
           # explicitly, so this is non-essential. HF's whoami endpoint

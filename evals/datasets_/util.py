@@ -109,10 +109,14 @@ def save_local_only(df: pd.DataFrame, fname: str):
     Used during partial-scale eval runs (smoke tests, local development) so
     the public dataset isn't truncated by a filtered aggregate. The next
     full-scale run will push the canonical version.
+
+    `fname` may contain a subdirectory (e.g. "dry-run/results"), which DRY_RUN
+    uses to keep test output away from the tracked results/*.json files.
     """
     df = df.drop(columns=["__index_level_0__"], errors="ignore")
-    Path("results").mkdir(exist_ok=True)
-    df.to_json(f"results/{fname}.json", orient="records", force_ascii=False, indent=2)
+    out = Path("results") / f"{fname}.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    df.to_json(out, orient="records", force_ascii=False, indent=2)
 
 
 def get_valid_task_languages(task_name: str) -> set:
