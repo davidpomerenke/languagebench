@@ -10,7 +10,12 @@ from dotenv import load_dotenv
 from google.cloud import translate_v2 as translate
 from huggingface_hub import AsyncInferenceClient, HfApi
 from joblib.memory import Memory
-from openai import AsyncOpenAI, BadRequestError
+from openai import (
+    AsyncOpenAI,
+    AuthenticationError,
+    BadRequestError,
+    PermissionDeniedError,
+)
 from requests import HTTPError, get
 
 # for development purposes, all languages will be evaluated on the fast models
@@ -422,6 +427,12 @@ class FatalAPIError(RuntimeError):
     """
 
 
+# Account-level by TYPE, regardless of message: 401 (bad/revoked/mistyped key)
+# and 403 (key lacks permission, or spend policy denies the request). Note
+# RateLimitError (429) is deliberately absent, that one is transient and
+# per-request, not account-level.
+_FATAL_ERROR_TYPES = (AuthenticationError, PermissionDeniedError)
+
 _FATAL_ERROR_MARKERS = (
     "key limit exceeded",
     "insufficient credits",
@@ -449,6 +460,18 @@ async def complete(**kwargs) -> str | None:
             if "filtered" in e.message:
                 return None
             raise e
+        except _FATAL_ERROR_TYPES as e:
+            # Credential/permission failures are account-level by definition and
+            # apply to every subsequent call. Matched BY TYPE because the string
+            # markers below do not catch them: a revoked or mistyped key returns
+            # 401 "User not found.", which contains none of the markers, so the
+            # run would otherwise grind through the whole matrix logging every
+            # combo as an error, flooding results-detailed and poisoning the
+            # auto-blocklist, which is exactly what this guard exists to stop.
+            raise FatalAPIError(
+                f"OpenRouter account-level failure ({type(e).__name__}): {e}. "
+                "Aborting run before results-detailed is polluted."
+            ) from e
         except Exception as e:
             msg = str(e).lower()
             if any(marker in msg for marker in _FATAL_ERROR_MARKERS):
@@ -645,7 +668,8 @@ def load_auto_blocklist(date: date) -> list[str]:
     )
 
 
-def update_blocklist_strikes(detailed=None, slow_models=None) -> pd.DataFrame:
+def update_blocklist_strikes(detailed=None, slow_models=None,
+                             not_attempted=None, dry_run=False) -> pd.DataFrame:
     """Recompute consecutive-bad-run strikes and persist them to HF. Called once
     per eval run (from main.py) after results are merged. A model currently past
     the failure threshold gets +1 strike; a model that has recovered (or never
@@ -655,10 +679,18 @@ def update_blocklist_strikes(detailed=None, slow_models=None) -> pd.DataFrame:
     The 2-run grace (one free re-attempt) only applies when retrying is cheap.
     A failing model that is ALSO egregiously bad (>=80%) or SLOW (in
     `slow_models`, measured this run) is excluded after a single run — we don't
-    spend more time/money re-attempting an expensive failure."""
-    from datasets_.util import load, save
+    spend more time/money re-attempting an expensive failure.
+
+    `not_attempted` are models this run never got to, deferred by
+    MAX_NEW_MODELS_PER_RUN. Strikes are computed from the CUMULATIVE log, so
+    without this they would keep accruing +1 per run on a stale record and be
+    auto-blocklisted after AUTO_BLOCKLIST_MIN_RUNS runs without ever getting the
+    re-attempt the grace period is supposed to buy them. Their prior count is
+    held steady instead."""
+    from datasets_.util import load, save, save_local_only
 
     slow_models = slow_models or set()
+    not_attempted = not_attempted or set()
     health = compute_model_health(detailed)
     cols = ["model", "strikes", "failed_pct"]
     if health.empty:
@@ -679,6 +711,10 @@ def update_blocklist_strikes(detailed=None, slow_models=None) -> pd.DataFrame:
     fail_map = dict(zip(bad["model"], bad["failed_pct"]))
 
     def _strikes_for(model, fail_pct):
+        # Deferred by the per-run cap, it never ran, so it can't have earned a
+        # strike. Hold the prior count so the record persists without advancing.
+        if model in not_attempted:
+            return int(prior_map.get(model, 0))
         # No grace if the failure is egregious OR slow-and-expensive-to-retry;
         # otherwise increment so a fast, moderately-failing model gets one free
         # re-attempt before exclusion.
@@ -699,7 +735,10 @@ def update_blocklist_strikes(detailed=None, slow_models=None) -> pd.DataFrame:
         ],
         columns=cols,
     )
-    save(strikes_df, "model-health-strikes")
+    if dry_run:
+        save_local_only(strikes_df, "dry-run/model-health-strikes")
+    else:
+        save(strikes_df, "model-health-strikes")
     blocked = sorted(
         strikes_df[strikes_df["strikes"] >= AUTO_BLOCKLIST_MIN_RUNS]["model"].tolist()
     )
